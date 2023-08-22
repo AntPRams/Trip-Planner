@@ -22,3 +22,8 @@ struct ContentView: View {
 #Preview {
     ContentView()
 }
+
+#Preview {
+    ContentView()
+        .previewDisplayName("iPhone 14 Pro Max")
+}

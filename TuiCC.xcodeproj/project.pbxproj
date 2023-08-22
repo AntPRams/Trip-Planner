@@ -11,6 +11,10 @@
 		B69C4E212A94F94400CEC473 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69C4E202A94F94400CEC473 /* ContentView.swift */; };
 		B69C4E232A94F94700CEC473 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B69C4E222A94F94700CEC473 /* Assets.xcassets */; };
 		B69C4E262A94F94700CEC473 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B69C4E252A94F94700CEC473 /* Preview Assets.xcassets */; };
+		B69C4E2D2A95050600CEC473 /* InjectionKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69C4E2C2A95050600CEC473 /* InjectionKey.swift */; };
+		B69C4E312A95066400CEC473 /* NetworkProviderInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69C4E302A95066400CEC473 /* NetworkProviderInterface.swift */; };
+		B69C4E342A9506F500CEC473 /* NetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69C4E332A9506F500CEC473 /* NetworkProvider.swift */; };
+		B69C4E372A95072500CEC473 /* NetworklProviderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69C4E362A95072500CEC473 /* NetworklProviderMock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +23,10 @@
 		B69C4E202A94F94400CEC473 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B69C4E222A94F94700CEC473 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B69C4E252A94F94700CEC473 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B69C4E2C2A95050600CEC473 /* InjectionKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectionKey.swift; sourceTree = "<group>"; };
+		B69C4E302A95066400CEC473 /* NetworkProviderInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProviderInterface.swift; sourceTree = "<group>"; };
+		B69C4E332A9506F500CEC473 /* NetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProvider.swift; sourceTree = "<group>"; };
+		B69C4E362A95072500CEC473 /* NetworklProviderMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworklProviderMock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +60,10 @@
 			isa = PBXGroup;
 			children = (
 				B69C4E1E2A94F94400CEC473 /* TuiCCApp.swift */,
-				B69C4E202A94F94400CEC473 /* ContentView.swift */,
+				B69C4E2E2A95055100CEC473 /* Views */,
+				B69C4E2F2A95056400CEC473 /* Injection */,
+				B69C4E322A95066F00CEC473 /* Service */,
+				B69C4E352A95070B00CEC473 /* Tests */,
 				B69C4E222A94F94700CEC473 /* Assets.xcassets */,
 				B69C4E242A94F94700CEC473 /* Preview Content */,
 			);
@@ -65,6 +76,39 @@
 				B69C4E252A94F94700CEC473 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B69C4E2E2A95055100CEC473 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B69C4E202A94F94400CEC473 /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B69C4E2F2A95056400CEC473 /* Injection */ = {
+			isa = PBXGroup;
+			children = (
+				B69C4E2C2A95050600CEC473 /* InjectionKey.swift */,
+			);
+			path = Injection;
+			sourceTree = "<group>";
+		};
+		B69C4E322A95066F00CEC473 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				B69C4E302A95066400CEC473 /* NetworkProviderInterface.swift */,
+				B69C4E332A9506F500CEC473 /* NetworkProvider.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		B69C4E352A95070B00CEC473 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				B69C4E362A95072500CEC473 /* NetworklProviderMock.swift */,
+			);
+			path = Tests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +182,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				B69C4E212A94F94400CEC473 /* ContentView.swift in Sources */,
+				B69C4E312A95066400CEC473 /* NetworkProviderInterface.swift in Sources */,
+				B69C4E372A95072500CEC473 /* NetworklProviderMock.swift in Sources */,
+				B69C4E2D2A95050600CEC473 /* InjectionKey.swift in Sources */,
 				B69C4E1F2A94F94400CEC473 /* TuiCCApp.swift in Sources */,
+				B69C4E342A9506F500CEC473 /* NetworkProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,7 +320,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"TuiCC/Preview Content\"";
-				DEVELOPMENT_TEAM = 2X5WL3592T;
+				DEVELOPMENT_TEAM = DF7FAJJH84;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -301,7 +349,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"TuiCC/Preview Content\"";
-				DEVELOPMENT_TEAM = 2X5WL3592T;
+				DEVELOPMENT_TEAM = DF7FAJJH84;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
