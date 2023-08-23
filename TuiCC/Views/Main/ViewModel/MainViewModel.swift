@@ -7,18 +7,18 @@ protocol MainViewModelInterface: ObservableObject {
 
 class MainViewModel: MainViewModelInterface {
     
-    private var networkProvider: ConnectionsServiceAPI
+    private var networkProvider: ConnectionsServiceInterface
     
     var connections = [Connection]()
     
-    init(networkProvider: ConnectionsServiceAPI = connectionsServiceAPIClient) {
+    init(networkProvider: ConnectionsServiceInterface = ConnectionsService()) {
         self.networkProvider = networkProvider
     }
     
     func fetchData() {
         Task {
             do {
-                let connections = try await networkProvider.fetch()
+                let connections = try await networkProvider.fetchConnections()
                 self.connections = connections
                 print(self.connections)
             } catch {

@@ -7,14 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B61D2BDB2A962FD6008D3606 /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61D2BDA2A962FD6008D3606 /* Connection.swift */; };
+		B61D2BDD2A963002008D3606 /* Coordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61D2BDC2A963002008D3606 /* Coordinates.swift */; };
+		B61D2BE52A964728008D3606 /* ArrayExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61D2BE42A964728008D3606 /* ArrayExtensionsTests.swift */; };
+		B64667DA2A964A7200DA4302 /* ConnectionsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64667D92A964A7200DA4302 /* ConnectionsService.swift */; };
+		B64667DC2A964B4B00DA4302 /* ApiCallerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64667DB2A964B4B00DA4302 /* ApiCallerMock.swift */; };
+		B64667DF2A964CCF00DA4302 /* connectionsMock.json in Resources */ = {isa = PBXBuildFile; fileRef = B64667DE2A964CCF00DA4302 /* connectionsMock.json */; };
+		B64667E12A964DE600DA4302 /* ConnectionsServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64667E02A964DE600DA4302 /* ConnectionsServiceTests.swift */; };
+		B64667E22A964ECE00DA4302 /* ConnectionsServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69C4E362A95072500CEC473 /* ConnectionsServiceMock.swift */; };
 		B69C4E1F2A94F94400CEC473 /* TuiCCApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69C4E1E2A94F94400CEC473 /* TuiCCApp.swift */; };
 		B69C4E212A94F94400CEC473 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69C4E202A94F94400CEC473 /* MainView.swift */; };
 		B69C4E232A94F94700CEC473 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B69C4E222A94F94700CEC473 /* Assets.xcassets */; };
 		B69C4E262A94F94700CEC473 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B69C4E252A94F94700CEC473 /* Preview Assets.xcassets */; };
 		B69C4E2D2A95050600CEC473 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69C4E2C2A95050600CEC473 /* Keys.swift */; };
-		B69C4E312A95066400CEC473 /* NetworkProviderInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69C4E302A95066400CEC473 /* NetworkProviderInterface.swift */; };
+		B69C4E312A95066400CEC473 /* ConnectionsServiceInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69C4E302A95066400CEC473 /* ConnectionsServiceInterface.swift */; };
 		B69C4E342A9506F500CEC473 /* NetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69C4E332A9506F500CEC473 /* NetworkProvider.swift */; };
-		B69C4E372A95072500CEC473 /* NetworkProviderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69C4E362A95072500CEC473 /* NetworkProviderMock.swift */; };
 		B69C4E3B2A95082900CEC473 /* InjectedValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69C4E3A2A95082900CEC473 /* InjectedValues.swift */; };
 		B69C4E3D2A95090800CEC473 /* Injected.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69C4E3C2A95090800CEC473 /* Injected.swift */; };
 		B69C4E422A950B5500CEC473 /* InjectionKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69C4E412A950B5500CEC473 /* InjectionKey.swift */; };
@@ -24,16 +31,34 @@
 		B69C52592A9528E400CEC473 /* ArrayExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69C52582A9528E400CEC473 /* ArrayExtensions.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		B61D2BE62A964728008D3606 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B69C4E132A94F94400CEC473 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B69C4E1A2A94F94400CEC473;
+			remoteInfo = TuiCC;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		B61D2BDA2A962FD6008D3606 /* Connection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connection.swift; sourceTree = "<group>"; };
+		B61D2BDC2A963002008D3606 /* Coordinates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinates.swift; sourceTree = "<group>"; };
+		B61D2BE22A964728008D3606 /* TuiCCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TuiCCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B61D2BE42A964728008D3606 /* ArrayExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtensionsTests.swift; sourceTree = "<group>"; };
+		B64667D92A964A7200DA4302 /* ConnectionsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionsService.swift; sourceTree = "<group>"; };
+		B64667DB2A964B4B00DA4302 /* ApiCallerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiCallerMock.swift; sourceTree = "<group>"; };
+		B64667DE2A964CCF00DA4302 /* connectionsMock.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = connectionsMock.json; sourceTree = "<group>"; };
+		B64667E02A964DE600DA4302 /* ConnectionsServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionsServiceTests.swift; sourceTree = "<group>"; };
 		B69C4E1B2A94F94400CEC473 /* TuiCC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TuiCC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B69C4E1E2A94F94400CEC473 /* TuiCCApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TuiCCApp.swift; sourceTree = "<group>"; };
 		B69C4E202A94F94400CEC473 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		B69C4E222A94F94700CEC473 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B69C4E252A94F94700CEC473 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B69C4E2C2A95050600CEC473 /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
-		B69C4E302A95066400CEC473 /* NetworkProviderInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProviderInterface.swift; sourceTree = "<group>"; };
+		B69C4E302A95066400CEC473 /* ConnectionsServiceInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionsServiceInterface.swift; sourceTree = "<group>"; };
 		B69C4E332A9506F500CEC473 /* NetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProvider.swift; sourceTree = "<group>"; };
-		B69C4E362A95072500CEC473 /* NetworkProviderMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProviderMock.swift; sourceTree = "<group>"; };
+		B69C4E362A95072500CEC473 /* ConnectionsServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionsServiceMock.swift; sourceTree = "<group>"; };
 		B69C4E3A2A95082900CEC473 /* InjectedValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectedValues.swift; sourceTree = "<group>"; };
 		B69C4E3C2A95090800CEC473 /* Injected.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injected.swift; sourceTree = "<group>"; };
 		B69C4E412A950B5500CEC473 /* InjectionKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectionKey.swift; sourceTree = "<group>"; };
@@ -44,6 +69,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		B61D2BDF2A964728008D3606 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B69C4E182A94F94400CEC473 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -54,10 +86,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B61D2BE32A964728008D3606 /* TuiCCTests */ = {
+			isa = PBXGroup;
+			children = (
+				B69C4E352A95070B00CEC473 /* Mocks */,
+				B61D2BE42A964728008D3606 /* ArrayExtensionsTests.swift */,
+				B64667E02A964DE600DA4302 /* ConnectionsServiceTests.swift */,
+			);
+			path = TuiCCTests;
+			sourceTree = "<group>";
+		};
+		B64667DD2A964C7C00DA4302 /* Json */ = {
+			isa = PBXGroup;
+			children = (
+				B64667DE2A964CCF00DA4302 /* connectionsMock.json */,
+			);
+			path = Json;
+			sourceTree = "<group>";
+		};
 		B69C4E122A94F94400CEC473 = {
 			isa = PBXGroup;
 			children = (
 				B69C4E1D2A94F94400CEC473 /* TuiCC */,
+				B61D2BE32A964728008D3606 /* TuiCCTests */,
 				B69C4E1C2A94F94400CEC473 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -66,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				B69C4E1B2A94F94400CEC473 /* TuiCC.app */,
+				B61D2BE22A964728008D3606 /* TuiCCTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -78,7 +130,6 @@
 				B69C4E2E2A95055100CEC473 /* Views */,
 				B69C4E2F2A95056400CEC473 /* Injection */,
 				B69C4E322A95066F00CEC473 /* Service */,
-				B69C4E352A95070B00CEC473 /* Tests */,
 				B69C4E222A94F94700CEC473 /* Assets.xcassets */,
 				B69C4E242A94F94700CEC473 /* Preview Content */,
 			);
@@ -116,19 +167,22 @@
 			isa = PBXGroup;
 			children = (
 				B69C4E492A9515A900CEC473 /* Models */,
-				B69C4E302A95066400CEC473 /* NetworkProviderInterface.swift */,
+				B69C4E302A95066400CEC473 /* ConnectionsServiceInterface.swift */,
+				B64667D92A964A7200DA4302 /* ConnectionsService.swift */,
 				B69C4E332A9506F500CEC473 /* NetworkProvider.swift */,
 				B69C4E4C2A951C7100CEC473 /* NetworkError.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
 		};
-		B69C4E352A95070B00CEC473 /* Tests */ = {
+		B69C4E352A95070B00CEC473 /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
-				B69C4E362A95072500CEC473 /* NetworkProviderMock.swift */,
+				B64667DD2A964C7C00DA4302 /* Json */,
+				B69C4E362A95072500CEC473 /* ConnectionsServiceMock.swift */,
+				B64667DB2A964B4B00DA4302 /* ApiCallerMock.swift */,
 			);
-			path = Tests;
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 		B69C4E432A950BD200CEC473 /* Main */ = {
@@ -152,6 +206,8 @@
 			isa = PBXGroup;
 			children = (
 				B69C4E4A2A9515D000CEC473 /* Connections.swift */,
+				B61D2BDC2A963002008D3606 /* Coordinates.swift */,
+				B61D2BDA2A962FD6008D3606 /* Connection.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -167,6 +223,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		B61D2BE12A964728008D3606 /* TuiCCTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B61D2BE82A964728008D3606 /* Build configuration list for PBXNativeTarget "TuiCCTests" */;
+			buildPhases = (
+				B61D2BDE2A964728008D3606 /* Sources */,
+				B61D2BDF2A964728008D3606 /* Frameworks */,
+				B61D2BE02A964728008D3606 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B61D2BE72A964728008D3606 /* PBXTargetDependency */,
+			);
+			name = TuiCCTests;
+			productName = TuiCCTests;
+			productReference = B61D2BE22A964728008D3606 /* TuiCCTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		B69C4E1A2A94F94400CEC473 /* TuiCC */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = B69C4E292A94F94700CEC473 /* Build configuration list for PBXNativeTarget "TuiCC" */;
@@ -194,6 +268,10 @@
 				LastSwiftUpdateCheck = 1500;
 				LastUpgradeCheck = 1500;
 				TargetAttributes = {
+					B61D2BE12A964728008D3606 = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = B69C4E1A2A94F94400CEC473;
+					};
 					B69C4E1A2A94F94400CEC473 = {
 						CreatedOnToolsVersion = 15.0;
 					};
@@ -213,11 +291,20 @@
 			projectRoot = "";
 			targets = (
 				B69C4E1A2A94F94400CEC473 /* TuiCC */,
+				B61D2BE12A964728008D3606 /* TuiCCTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		B61D2BE02A964728008D3606 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B64667DF2A964CCF00DA4302 /* connectionsMock.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B69C4E192A94F94400CEC473 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -230,6 +317,17 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		B61D2BDE2A964728008D3606 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B64667E12A964DE600DA4302 /* ConnectionsServiceTests.swift in Sources */,
+				B64667E22A964ECE00DA4302 /* ConnectionsServiceMock.swift in Sources */,
+				B61D2BE52A964728008D3606 /* ArrayExtensionsTests.swift in Sources */,
+				B64667DC2A964B4B00DA4302 /* ApiCallerMock.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B69C4E172A94F94400CEC473 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -237,22 +335,68 @@
 				B69C52592A9528E400CEC473 /* ArrayExtensions.swift in Sources */,
 				B69C4E212A94F94400CEC473 /* MainView.swift in Sources */,
 				B69C4E3D2A95090800CEC473 /* Injected.swift in Sources */,
-				B69C4E312A95066400CEC473 /* NetworkProviderInterface.swift in Sources */,
-				B69C4E372A95072500CEC473 /* NetworkProviderMock.swift in Sources */,
+				B69C4E312A95066400CEC473 /* ConnectionsServiceInterface.swift in Sources */,
 				B69C4E4B2A9515D000CEC473 /* Connections.swift in Sources */,
 				B69C4E2D2A95050600CEC473 /* Keys.swift in Sources */,
+				B64667DA2A964A7200DA4302 /* ConnectionsService.swift in Sources */,
 				B69C4E462A950BFC00CEC473 /* MainViewModel.swift in Sources */,
 				B69C4E3B2A95082900CEC473 /* InjectedValues.swift in Sources */,
+				B61D2BDD2A963002008D3606 /* Coordinates.swift in Sources */,
 				B69C4E1F2A94F94400CEC473 /* TuiCCApp.swift in Sources */,
 				B69C4E4D2A951C7100CEC473 /* NetworkError.swift in Sources */,
 				B69C4E422A950B5500CEC473 /* InjectionKey.swift in Sources */,
 				B69C4E342A9506F500CEC473 /* NetworkProvider.swift in Sources */,
+				B61D2BDB2A962FD6008D3606 /* Connection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		B61D2BE72A964728008D3606 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B69C4E1A2A94F94400CEC473 /* TuiCC */;
+			targetProxy = B61D2BE62A964728008D3606 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		B61D2BE92A964728008D3606 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2X5WL3592T;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ardevlp.TuiCCTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TuiCC.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TuiCC";
+			};
+			name = Debug;
+		};
+		B61D2BEA2A964728008D3606 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2X5WL3592T;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ardevlp.TuiCCTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TuiCC.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TuiCC";
+			};
+			name = Release;
+		};
 		B69C4E272A94F94700CEC473 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -433,6 +577,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		B61D2BE82A964728008D3606 /* Build configuration list for PBXNativeTarget "TuiCCTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B61D2BE92A964728008D3606 /* Debug */,
+				B61D2BEA2A964728008D3606 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		B69C4E162A94F94400CEC473 /* Build configuration list for PBXProject "TuiCC" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

@@ -26,5 +26,5 @@ struct MainView: View {
 }
 
 #Preview {
-    MainView(viewModel: MainViewModel(networkProvider: connectionsServiceAPIClient))
+    MainView(viewModel: MainViewModel(networkProvider: ConnectionsService()))
 }
