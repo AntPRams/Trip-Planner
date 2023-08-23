@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "10C448A3-6C4D-414A-B7BD-E74AA072A39C"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "94705545-D009-4F6C-848D-319B4FBEA853"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TuiCC/Service/ConnectionsService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "fetchConnections()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "94705545-D009-4F6C-848D-319B4FBEA853 - 9e3c9f142c17cefb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for TuiCC.ConnectionsService.fetchConnections() async throws -&gt; Swift.Array&lt;TuiCC.Connection&gt;"
+                  moduleName = "TuiCC"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ars58/Developer/DevTests/Learning%20SwiftUI/TuiCC/TuiCC/Service/ConnectionsService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "308">
+               </Location>
+               <Location
+                  uuid = "94705545-D009-4F6C-848D-319B4FBEA853 - c6eb878629b7bc0f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for TuiCC.ConnectionsService.fetchConnections() async throws -&gt; Swift.Array&lt;TuiCC.Connection&gt;"
+                  moduleName = "TuiCC"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ars58/Developer/DevTests/Learning%20SwiftUI/TuiCC/TuiCC/Service/ConnectionsService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "36">
+               </Location>
+               <Location
+                  uuid = "94705545-D009-4F6C-848D-319B4FBEA853 - 17d78be232ec02f1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for TuiCC.ConnectionsService.fetchConnections() async throws -&gt; Swift.Array&lt;TuiCC.Connection&gt;"
+                  moduleName = "TuiCC"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ars58/Developer/DevTests/Learning%20SwiftUI/TuiCC/TuiCC/Service/ConnectionsService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "56">
+               </Location>
+               <Location
+                  uuid = "94705545-D009-4F6C-848D-319B4FBEA853 - 2b4401b73ba63cf2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for TuiCC.ConnectionsService.fetchConnections() async throws -&gt; Swift.Array&lt;TuiCC.Connection&gt;"
+                  moduleName = "TuiCC"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ars58/Developer/DevTests/Learning%20SwiftUI/TuiCC/TuiCC/Service/ConnectionsService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "52">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6435DE4E-C077-405B-8B57-B85C923DC840"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TuiCCTests/Mocks/ConnectionsServiceMock.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "fetchConnections()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

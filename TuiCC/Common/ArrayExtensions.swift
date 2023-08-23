@@ -9,12 +9,15 @@ extension Array {
 }
 
 extension Array where Element: Hashable {
-    
-    mutating func removeDuplicates() {
+    func removingDuplicates() -> [Element] {
         var addedDict = [Element: Bool]()
         
-        self = filter {
+        return filter {
             addedDict.updateValue(true, forKey: $0) == nil
         }
+    }
+    
+    mutating func removeDuplicates() {
+        self = self.removingDuplicates()
     }
 }

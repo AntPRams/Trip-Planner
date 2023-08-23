@@ -13,21 +13,20 @@ final class ConnectionsServiceTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
-        
         sut = ConnectionsServiceMock()
     }
     
     override func tearDown() {
         sut = nil
-        
         super.tearDown()
     }
 
-    
     func test_fetchConnections() throws {
-        
         Task {
+            //when
             let connections = try await sut.fetchConnections()
+            
+            //then
             XCTAssertEqual(connections.count, 3)
         }
     }

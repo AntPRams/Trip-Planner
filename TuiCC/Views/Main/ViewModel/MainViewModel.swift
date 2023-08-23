@@ -9,7 +9,8 @@ class MainViewModel: MainViewModelInterface {
     
     private var networkProvider: ConnectionsServiceInterface
     
-    var connections = [Connection]()
+    @Published var connections = [Connection]()
+    @Published var cities = [String]()
     
     init(networkProvider: ConnectionsServiceInterface = ConnectionsService()) {
         self.networkProvider = networkProvider
@@ -20,6 +21,7 @@ class MainViewModel: MainViewModelInterface {
             do {
                 let connections = try await networkProvider.fetchConnections()
                 self.connections = connections
+                extractCities()
                 print(self.connections)
             } catch {
                 print(error.localizedDescription)
@@ -27,9 +29,15 @@ class MainViewModel: MainViewModelInterface {
         }
     }
     
+    private func extractCities() {
+        let allCities = connections.flatMap { model in
+            [model.origin, model.destination]
+        }
+        
+        cities = allCities.removingDuplicates()
+    }
+    
     func calculatePaths(from origin: String, to destination: String) {
         
     }
-    
-    
 }

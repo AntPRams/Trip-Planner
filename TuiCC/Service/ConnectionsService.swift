@@ -9,7 +9,11 @@ final class ConnectionsService: ConnectionsServiceInterface {
     }
     
     func fetchConnections() async throws -> [Connection] {
-        let data: Connections = try await apiCaller.fetch(from: URL(string: "https://raw.githubusercontent.com/TuiMobilityHub/ios-code-challenge/master/connections.json")!)
+        guard let url = EndPoint.connections() else {
+            throw NetworkError.notFound
+        }
+        
+        let data: Connections = try await apiCaller.fetch(from: url)
         
         guard data.connections.isNotEmpty else {
             throw NetworkError.notFound

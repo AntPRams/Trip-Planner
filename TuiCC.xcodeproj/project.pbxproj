@@ -11,17 +11,18 @@
 		B61D2BDD2A963002008D3606 /* Coordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61D2BDC2A963002008D3606 /* Coordinates.swift */; };
 		B61D2BE52A964728008D3606 /* ArrayExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61D2BE42A964728008D3606 /* ArrayExtensionsTests.swift */; };
 		B64667DA2A964A7200DA4302 /* ConnectionsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64667D92A964A7200DA4302 /* ConnectionsService.swift */; };
-		B64667DC2A964B4B00DA4302 /* ApiCallerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64667DB2A964B4B00DA4302 /* ApiCallerMock.swift */; };
 		B64667DF2A964CCF00DA4302 /* connectionsMock.json in Resources */ = {isa = PBXBuildFile; fileRef = B64667DE2A964CCF00DA4302 /* connectionsMock.json */; };
 		B64667E12A964DE600DA4302 /* ConnectionsServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64667E02A964DE600DA4302 /* ConnectionsServiceTests.swift */; };
 		B64667E22A964ECE00DA4302 /* ConnectionsServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69C4E362A95072500CEC473 /* ConnectionsServiceMock.swift */; };
+		B64667E42A96538700DA4302 /* EndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64667E32A96538700DA4302 /* EndPoints.swift */; };
+		B64667E62A9657B400DA4302 /* MainViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64667E52A9657B400DA4302 /* MainViewModelTests.swift */; };
 		B69C4E1F2A94F94400CEC473 /* TuiCCApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69C4E1E2A94F94400CEC473 /* TuiCCApp.swift */; };
 		B69C4E212A94F94400CEC473 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69C4E202A94F94400CEC473 /* MainView.swift */; };
 		B69C4E232A94F94700CEC473 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B69C4E222A94F94700CEC473 /* Assets.xcassets */; };
 		B69C4E262A94F94700CEC473 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B69C4E252A94F94700CEC473 /* Preview Assets.xcassets */; };
 		B69C4E2D2A95050600CEC473 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69C4E2C2A95050600CEC473 /* Keys.swift */; };
 		B69C4E312A95066400CEC473 /* ConnectionsServiceInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69C4E302A95066400CEC473 /* ConnectionsServiceInterface.swift */; };
-		B69C4E342A9506F500CEC473 /* NetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69C4E332A9506F500CEC473 /* NetworkProvider.swift */; };
+		B69C4E342A9506F500CEC473 /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69C4E332A9506F500CEC473 /* APICaller.swift */; };
 		B69C4E3B2A95082900CEC473 /* InjectedValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69C4E3A2A95082900CEC473 /* InjectedValues.swift */; };
 		B69C4E3D2A95090800CEC473 /* Injected.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69C4E3C2A95090800CEC473 /* Injected.swift */; };
 		B69C4E422A950B5500CEC473 /* InjectionKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69C4E412A950B5500CEC473 /* InjectionKey.swift */; };
@@ -47,9 +48,10 @@
 		B61D2BE22A964728008D3606 /* TuiCCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TuiCCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B61D2BE42A964728008D3606 /* ArrayExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtensionsTests.swift; sourceTree = "<group>"; };
 		B64667D92A964A7200DA4302 /* ConnectionsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionsService.swift; sourceTree = "<group>"; };
-		B64667DB2A964B4B00DA4302 /* ApiCallerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiCallerMock.swift; sourceTree = "<group>"; };
 		B64667DE2A964CCF00DA4302 /* connectionsMock.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = connectionsMock.json; sourceTree = "<group>"; };
 		B64667E02A964DE600DA4302 /* ConnectionsServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionsServiceTests.swift; sourceTree = "<group>"; };
+		B64667E32A96538700DA4302 /* EndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoints.swift; sourceTree = "<group>"; };
+		B64667E52A9657B400DA4302 /* MainViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModelTests.swift; sourceTree = "<group>"; };
 		B69C4E1B2A94F94400CEC473 /* TuiCC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TuiCC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B69C4E1E2A94F94400CEC473 /* TuiCCApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TuiCCApp.swift; sourceTree = "<group>"; };
 		B69C4E202A94F94400CEC473 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -57,7 +59,7 @@
 		B69C4E252A94F94700CEC473 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B69C4E2C2A95050600CEC473 /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 		B69C4E302A95066400CEC473 /* ConnectionsServiceInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionsServiceInterface.swift; sourceTree = "<group>"; };
-		B69C4E332A9506F500CEC473 /* NetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProvider.swift; sourceTree = "<group>"; };
+		B69C4E332A9506F500CEC473 /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
 		B69C4E362A95072500CEC473 /* ConnectionsServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionsServiceMock.swift; sourceTree = "<group>"; };
 		B69C4E3A2A95082900CEC473 /* InjectedValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectedValues.swift; sourceTree = "<group>"; };
 		B69C4E3C2A95090800CEC473 /* Injected.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injected.swift; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 				B69C4E352A95070B00CEC473 /* Mocks */,
 				B61D2BE42A964728008D3606 /* ArrayExtensionsTests.swift */,
 				B64667E02A964DE600DA4302 /* ConnectionsServiceTests.swift */,
+				B64667E52A9657B400DA4302 /* MainViewModelTests.swift */,
 			);
 			path = TuiCCTests;
 			sourceTree = "<group>";
@@ -169,8 +172,9 @@
 				B69C4E492A9515A900CEC473 /* Models */,
 				B69C4E302A95066400CEC473 /* ConnectionsServiceInterface.swift */,
 				B64667D92A964A7200DA4302 /* ConnectionsService.swift */,
-				B69C4E332A9506F500CEC473 /* NetworkProvider.swift */,
+				B69C4E332A9506F500CEC473 /* APICaller.swift */,
 				B69C4E4C2A951C7100CEC473 /* NetworkError.swift */,
+				B64667E32A96538700DA4302 /* EndPoints.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -180,7 +184,6 @@
 			children = (
 				B64667DD2A964C7C00DA4302 /* Json */,
 				B69C4E362A95072500CEC473 /* ConnectionsServiceMock.swift */,
-				B64667DB2A964B4B00DA4302 /* ApiCallerMock.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -324,7 +327,7 @@
 				B64667E12A964DE600DA4302 /* ConnectionsServiceTests.swift in Sources */,
 				B64667E22A964ECE00DA4302 /* ConnectionsServiceMock.swift in Sources */,
 				B61D2BE52A964728008D3606 /* ArrayExtensionsTests.swift in Sources */,
-				B64667DC2A964B4B00DA4302 /* ApiCallerMock.swift in Sources */,
+				B64667E62A9657B400DA4302 /* MainViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,7 +348,8 @@
 				B69C4E1F2A94F94400CEC473 /* TuiCCApp.swift in Sources */,
 				B69C4E4D2A951C7100CEC473 /* NetworkError.swift in Sources */,
 				B69C4E422A950B5500CEC473 /* InjectionKey.swift in Sources */,
-				B69C4E342A9506F500CEC473 /* NetworkProvider.swift in Sources */,
+				B69C4E342A9506F500CEC473 /* APICaller.swift in Sources */,
+				B64667E42A96538700DA4302 /* EndPoints.swift in Sources */,
 				B61D2BDB2A962FD6008D3606 /* Connection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
