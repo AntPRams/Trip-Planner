@@ -1,4 +1,1 @@
-protocol NetworkProviderInterface {
-    func fetch()
-}
 

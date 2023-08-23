@@ -11,7 +11,7 @@ import SwiftUI
 struct TuiCCApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainView(viewModel: MainViewModel())
         }
     }
 }

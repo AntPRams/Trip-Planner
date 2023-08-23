@@ -7,9 +7,15 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct MainView: View {
+    
+    @ObservedObject var viewModel: MainViewModel
+    
     var body: some View {
         VStack {
+            Button("press me") {
+                viewModel.fetchData()
+            }
             Image(systemName: "globe")
                 .imageScale(.large)
                 .foregroundStyle(.tint)
@@ -20,10 +26,5 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
-}
-
-#Preview {
-    ContentView()
-        .previewDisplayName("iPhone 14 Pro Max")
+    MainView(viewModel: MainViewModel(networkProvider: connectionsServiceAPIClient))
 }

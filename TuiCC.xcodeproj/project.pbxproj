@@ -8,25 +8,39 @@
 
 /* Begin PBXBuildFile section */
 		B69C4E1F2A94F94400CEC473 /* TuiCCApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69C4E1E2A94F94400CEC473 /* TuiCCApp.swift */; };
-		B69C4E212A94F94400CEC473 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69C4E202A94F94400CEC473 /* ContentView.swift */; };
+		B69C4E212A94F94400CEC473 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69C4E202A94F94400CEC473 /* MainView.swift */; };
 		B69C4E232A94F94700CEC473 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B69C4E222A94F94700CEC473 /* Assets.xcassets */; };
 		B69C4E262A94F94700CEC473 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B69C4E252A94F94700CEC473 /* Preview Assets.xcassets */; };
-		B69C4E2D2A95050600CEC473 /* InjectionKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69C4E2C2A95050600CEC473 /* InjectionKey.swift */; };
+		B69C4E2D2A95050600CEC473 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69C4E2C2A95050600CEC473 /* Keys.swift */; };
 		B69C4E312A95066400CEC473 /* NetworkProviderInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69C4E302A95066400CEC473 /* NetworkProviderInterface.swift */; };
 		B69C4E342A9506F500CEC473 /* NetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69C4E332A9506F500CEC473 /* NetworkProvider.swift */; };
-		B69C4E372A95072500CEC473 /* NetworklProviderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69C4E362A95072500CEC473 /* NetworklProviderMock.swift */; };
+		B69C4E372A95072500CEC473 /* NetworkProviderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69C4E362A95072500CEC473 /* NetworkProviderMock.swift */; };
+		B69C4E3B2A95082900CEC473 /* InjectedValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69C4E3A2A95082900CEC473 /* InjectedValues.swift */; };
+		B69C4E3D2A95090800CEC473 /* Injected.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69C4E3C2A95090800CEC473 /* Injected.swift */; };
+		B69C4E422A950B5500CEC473 /* InjectionKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69C4E412A950B5500CEC473 /* InjectionKey.swift */; };
+		B69C4E462A950BFC00CEC473 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69C4E452A950BFC00CEC473 /* MainViewModel.swift */; };
+		B69C4E4B2A9515D000CEC473 /* Connections.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69C4E4A2A9515D000CEC473 /* Connections.swift */; };
+		B69C4E4D2A951C7100CEC473 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69C4E4C2A951C7100CEC473 /* NetworkError.swift */; };
+		B69C52592A9528E400CEC473 /* ArrayExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69C52582A9528E400CEC473 /* ArrayExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B69C4E1B2A94F94400CEC473 /* TuiCC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TuiCC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B69C4E1E2A94F94400CEC473 /* TuiCCApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TuiCCApp.swift; sourceTree = "<group>"; };
-		B69C4E202A94F94400CEC473 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		B69C4E202A94F94400CEC473 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		B69C4E222A94F94700CEC473 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B69C4E252A94F94700CEC473 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		B69C4E2C2A95050600CEC473 /* InjectionKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectionKey.swift; sourceTree = "<group>"; };
+		B69C4E2C2A95050600CEC473 /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 		B69C4E302A95066400CEC473 /* NetworkProviderInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProviderInterface.swift; sourceTree = "<group>"; };
 		B69C4E332A9506F500CEC473 /* NetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProvider.swift; sourceTree = "<group>"; };
-		B69C4E362A95072500CEC473 /* NetworklProviderMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworklProviderMock.swift; sourceTree = "<group>"; };
+		B69C4E362A95072500CEC473 /* NetworkProviderMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProviderMock.swift; sourceTree = "<group>"; };
+		B69C4E3A2A95082900CEC473 /* InjectedValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectedValues.swift; sourceTree = "<group>"; };
+		B69C4E3C2A95090800CEC473 /* Injected.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injected.swift; sourceTree = "<group>"; };
+		B69C4E412A950B5500CEC473 /* InjectionKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectionKey.swift; sourceTree = "<group>"; };
+		B69C4E452A950BFC00CEC473 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		B69C4E4A2A9515D000CEC473 /* Connections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connections.swift; sourceTree = "<group>"; };
+		B69C4E4C2A951C7100CEC473 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		B69C52582A9528E400CEC473 /* ArrayExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +73,7 @@
 		B69C4E1D2A94F94400CEC473 /* TuiCC */ = {
 			isa = PBXGroup;
 			children = (
+				B69C52572A9528D100CEC473 /* Common */,
 				B69C4E1E2A94F94400CEC473 /* TuiCCApp.swift */,
 				B69C4E2E2A95055100CEC473 /* Views */,
 				B69C4E2F2A95056400CEC473 /* Injection */,
@@ -81,7 +96,7 @@
 		B69C4E2E2A95055100CEC473 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				B69C4E202A94F94400CEC473 /* ContentView.swift */,
+				B69C4E432A950BD200CEC473 /* Main */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -89,7 +104,10 @@
 		B69C4E2F2A95056400CEC473 /* Injection */ = {
 			isa = PBXGroup;
 			children = (
-				B69C4E2C2A95050600CEC473 /* InjectionKey.swift */,
+				B69C4E3A2A95082900CEC473 /* InjectedValues.swift */,
+				B69C4E412A950B5500CEC473 /* InjectionKey.swift */,
+				B69C4E2C2A95050600CEC473 /* Keys.swift */,
+				B69C4E3C2A95090800CEC473 /* Injected.swift */,
 			);
 			path = Injection;
 			sourceTree = "<group>";
@@ -97,8 +115,10 @@
 		B69C4E322A95066F00CEC473 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				B69C4E492A9515A900CEC473 /* Models */,
 				B69C4E302A95066400CEC473 /* NetworkProviderInterface.swift */,
 				B69C4E332A9506F500CEC473 /* NetworkProvider.swift */,
+				B69C4E4C2A951C7100CEC473 /* NetworkError.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -106,9 +126,42 @@
 		B69C4E352A95070B00CEC473 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				B69C4E362A95072500CEC473 /* NetworklProviderMock.swift */,
+				B69C4E362A95072500CEC473 /* NetworkProviderMock.swift */,
 			);
 			path = Tests;
+			sourceTree = "<group>";
+		};
+		B69C4E432A950BD200CEC473 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				B69C4E442A950BE000CEC473 /* ViewModel */,
+				B69C4E202A94F94400CEC473 /* MainView.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		B69C4E442A950BE000CEC473 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B69C4E452A950BFC00CEC473 /* MainViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		B69C4E492A9515A900CEC473 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B69C4E4A2A9515D000CEC473 /* Connections.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B69C52572A9528D100CEC473 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				B69C52582A9528E400CEC473 /* ArrayExtensions.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,11 +234,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B69C4E212A94F94400CEC473 /* ContentView.swift in Sources */,
+				B69C52592A9528E400CEC473 /* ArrayExtensions.swift in Sources */,
+				B69C4E212A94F94400CEC473 /* MainView.swift in Sources */,
+				B69C4E3D2A95090800CEC473 /* Injected.swift in Sources */,
 				B69C4E312A95066400CEC473 /* NetworkProviderInterface.swift in Sources */,
-				B69C4E372A95072500CEC473 /* NetworklProviderMock.swift in Sources */,
-				B69C4E2D2A95050600CEC473 /* InjectionKey.swift in Sources */,
+				B69C4E372A95072500CEC473 /* NetworkProviderMock.swift in Sources */,
+				B69C4E4B2A9515D000CEC473 /* Connections.swift in Sources */,
+				B69C4E2D2A95050600CEC473 /* Keys.swift in Sources */,
+				B69C4E462A950BFC00CEC473 /* MainViewModel.swift in Sources */,
+				B69C4E3B2A95082900CEC473 /* InjectedValues.swift in Sources */,
 				B69C4E1F2A94F94400CEC473 /* TuiCCApp.swift in Sources */,
+				B69C4E4D2A951C7100CEC473 /* NetworkError.swift in Sources */,
+				B69C4E422A950B5500CEC473 /* InjectionKey.swift in Sources */,
 				B69C4E342A9506F500CEC473 /* NetworkProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
