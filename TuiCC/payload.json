@@ -17,37 +17,22 @@
     },
     {
       "from": "Tokyo",
-      "to": "Vila Real",
-      "coordinates": {
-        "from": {
-          "lat": 35.652832,
-          "long": 139.839478
-        },
-        "to": {
-          "lat": 51.5285582,
-          "long": -0.241681
-        }
-      },
-      "price": 200
-    },
-    {
-      "from": "Tokyo",
-      "to": "New York",
-      "coordinates": {
-        "from": {
-          "lat": 35.652832,
-          "long": 139.839478
-        },
-        "to": {
-          "lat": 51.5285582,
-          "long": -0.241681
-        }
-      },
-      "price": 200
-    },
-    {
-      "from": "Tokyo",
       "to": "London",
+      "coordinates": {
+        "from": {
+          "lat": 35.652832,
+          "long": 139.839478
+        },
+        "to": {
+          "lat": 51.5285582,
+          "long": -0.241681
+        }
+      },
+      "price": 200
+    },
+    {
+      "from": "London",
+      "to": "Los Angeles",
       "coordinates": {
         "from": {
           "lat": 35.652832,
@@ -167,4 +152,3 @@
     }
   ]
 }
-

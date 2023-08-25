@@ -69,6 +69,8 @@ class MainViewModel: MainViewModelInterface {
     }
     
     func findPossiblePaths(from origin: String, to destination: String) {
+        paths.removeAll()
+        var visitedCities = Set<String>()
         if let connection = newConnections.first(where: { element in
             element.destination == destination && element.origin == origin
         }) {
@@ -78,19 +80,18 @@ class MainViewModel: MainViewModelInterface {
         let origins = newConnections.filter { origin == $0.origin }
         
         for orig in origins {
-            if didFind {
-                paths.append(Path(path: conns, cost: conns.map{$0.price}.reduce(0, +)))
-                printPaths()
-                didFind = false
-            }
+            visitedCities.removeAll()
             conns.removeAll()
             conns.append(orig)
-            searchIn(connection: orig, for: destination)
+            visitedCities.insert(orig.origin)
+            visitedCities.insert(orig.destination)
+            searchIn(connection: orig, for: destination, visitedCities: &visitedCities)
         }
-        
+        printPaths()
     }
     
-    func searchIn(connection: NewConnection, for destination: String) {
+    func searchIn(connection: NewConnection, for destination: String, visitedCities: inout Set<String>) {
+        
         for connection in connection.connections {
             guard let lastDestination = conns.last?.destination else {
                 conns.append(connection)
@@ -99,15 +100,19 @@ class MainViewModel: MainViewModelInterface {
             
             if connection.destination == destination {
                 print("BINGO!!!!!!!!")
-                conns.append(connection)
+                var connsi = conns
+                connsi.append(connection)
+                paths.append(Path(path: connsi, cost: conns.map{$0.price}.reduce(0, +)))
                 didFind = true
-                return
-            } else if connection.connections.isEmpty && connection.destination != destination {
+                continue
+            } else if connection.connections.isEmpty && connection.destination != destination || visitedCities.contains(connection.destination) {
                 continue
             } else if lastDestination == connection.origin  {
+                visitedCities.insert(connection.destination)
+                visitedCities.insert(connection.origin)
                 print("SIGA")
                 conns.append(connection)
-                searchIn(connection: connection, for: destination)
+                searchIn(connection: connection, for: destination, visitedCities: &visitedCities)
             }
         }
     }
@@ -137,33 +142,23 @@ extension MainViewModel {
     }
 
     func printPaths() {
-        var text = String()
-        paths.forEach { element in
-            element.path.forEach { connection in
-                text += " \(connection.origin) -> \(connection.destination) -> "
-                print(text)
-            }
+        paths.forEach { path in
+            print(path.getPath())
         }
     }
-    
-    func letstryagain(from origin: String, to destination: String, pathStart: [NewConnection]) {
-        var newpath = [NewConnection]()
-        
-        for conn in pathStart {
-            guard let lastDestination = newpath.last?.destination else {
-                newpath.append(conn)
-                continue
-            }
-        }
-        
-    }
-
-    
 }
 
 struct Path {
     var path: [NewConnection]
     var cost: Double
+    
+    func getPath() -> String {
+        var text = String()
+        for connection in path {
+            text += " \(connection.origin) -> \(connection.destination) -> "
+        }
+        return text
+    }
 }
 
 class NewConnection {

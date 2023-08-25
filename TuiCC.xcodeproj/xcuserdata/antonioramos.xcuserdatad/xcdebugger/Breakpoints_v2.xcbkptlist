@@ -7,69 +7,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "70E7972D-E1BB-48A4-8A09-21C442176490"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TuiCC/Views/Main/ViewModel/MainViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "84"
-            endingLineNumber = "84"
-            landmarkName = "findPossiblePaths(from:to:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "70E7972D-E1BB-48A4-8A09-21C442176490 - a8e1ae54bf70c9e4"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "TuiCC.MainViewModel.findPossiblePaths(from: Swift.String, to: Swift.String) -&gt; ()"
-                  moduleName = "TuiCC"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/antonioramos/Developer/TuiCC/TuiCC/Views/Main/ViewModel/MainViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "84"
-                  endingLineNumber = "84"
-                  offsetFromSymbolStart = "1241">
-               </Location>
-               <Location
-                  uuid = "70E7972D-E1BB-48A4-8A09-21C442176490 - a8e1ae54bf70c9e4"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "TuiCC.MainViewModel.findPossiblePaths(from: Swift.String, to: Swift.String) -&gt; ()"
-                  moduleName = "TuiCC"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/antonioramos/Developer/TuiCC/TuiCC/Views/Main/ViewModel/MainViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "84"
-                  endingLineNumber = "84"
-                  offsetFromSymbolStart = "1359">
-               </Location>
-               <Location
-                  uuid = "70E7972D-E1BB-48A4-8A09-21C442176490 - a8e1ae54bf70c9e4"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "TuiCC.MainViewModel.findPossiblePaths(from: Swift.String, to: Swift.String) -&gt; ()"
-                  moduleName = "TuiCC"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/antonioramos/Developer/TuiCC/TuiCC/Views/Main/ViewModel/MainViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "84"
-                  endingLineNumber = "84"
-                  offsetFromSymbolStart = "1338">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "3CFB1EDC-8A22-4D9D-AF9D-7C978CC84274"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -77,8 +14,8 @@
             filePath = "TuiCC/Views/Main/ViewModel/MainViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "80"
-            endingLineNumber = "80"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
             landmarkName = "findPossiblePaths(from:to:)"
             landmarkType = "7">
             <Locations>
@@ -142,6 +79,21 @@
                   endingLineNumber = "80"
                   offsetFromSymbolStart = "888">
                </Location>
+               <Location
+                  uuid = "3CFB1EDC-8A22-4D9D-AF9D-7C978CC84274 - a8e1ae54bf70ca4b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TuiCC.MainViewModel.findPossiblePaths(from: Swift.String, to: Swift.String) -&gt; ()"
+                  moduleName = "TuiCC"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/antonioramos/Developer/TuiCC/TuiCC/Views/Main/ViewModel/MainViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "81"
+                  endingLineNumber = "81"
+                  offsetFromSymbolStart = "876">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -155,57 +107,10 @@
             filePath = "TuiCC/Views/Main/ViewModel/MainViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "98"
-            endingLineNumber = "98"
-            landmarkName = "searchIn(connection:for:)"
+            startingLineNumber = "99"
+            endingLineNumber = "99"
+            landmarkName = "searchIn(connection:for:visitedCities:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "5EBCED40-FE2C-4EF8-BB48-0F0783CB0AC8 - b05273b94a0f8c44"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "TuiCC.MainViewModel.searchIn(connection: TuiCC.NewConnection, mainOrigin: Swift.String, for: Swift.String) -&gt; ()"
-                  moduleName = "TuiCC"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/antonioramos/Developer/TuiCC/TuiCC/Views/Main/ViewModel/MainViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "98"
-                  endingLineNumber = "98"
-                  offsetFromSymbolStart = "2158">
-               </Location>
-               <Location
-                  uuid = "5EBCED40-FE2C-4EF8-BB48-0F0783CB0AC8 - b05273b94a0f8c44"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "TuiCC.MainViewModel.searchIn(connection: TuiCC.NewConnection, mainOrigin: Swift.String, for: Swift.String) -&gt; ()"
-                  moduleName = "TuiCC"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/antonioramos/Developer/TuiCC/TuiCC/Views/Main/ViewModel/MainViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "98"
-                  endingLineNumber = "98"
-                  offsetFromSymbolStart = "2241">
-               </Location>
-               <Location
-                  uuid = "5EBCED40-FE2C-4EF8-BB48-0F0783CB0AC8 - b05273b94a0f8c44"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "TuiCC.MainViewModel.searchIn(connection: TuiCC.NewConnection, mainOrigin: Swift.String, for: Swift.String) -&gt; ()"
-                  moduleName = "TuiCC"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/antonioramos/Developer/TuiCC/TuiCC/Views/Main/ViewModel/MainViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "98"
-                  endingLineNumber = "98"
-                  offsetFromSymbolStart = "2253">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -218,186 +123,26 @@
             filePath = "TuiCC/Views/Main/ViewModel/MainViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "96"
-            endingLineNumber = "96"
-            landmarkName = "searchIn(connection:for:)"
+            startingLineNumber = "97"
+            endingLineNumber = "97"
+            landmarkName = "searchIn(connection:for:visitedCities:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "909E7040-8A91-4DB8-887B-D6858F14DAC9 - b05273b94a0f8c06"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "TuiCC.MainViewModel.searchIn(connection: TuiCC.NewConnection, mainOrigin: Swift.String, for: Swift.String) -&gt; ()"
-                  moduleName = "TuiCC"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/antonioramos/Developer/TuiCC/TuiCC/Views/Main/ViewModel/MainViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "96"
-                  endingLineNumber = "96"
-                  offsetFromSymbolStart = "225">
-               </Location>
-               <Location
-                  uuid = "909E7040-8A91-4DB8-887B-D6858F14DAC9 - b05273b94a0f8c06"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "TuiCC.MainViewModel.searchIn(connection: TuiCC.NewConnection, mainOrigin: Swift.String, for: Swift.String) -&gt; ()"
-                  moduleName = "TuiCC"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/antonioramos/Developer/TuiCC/TuiCC/Views/Main/ViewModel/MainViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "96"
-                  endingLineNumber = "96"
-                  offsetFromSymbolStart = "409">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "D359D6D4-FFC6-4235-892B-3DDD7C0BE456"
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TuiCC/Views/Main/ViewModel/MainViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "102"
-            endingLineNumber = "102"
-            landmarkName = "searchIn(connection:for:)"
+            startingLineNumber = "105"
+            endingLineNumber = "105"
+            landmarkName = "searchIn(connection:for:visitedCities:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "D359D6D4-FFC6-4235-892B-3DDD7C0BE456 - b05273b94a0f93c8"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "TuiCC.MainViewModel.searchIn(connection: TuiCC.NewConnection, mainOrigin: Swift.String, for: Swift.String) -&gt; ()"
-                  moduleName = "TuiCC"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/antonioramos/Developer/TuiCC/TuiCC/Views/Main/ViewModel/MainViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "102"
-                  endingLineNumber = "102"
-                  offsetFromSymbolStart = "755">
-               </Location>
-               <Location
-                  uuid = "D359D6D4-FFC6-4235-892B-3DDD7C0BE456 - b05273b94a0f93c8"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "TuiCC.MainViewModel.searchIn(connection: TuiCC.NewConnection, mainOrigin: Swift.String, for: Swift.String) -&gt; ()"
-                  moduleName = "TuiCC"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/antonioramos/Developer/TuiCC/TuiCC/Views/Main/ViewModel/MainViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "102"
-                  endingLineNumber = "102"
-                  offsetFromSymbolStart = "837">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "85E97571-9A02-46F1-A0CC-756F88FBC36B"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TuiCC/Views/Main/ViewModel/MainViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "86"
-            endingLineNumber = "86"
-            landmarkName = "findPossiblePaths(from:to:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "85E97571-9A02-46F1-A0CC-756F88FBC36B - a8e1ae54bf70c981"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "TuiCC.MainViewModel.findPossiblePaths(from: Swift.String, to: Swift.String) -&gt; ()"
-                  moduleName = "TuiCC"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/antonioramos/Developer/TuiCC/TuiCC/Views/Main/ViewModel/MainViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "87"
-                  endingLineNumber = "87"
-                  offsetFromSymbolStart = "1404">
-               </Location>
-               <Location
-                  uuid = "85E97571-9A02-46F1-A0CC-756F88FBC36B - a8e1ae54bf70c981"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "TuiCC.MainViewModel.findPossiblePaths(from: Swift.String, to: Swift.String) -&gt; ()"
-                  moduleName = "TuiCC"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/antonioramos/Developer/TuiCC/TuiCC/Views/Main/ViewModel/MainViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "87"
-                  endingLineNumber = "87"
-                  offsetFromSymbolStart = "1464">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "0C0FF726-4B79-4504-8261-915A1196AD6C"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TuiCC/Views/Main/ViewModel/MainViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "94"
-            endingLineNumber = "94"
-            landmarkName = "searchIn(connection:for:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "0C0FF726-4B79-4504-8261-915A1196AD6C - b05273b94a0f8c06"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "TuiCC.MainViewModel.searchIn(connection: TuiCC.NewConnection, mainOrigin: Swift.String, for: Swift.String) -&gt; ()"
-                  moduleName = "TuiCC"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/antonioramos/Developer/TuiCC/TuiCC/Views/Main/ViewModel/MainViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "96"
-                  endingLineNumber = "96"
-                  offsetFromSymbolStart = "225">
-               </Location>
-               <Location
-                  uuid = "0C0FF726-4B79-4504-8261-915A1196AD6C - b05273b94a0f8c27"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "TuiCC.MainViewModel.searchIn(connection: TuiCC.NewConnection, mainOrigin: Swift.String, for: Swift.String) -&gt; ()"
-                  moduleName = "TuiCC"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/antonioramos/Developer/TuiCC/TuiCC/Views/Main/ViewModel/MainViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "95"
-                  endingLineNumber = "95"
-                  offsetFromSymbolStart = "225">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -410,57 +155,10 @@
             filePath = "TuiCC/Views/Main/ViewModel/MainViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "97"
-            endingLineNumber = "97"
-            landmarkName = "searchIn(connection:for:)"
+            startingLineNumber = "98"
+            endingLineNumber = "98"
+            landmarkName = "searchIn(connection:for:visitedCities:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "F28FCB69-147A-48E1-96E9-D7CCE494B50E - b05273b94a0f8c65"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "TuiCC.MainViewModel.searchIn(connection: TuiCC.NewConnection, mainOrigin: Swift.String, for: Swift.String) -&gt; ()"
-                  moduleName = "TuiCC"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/antonioramos/Developer/TuiCC/TuiCC/Views/Main/ViewModel/MainViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "97"
-                  endingLineNumber = "97"
-                  offsetFromSymbolStart = "409">
-               </Location>
-               <Location
-                  uuid = "F28FCB69-147A-48E1-96E9-D7CCE494B50E - b05273b94a0f8c65"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "TuiCC.MainViewModel.searchIn(connection: TuiCC.NewConnection, mainOrigin: Swift.String, for: Swift.String) -&gt; ()"
-                  moduleName = "TuiCC"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/antonioramos/Developer/TuiCC/TuiCC/Views/Main/ViewModel/MainViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "97"
-                  endingLineNumber = "97"
-                  offsetFromSymbolStart = "2158">
-               </Location>
-               <Location
-                  uuid = "F28FCB69-147A-48E1-96E9-D7CCE494B50E - b05273b94a0f8c65"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "TuiCC.MainViewModel.searchIn(connection: TuiCC.NewConnection, mainOrigin: Swift.String, for: Swift.String) -&gt; ()"
-                  moduleName = "TuiCC"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/antonioramos/Developer/TuiCC/TuiCC/Views/Main/ViewModel/MainViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "97"
-                  endingLineNumber = "97"
-                  offsetFromSymbolStart = "2170">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -473,42 +171,10 @@
             filePath = "TuiCC/Views/Main/ViewModel/MainViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "87"
-            endingLineNumber = "87"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
             landmarkName = "findPossiblePaths(from:to:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "747594AD-3408-4C12-BFFD-C20963E7FF24 - a8e1ae54bf70c960"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "TuiCC.MainViewModel.findPossiblePaths(from: Swift.String, to: Swift.String) -&gt; ()"
-                  moduleName = "TuiCC"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/antonioramos/Developer/TuiCC/TuiCC/Views/Main/ViewModel/MainViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "88"
-                  endingLineNumber = "88"
-                  offsetFromSymbolStart = "1505">
-               </Location>
-               <Location
-                  uuid = "747594AD-3408-4C12-BFFD-C20963E7FF24 - a8e1ae54bf70c960"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "TuiCC.MainViewModel.findPossiblePaths(from: Swift.String, to: Swift.String) -&gt; ()"
-                  moduleName = "TuiCC"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/antonioramos/Developer/TuiCC/TuiCC/Views/Main/ViewModel/MainViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "88"
-                  endingLineNumber = "88"
-                  offsetFromSymbolStart = "1599">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -521,57 +187,10 @@
             filePath = "TuiCC/Views/Main/ViewModel/MainViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "107"
-            endingLineNumber = "107"
-            landmarkName = "searchIn(connection:for:)"
+            startingLineNumber = "109"
+            endingLineNumber = "109"
+            landmarkName = "searchIn(connection:for:visitedCities:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "32BCD29B-BC7C-49B2-8393-44C72FA14001 - b05273b94a0f92b3"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "TuiCC.MainViewModel.searchIn(connection: TuiCC.NewConnection, mainOrigin: Swift.String, for: Swift.String) -&gt; ()"
-                  moduleName = "TuiCC"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/antonioramos/Developer/TuiCC/TuiCC/Views/Main/ViewModel/MainViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "107"
-                  endingLineNumber = "107"
-                  offsetFromSymbolStart = "1221">
-               </Location>
-               <Location
-                  uuid = "32BCD29B-BC7C-49B2-8393-44C72FA14001 - b05273b94a0f92b3"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "TuiCC.MainViewModel.searchIn(connection: TuiCC.NewConnection, mainOrigin: Swift.String, for: Swift.String) -&gt; ()"
-                  moduleName = "TuiCC"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/antonioramos/Developer/TuiCC/TuiCC/Views/Main/ViewModel/MainViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "107"
-                  endingLineNumber = "107"
-                  offsetFromSymbolStart = "1596">
-               </Location>
-               <Location
-                  uuid = "32BCD29B-BC7C-49B2-8393-44C72FA14001 - b05273b94a0f9292"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "TuiCC.MainViewModel.searchIn(connection: TuiCC.NewConnection, mainOrigin: Swift.String, for: Swift.String) -&gt; ()"
-                  moduleName = "TuiCC"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/antonioramos/Developer/TuiCC/TuiCC/Views/Main/ViewModel/MainViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "108"
-                  endingLineNumber = "108"
-                  offsetFromSymbolStart = "1608">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -584,9 +203,9 @@
             filePath = "TuiCC/Views/Main/ViewModel/MainViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "109"
-            endingLineNumber = "109"
-            landmarkName = "searchIn(connection:for:)"
+            startingLineNumber = "114"
+            endingLineNumber = "114"
+            landmarkName = "searchIn(connection:for:visitedCities:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -604,38 +223,6 @@
             endingLineNumber = "90"
             landmarkName = "findPossiblePaths(from:to:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "496C0514-C29C-41A0-B2F1-45859CE45B76 - a8e1ae54bf70c8fd"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "TuiCC.MainViewModel.findPossiblePaths(from: Swift.String, to: Swift.String) -&gt; ()"
-                  moduleName = "TuiCC"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/antonioramos/Developer/TuiCC/TuiCC/Views/Main/ViewModel/MainViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "91"
-                  endingLineNumber = "91"
-                  offsetFromSymbolStart = "1601">
-               </Location>
-               <Location
-                  uuid = "496C0514-C29C-41A0-B2F1-45859CE45B76 - a8e1ae54bf70c8dc"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "TuiCC.MainViewModel.findPossiblePaths(from: Swift.String, to: Swift.String) -&gt; ()"
-                  moduleName = "TuiCC"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/antonioramos/Developer/TuiCC/TuiCC/Views/Main/ViewModel/MainViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "92"
-                  endingLineNumber = "92"
-                  offsetFromSymbolStart = "2016">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
