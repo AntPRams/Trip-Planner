@@ -31,9 +31,9 @@ struct SearchField: View {
                 scheduler: DispatchQueue.main
             )) { value in
                 withAnimation {
-                    showDropdown = (value != String())
-                    viewModel.cities.remove(at: 2)
-                    print("do something \(value)")
+//                    showDropdown = (value != String())
+//                    viewModel.cities.remove(at: 2)
+//                    print("do something \(value)")
                     
                 }
             }

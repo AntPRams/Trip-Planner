@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		91DD4C542A98F90D000AD497 /* payload.json in Resources */ = {isa = PBXBuildFile; fileRef = 91DD4C532A98F90D000AD497 /* payload.json */; };
 		B61D2BDB2A962FD6008D3606 /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61D2BDA2A962FD6008D3606 /* Connection.swift */; };
 		B61D2BDD2A963002008D3606 /* Coordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61D2BDC2A963002008D3606 /* Coordinates.swift */; };
 		B61D2BE52A964728008D3606 /* ArrayExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61D2BE42A964728008D3606 /* ArrayExtensionsTests.swift */; };
@@ -44,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		91DD4C532A98F90D000AD497 /* payload.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = payload.json; sourceTree = "<group>"; };
 		B61D2BDA2A962FD6008D3606 /* Connection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connection.swift; sourceTree = "<group>"; };
 		B61D2BDC2A963002008D3606 /* Coordinates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinates.swift; sourceTree = "<group>"; };
 		B61D2BE22A964728008D3606 /* TuiCCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TuiCCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -145,6 +147,7 @@
 				B69C4E322A95066F00CEC473 /* Service */,
 				B69C4E222A94F94700CEC473 /* Assets.xcassets */,
 				B69C4E242A94F94700CEC473 /* Preview Content */,
+				91DD4C532A98F90D000AD497 /* payload.json */,
 			);
 			path = TuiCC;
 			sourceTree = "<group>";
@@ -323,6 +326,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91DD4C542A98F90D000AD497 /* payload.json in Resources */,
 				B69C4E262A94F94700CEC473 /* Preview Assets.xcassets in Resources */,
 				B69C4E232A94F94700CEC473 /* Assets.xcassets in Resources */,
 			);

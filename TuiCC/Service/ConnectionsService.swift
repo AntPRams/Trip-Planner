@@ -4,6 +4,11 @@ final class ConnectionsService: ConnectionsServiceInterface {
     
     private var apiCaller: APICallerInterface
     
+    private let mockurl = Bundle(for: ConnectionsService.self).url(
+        forResource: "payload",
+        withExtension: "json"
+    )
+    
     init(apiCaller: APICallerInterface = APICaller()) {
         self.apiCaller = apiCaller
     }
@@ -13,7 +18,7 @@ final class ConnectionsService: ConnectionsServiceInterface {
             throw NetworkError.notFound
         }
         
-        let data: Connections = try await apiCaller.fetch(from: url)
+        let data: Connections = try await apiCaller.fetch(from: mockurl!)
         
         guard data.connections.isNotEmpty else {
             throw NetworkError.notFound

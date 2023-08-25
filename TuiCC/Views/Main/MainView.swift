@@ -23,6 +23,11 @@ struct MainView: View {
                     .imageScale(.large)
                     .foregroundStyle(.tint)
                 Text("Hello, world!")
+                Button("Lets test") {
+                    let source = "Tokyo"
+                    let destination = "Los Angeles"
+                    viewModel.calculatePaths(from: source, to: destination)
+                }
             }
             .padding()
             .navigationTitle("Search")
