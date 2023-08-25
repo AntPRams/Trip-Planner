@@ -1,4 +1,5 @@
 import Foundation
+import SwiftUI
 
 protocol MainViewModelInterface: ObservableObject {
     func fetchData()
@@ -11,6 +12,7 @@ class MainViewModel: MainViewModelInterface {
     
     @Published var connections = [Connection]()
     @Published var cities = [String]()
+    @Published var originText: String = ""
     
     init(networkProvider: ConnectionsServiceInterface = ConnectionsService()) {
         self.networkProvider = networkProvider
@@ -20,9 +22,11 @@ class MainViewModel: MainViewModelInterface {
         Task {
             do {
                 let connections = try await networkProvider.fetchConnections()
-                self.connections = connections
-                extractCities()
-                print(self.connections)
+                await MainActor.run {
+                    self.connections = connections
+                    extractCities()
+                    print(self.connections)
+                }
             } catch {
                 print(error.localizedDescription)
             }
@@ -35,6 +39,11 @@ class MainViewModel: MainViewModelInterface {
         }
         
         cities = allCities.removingDuplicates()
+        self.objectWillChange.send()
+    }
+    
+    func searchCity(query: String) {
+        
     }
     
     func calculatePaths(from origin: String, to destination: String) {

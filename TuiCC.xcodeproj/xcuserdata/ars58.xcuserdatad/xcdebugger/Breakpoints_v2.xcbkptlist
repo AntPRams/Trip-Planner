@@ -79,6 +79,96 @@
                   endingLineNumber = "16"
                   offsetFromSymbolStart = "52">
                </Location>
+               <Location
+                  uuid = "94705545-D009-4F6C-848D-319B4FBEA853 - 526045749f2214f7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for TuiCC.ConnectionsService.fetchConnections() async throws -&gt; Swift.Array&lt;TuiCC.Connection&gt;"
+                  moduleName = "TuiCC"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ars58/Desktop/ToMove/DevTests/Learning%20SwiftUI/TuiCC/TuiCC/Service/ConnectionsService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "308">
+               </Location>
+               <Location
+                  uuid = "94705545-D009-4F6C-848D-319B4FBEA853 - ab75de69a826603"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for TuiCC.ConnectionsService.fetchConnections() async throws -&gt; Swift.Array&lt;TuiCC.Connection&gt;"
+                  moduleName = "TuiCC"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ars58/Desktop/ToMove/DevTests/Learning%20SwiftUI/TuiCC/TuiCC/Service/ConnectionsService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "36">
+               </Location>
+               <Location
+                  uuid = "94705545-D009-4F6C-848D-319B4FBEA853 - db8b518281d9d8fd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for TuiCC.ConnectionsService.fetchConnections() async throws -&gt; Swift.Array&lt;TuiCC.Connection&gt;"
+                  moduleName = "TuiCC"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ars58/Desktop/ToMove/DevTests/Learning%20SwiftUI/TuiCC/TuiCC/Service/ConnectionsService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "56">
+               </Location>
+               <Location
+                  uuid = "94705545-D009-4F6C-848D-319B4FBEA853 - e718dbd78893e6fe"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for TuiCC.ConnectionsService.fetchConnections() async throws -&gt; Swift.Array&lt;TuiCC.Connection&gt;"
+                  moduleName = "TuiCC"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ars58/Desktop/ToMove/DevTests/Learning%20SwiftUI/TuiCC/TuiCC/Service/ConnectionsService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "52">
+               </Location>
+               <Location
+                  uuid = "94705545-D009-4F6C-848D-319B4FBEA853 - 526045749f2214f7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for TuiCC.ConnectionsService.fetchConnections() async throws -&gt; Swift.Array&lt;TuiCC.Connection&gt;"
+                  moduleName = "TuiCC"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ars58/Desktop/ToMove/DevTests/Learning%20SwiftUI/TuiCC/TuiCC/Service/ConnectionsService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "188">
+               </Location>
+               <Location
+                  uuid = "94705545-D009-4F6C-848D-319B4FBEA853 - db8b518281d9d8fd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for TuiCC.ConnectionsService.fetchConnections() async throws -&gt; Swift.Array&lt;TuiCC.Connection&gt;"
+                  moduleName = "TuiCC"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ars58/Desktop/ToMove/DevTests/Learning%20SwiftUI/TuiCC/TuiCC/Service/ConnectionsService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "44">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>

@@ -9,22 +9,30 @@ import SwiftUI
 
 struct MainView: View {
     
-    @ObservedObject var viewModel: MainViewModel
+    @StateObject var viewModel: MainViewModel
     
     var body: some View {
-        VStack {
-            Button("press me") {
-                viewModel.fetchData()
+        NavigationStack {
+            VStack {
+                MainViewHeader(viewModel: viewModel)
+                    .zIndex(1)
+                Button("press me") {
+                    viewModel.fetchData()
+                }
+                Image(systemName: "globe")
+                    .imageScale(.large)
+                    .foregroundStyle(.tint)
+                Text("Hello, world!")
             }
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            .padding()
+            .navigationTitle("Search")
         }
-        .padding()
+        .onAppear {
+            viewModel.fetchData()
+        }
     }
 }
-
-#Preview {
-    MainView(viewModel: MainViewModel(networkProvider: ConnectionsService()))
-}
+//
+//#Preview {
+//    MainView(viewModel: MainViewModel(networkProvider: ConnectionsService()))
+//}

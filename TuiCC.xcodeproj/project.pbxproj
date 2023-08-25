@@ -10,6 +10,7 @@
 		B61D2BDB2A962FD6008D3606 /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61D2BDA2A962FD6008D3606 /* Connection.swift */; };
 		B61D2BDD2A963002008D3606 /* Coordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61D2BDC2A963002008D3606 /* Coordinates.swift */; };
 		B61D2BE52A964728008D3606 /* ArrayExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61D2BE42A964728008D3606 /* ArrayExtensionsTests.swift */; };
+		B6342AFE2A97AFD30078E138 /* MainViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6342AFD2A97AFD30078E138 /* MainViewHeader.swift */; };
 		B64667DA2A964A7200DA4302 /* ConnectionsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64667D92A964A7200DA4302 /* ConnectionsService.swift */; };
 		B64667DF2A964CCF00DA4302 /* connectionsMock.json in Resources */ = {isa = PBXBuildFile; fileRef = B64667DE2A964CCF00DA4302 /* connectionsMock.json */; };
 		B64667E12A964DE600DA4302 /* ConnectionsServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64667E02A964DE600DA4302 /* ConnectionsServiceTests.swift */; };
@@ -47,6 +48,7 @@
 		B61D2BDC2A963002008D3606 /* Coordinates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinates.swift; sourceTree = "<group>"; };
 		B61D2BE22A964728008D3606 /* TuiCCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TuiCCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B61D2BE42A964728008D3606 /* ArrayExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtensionsTests.swift; sourceTree = "<group>"; };
+		B6342AFD2A97AFD30078E138 /* MainViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewHeader.swift; sourceTree = "<group>"; };
 		B64667D92A964A7200DA4302 /* ConnectionsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionsService.swift; sourceTree = "<group>"; };
 		B64667DE2A964CCF00DA4302 /* connectionsMock.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = connectionsMock.json; sourceTree = "<group>"; };
 		B64667E02A964DE600DA4302 /* ConnectionsServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionsServiceTests.swift; sourceTree = "<group>"; };
@@ -99,6 +101,14 @@
 			path = TuiCCTests;
 			sourceTree = "<group>";
 		};
+		B6342AFC2A97AF9F0078E138 /* SuplementaryViews */ = {
+			isa = PBXGroup;
+			children = (
+				B6342AFD2A97AFD30078E138 /* MainViewHeader.swift */,
+			);
+			path = SuplementaryViews;
+			sourceTree = "<group>";
+		};
 		B64667DD2A964C7C00DA4302 /* Json */ = {
 			isa = PBXGroup;
 			children = (
@@ -128,8 +138,8 @@
 		B69C4E1D2A94F94400CEC473 /* TuiCC */ = {
 			isa = PBXGroup;
 			children = (
-				B69C52572A9528D100CEC473 /* Common */,
 				B69C4E1E2A94F94400CEC473 /* TuiCCApp.swift */,
+				B69C52572A9528D100CEC473 /* Common */,
 				B69C4E2E2A95055100CEC473 /* Views */,
 				B69C4E2F2A95056400CEC473 /* Injection */,
 				B69C4E322A95066F00CEC473 /* Service */,
@@ -191,8 +201,9 @@
 		B69C4E432A950BD200CEC473 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				B69C4E442A950BE000CEC473 /* ViewModel */,
 				B69C4E202A94F94400CEC473 /* MainView.swift */,
+				B6342AFC2A97AF9F0078E138 /* SuplementaryViews */,
+				B69C4E442A950BE000CEC473 /* ViewModel */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -350,6 +361,7 @@
 				B69C4E422A950B5500CEC473 /* InjectionKey.swift in Sources */,
 				B69C4E342A9506F500CEC473 /* APICaller.swift in Sources */,
 				B64667E42A96538700DA4302 /* EndPoints.swift in Sources */,
+				B6342AFE2A97AFD30078E138 /* MainViewHeader.swift in Sources */,
 				B61D2BDB2A962FD6008D3606 /* Connection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -536,7 +548,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -544,6 +556,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ardevlp.TuiCC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -566,7 +581,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -574,6 +589,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ardevlp.TuiCC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
