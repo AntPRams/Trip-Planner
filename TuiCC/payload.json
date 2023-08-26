@@ -32,21 +32,6 @@
     },
     {
       "from": "London",
-      "to": "Los Angeles",
-      "coordinates": {
-        "from": {
-          "lat": 35.652832,
-          "long": 139.839478
-        },
-        "to": {
-          "lat": 51.5285582,
-          "long": -0.241681
-        }
-      },
-      "price": 200
-    },
-    {
-      "from": "London",
       "to": "Porto",
       "price": 50,
       "coordinates": {
@@ -63,6 +48,21 @@
     {
       "from": "Tokyo",
       "to": "Sydney",
+      "price": 100,
+      "coordinates": {
+        "from": {
+          "lat": 35.652832,
+          "long": 139.839478
+        },
+        "to": {
+          "lat": -33.865143,
+          "long": 151.2099
+        }
+      }
+    },
+    {
+      "from": "Tokyo",
+      "to": "Cape Town",
       "price": 100,
       "coordinates": {
         "from": {
@@ -108,6 +108,21 @@
     {
       "from": "London",
       "to": "New York",
+      "price": 400,
+      "coordinates": {
+        "from": {
+          "lat": 51.5285582,
+          "long": -0.241681
+        },
+        "to": {
+          "lat": 40.73061,
+          "long": -73.935242
+        }
+      }
+    },
+    {
+      "from": "Tokyo",
+      "to": "Los Angeles",
       "price": 400,
       "coordinates": {
         "from": {
