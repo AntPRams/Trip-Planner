@@ -1,24 +1,41 @@
 import CoreLocation
 
 class FlightPath {
+    
+    //MARK: - Properties
+    
     var nodes: [FlightNode]
-    var price: Double {
+    var cumulativePrice: Double {
         let values = nodes.compactMap { node in
             node.flightConnection.price
         }
         return values.reduce(0, +)
     }
+    
+    //MARK: - Init
         
     init(nodes: [FlightNode]) {
         self.nodes = nodes
     }
-    
-    func getCoordinates() -> [CLLocationCoordinate2D] {
-        guard nodes.isEmpty else { return [] }
+}
+
+//MARK: - Public interface
+
+extension FlightPath {
+    func coordinates() -> [CLLocationCoordinate2D] {
+        guard nodes.isNotEmpty else { return [] }
         
-        let coordinates = nodes.compactMap { node in
-            node.flightConnection.locationsCoordinates.destination
+        var mapCoordinates = [CLLocationCoordinate2D]()
+        if let origin = nodes.first {
+            mapCoordinates.append(origin.flightConnection.locationsCoordinates.origin.locationCoordinate)
+            mapCoordinates.append(origin.flightConnection.locationsCoordinates.destination.locationCoordinate)
         }
-        return []
+        
+        let destinationsDroppingOrigin = Array(nodes.dropFirst()).compactMap { node in
+            node.flightConnection.locationsCoordinates.destination.locationCoordinate
+        }
+        mapCoordinates.append(contentsOf: destinationsDroppingOrigin)
+        
+        return mapCoordinates
     }
 }

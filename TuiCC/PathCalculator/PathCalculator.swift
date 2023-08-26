@@ -2,36 +2,42 @@ import GameplayKit
 import CoreLocation
 
 actor PathCalculator {
+    
+    //MARK: - Properties
+    
     private let graph = GKGraph()
     private var nodes = [FlightNode]()
     private var flightPaths = [FlightPath]()
     
     var connections: [Connection]
-    var origin: String
+    
+    //MARK: - Init
     
     init(connections: [Connection], origin: String) {
         self.connections = connections
-        self.origin = origin
     }
     
-    func updateOrigin(_ newOrigin: String) {
-        self.origin = newOrigin
-        processNodes()
-    }
+    //MARK: - Public interface
     
-    func updateConnections(_ connections: [Connection], _ newOrigin: String? = nil) {
+    func updateConnections(_ connections: [Connection]) {
         self.connections = connections
-        guard let newOrigin else {
-            processNodes()
-            return
-        }
-        updateOrigin(newOrigin)
-        
     }
     
-    func getCheapestPath(to destination: String) -> (price: Double, coordinates: [CLLocationCoordinate2D]) {
+    func getCheapestPath(from origin: String, to destination: String) throws -> (price: Double, coordinates: [CLLocationCoordinate2D]) {
+        if connections.isNotEmpty && nodes.isEmpty {
+            processNodes(from: origin)
+        }
+
+        findPath(from: origin, to: destination)
         
-        return (price: 0, coordinates: [])
+        guard
+            flightPaths.isNotEmpty,
+            let cheapestPath = flightPaths.min(by: { $0.cumulativePrice < $1.cumulativePrice })
+        else {
+            throw AppError.noPathsAvailable
+        }
+        
+        return (price: cheapestPath.cumulativePrice, coordinates: cheapestPath.coordinates())
     }
     
     func printPath(_ path: [GKGraphNode]) {
@@ -51,41 +57,47 @@ actor PathCalculator {
 // MARK: - Private work
 
 extension PathCalculator {
-    private func processNodes() {
-        let temporaryNodes = connections.map { FlightNode(id: $0.id.uuidString, flightConnection: $0) }
+    
+    /// Will convert every `Connection` into `FlightNode`s so the graph can process them as nodes
+    /// Then it will add the possible connections into each node.
+    private func processNodes(from origin: String) {
+        let nodes = connections.map { FlightNode(id: $0.id.uuidString, flightConnection: $0) }
         
-        for node in temporaryNodes {
-            let possibleConnections = connections.filter { connection in
-                node.flightConnection.destination == connection.origin && // Has connection
-                connection.destination != origin // We won't go in circles
+        for node in nodes {
+            let possibleConnections = nodes.filter { element in
+                node.flightConnection.destination == element.flightConnection.origin && // Has connection
+                element.flightConnection.destination != origin // We won't go in circles
             }
-            
-            for possibleConnection in possibleConnections {
-                if let nodeConnection = temporaryNodes.first(where: { element in
-                    element.id == possibleConnection.id.uuidString
-                }) {
-                    node.addConnections(to: [nodeConnection], bidirectional: false) //addConnection(to: nodeConnection, price: Float(nodeConnection.flightConnection.price))
-                }
-            }
+            node.addConnections(to: possibleConnections, bidirectional: false)
         }
-        self.nodes = temporaryNodes
+        self.nodes = nodes
     }
     
-    private func findPath(to destination: String) {
+    /// Will process all possible `FlightPath`s between the two give locations
+    ///
+    /// - Parameters:
+    ///   - origin: Origin city
+    ///   - destination: Destination city
+    private func findPath(from origin: String, to destination: String) {
+        //Filter all nodes that match the requested origin
         let possibleNodesToOrigin = nodes.filter { node in
             node.flightConnection.origin == origin
         }
+        //Filter all nodes that match the requested destination
         let possibleNodesToDestination = nodes.filter { node in
             node.flightConnection.destination == destination
         }
         
+        //Calculate all possible paths between the two nodes
         for origin in possibleNodesToOrigin {
             for destination in possibleNodesToDestination {
                 let nodes = graph.findPath(from: origin, to: destination).compactMap { $0 as? FlightNode }
-                let path = FlightPath(nodes: nodes)
-                flightPaths.append(path)
-                printPath(nodes)
-                printCost(for: nodes)
+                if nodes.isNotEmpty {
+                    let path = FlightPath(nodes: nodes)
+                    flightPaths.append(path)
+                    printPath(nodes)
+                    printCost(for: nodes)
+                }
             }
         }
     }
