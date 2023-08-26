@@ -10,6 +10,10 @@ enum AppConstants: String {
     case networkError300GenericMessage
     case networkErrorUnknown
     
+    // MARK: - App Error
+    
+    case appErrorNoPathsAvailable
+    
     static func localized(_ constant: AppConstants) -> String {
         NSLocalizedString(constant.rawValue, comment: "")
     }

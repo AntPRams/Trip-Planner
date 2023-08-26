@@ -9,3 +9,5 @@
 "networkErrorUnknown" = "Oops!\nSomething went wrong.";
 
 // MARK: - App Error
+
+"appErrorNoPathsAvailable" = "There are no flights available.";
