@@ -1,19 +1,16 @@
-//
-//  MainViewHeader.swift
-//  TuiCC
-//
-//  Created by António Ramos on 24/08/2023.
-//
-
 import SwiftUI
+
 
 struct MainViewHeader: View {
     
     @ObservedObject var viewModel: MainViewModel
     
     var body: some View {
-        VStack(alignment: .leading) {
-            SearchField(viewModel: viewModel)
+        VStack(alignment: .leading, spacing: 10) {
+            SearchField(viewModel: viewModel, textFieldType: .origin)
+                .zIndex(3)
+            SearchField(viewModel: viewModel, textFieldType: .destination)
+                .zIndex(2)
         }
     }
 }
@@ -23,21 +20,21 @@ struct SearchField: View {
     @ObservedObject var viewModel: MainViewModel
     @State private var showDropdown: Bool = false
     
+    var textFieldType: ConnectionType
+    
     var body: some View {
-        TextField("Type origin", text: $viewModel.originText)
+        TextField("Type origin", text: textFieldType == .origin ? $viewModel.originText : $viewModel.destinationText)
             .textFieldStyle(.roundedBorder)
-            .onReceive(viewModel.$originText.debounce(
+            .onReceive(
+                (textFieldType == .origin ? viewModel.$originText : viewModel.$destinationText).debounce(
                 for: .seconds(1),
                 scheduler: DispatchQueue.main
             )) { value in
                 withAnimation {
-//                    showDropdown = (value != String())
-//                    viewModel.cities.remove(at: 2)
-//                    print("do something \(value)")
-                    
+                    showDropdown = (value != String())
                 }
             }
-            .padding(.all, 12)
+            .padding(.all, 3)
             .overlay(alignment: .topLeading) {
                 DropDownList(
                     showDropdownList: $showDropdown,
@@ -104,13 +101,9 @@ struct CityRow: View {
         }
     }
 }
-
-extension Image {
-    
-    static let originPlaneImage = Image(systemName: "airplane.departure")
-    static let destinationPlaneImage = Image(systemName: "airplane.arrival")
-}
 //
-//#Preview {
-//    MainViewHeader(originText: .constant("test1"))
+//struct MainViewHeader_Previews: PreviewProvider {
+//    static var previews: some View {
+//
+//    }
 //}

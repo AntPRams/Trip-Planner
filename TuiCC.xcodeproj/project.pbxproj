@@ -14,6 +14,8 @@
 		91DD4C652A9A386F000AD497 /* FlightPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DD4C642A9A386F000AD497 /* FlightPath.swift */; };
 		91DD4C682A9A3998000AD497 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 91DD4C6A2A9A3998000AD497 /* Localizable.strings */; };
 		91DD4C6E2A9A3A93000AD497 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DD4C6D2A9A3A93000AD497 /* AppConstants.swift */; };
+		91DD4C712A9A7A9A000AD497 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DD4C702A9A7A9A000AD497 /* MapView.swift */; };
+		91DD4C732A9A7AE0000AD497 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DD4C722A9A7AE0000AD497 /* Image.swift */; };
 		B61D2BDB2A962FD6008D3606 /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61D2BDA2A962FD6008D3606 /* Connection.swift */; };
 		B61D2BDD2A963002008D3606 /* Coordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61D2BDC2A963002008D3606 /* Coordinates.swift */; };
 		B61D2BE52A964728008D3606 /* ArrayExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61D2BE42A964728008D3606 /* ArrayExtensionsTests.swift */; };
@@ -37,7 +39,7 @@
 		B69C4E462A950BFC00CEC473 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69C4E452A950BFC00CEC473 /* MainViewModel.swift */; };
 		B69C4E4B2A9515D000CEC473 /* Connections.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69C4E4A2A9515D000CEC473 /* Connections.swift */; };
 		B69C4E4D2A951C7100CEC473 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69C4E4C2A951C7100CEC473 /* NetworkError.swift */; };
-		B69C52592A9528E400CEC473 /* ArrayExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69C52582A9528E400CEC473 /* ArrayExtensions.swift */; };
+		B69C52592A9528E400CEC473 /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69C52582A9528E400CEC473 /* Array.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,8 @@
 		91DD4C642A9A386F000AD497 /* FlightPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightPath.swift; sourceTree = "<group>"; };
 		91DD4C692A9A3998000AD497 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		91DD4C6D2A9A3A93000AD497 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		91DD4C702A9A7A9A000AD497 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		91DD4C722A9A7AE0000AD497 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		B61D2BDA2A962FD6008D3606 /* Connection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connection.swift; sourceTree = "<group>"; };
 		B61D2BDC2A963002008D3606 /* Coordinates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinates.swift; sourceTree = "<group>"; };
 		B61D2BE22A964728008D3606 /* TuiCCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TuiCCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -83,7 +87,7 @@
 		B69C4E452A950BFC00CEC473 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		B69C4E4A2A9515D000CEC473 /* Connections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connections.swift; sourceTree = "<group>"; };
 		B69C4E4C2A951C7100CEC473 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
-		B69C52582A9528E400CEC473 /* ArrayExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtensions.swift; sourceTree = "<group>"; };
+		B69C52582A9528E400CEC473 /* Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +142,23 @@
 				91DD4C6D2A9A3A93000AD497 /* AppConstants.swift */,
 			);
 			path = Localizable;
+			sourceTree = "<group>";
+		};
+		91DD4C6F2A9A7A78000AD497 /* MapView */ = {
+			isa = PBXGroup;
+			children = (
+				91DD4C702A9A7A9A000AD497 /* MapView.swift */,
+			);
+			path = MapView;
+			sourceTree = "<group>";
+		};
+		91DD4C742A9A7AE7000AD497 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B69C52582A9528E400CEC473 /* Array.swift */,
+				91DD4C722A9A7AE0000AD497 /* Image.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		B61D2BE32A964728008D3606 /* TuiCCTests */ = {
@@ -214,6 +235,7 @@
 			isa = PBXGroup;
 			children = (
 				B69C4E432A950BD200CEC473 /* Main */,
+				91DD4C6F2A9A7A78000AD497 /* MapView */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -281,8 +303,8 @@
 		B69C52572A9528D100CEC473 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				91DD4C742A9A7AE7000AD497 /* Extensions */,
 				91DD4C5E2A9A367D000AD497 /* Error */,
-				B69C52582A9528E400CEC473 /* ArrayExtensions.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -401,7 +423,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B69C52592A9528E400CEC473 /* ArrayExtensions.swift in Sources */,
+				B69C52592A9528E400CEC473 /* Array.swift in Sources */,
+				91DD4C732A9A7AE0000AD497 /* Image.swift in Sources */,
 				B69C4E212A94F94400CEC473 /* MainView.swift in Sources */,
 				91DD4C602A9A3693000AD497 /* AppError.swift in Sources */,
 				91DD4C6E2A9A3A93000AD497 /* AppConstants.swift in Sources */,
@@ -410,6 +433,7 @@
 				B69C4E4B2A9515D000CEC473 /* Connections.swift in Sources */,
 				91DD4C5D2A99AD10000AD497 /* PathCalculator.swift in Sources */,
 				B69C4E2D2A95050600CEC473 /* Keys.swift in Sources */,
+				91DD4C712A9A7A9A000AD497 /* MapView.swift in Sources */,
 				B64667DA2A964A7200DA4302 /* ConnectionsService.swift in Sources */,
 				B69C4E462A950BFC00CEC473 /* MainViewModel.swift in Sources */,
 				91DD4C652A9A386F000AD497 /* FlightPath.swift in Sources */,

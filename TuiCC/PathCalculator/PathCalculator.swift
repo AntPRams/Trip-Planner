@@ -13,7 +13,7 @@ actor PathCalculator {
     
     //MARK: - Init
     
-    init(connections: [Connection], origin: String) {
+    init(connections: [Connection]) {
         self.connections = connections
     }
     
@@ -58,19 +58,18 @@ actor PathCalculator {
 
 extension PathCalculator {
     
-    /// Will convert every `Connection` into `FlightNode`s so the graph can process them as nodes
+    /// Will convert every `Connection` into `FlightNode` so the graph can process them
     /// Then it will add the possible connections into each node.
     private func processNodes(from origin: String) {
-        let nodes = connections.map { FlightNode(id: $0.id.uuidString, flightConnection: $0) }
+        nodes = connections.map { FlightNode(id: $0.id.uuidString, flightConnection: $0) }
         
         for node in nodes {
             let possibleConnections = nodes.filter { element in
-                node.flightConnection.destination == element.flightConnection.origin && // Has connection
-                element.flightConnection.destination != origin // We won't go in circles
+                node.flightConnection.destination == element.flightConnection.origin && // Has connection to node
+                element.flightConnection.destination != origin // We don't want to go in circles
             }
             node.addConnections(to: possibleConnections, bidirectional: false)
         }
-        self.nodes = nodes
     }
     
     /// Will process all possible `FlightPath`s between the two give locations

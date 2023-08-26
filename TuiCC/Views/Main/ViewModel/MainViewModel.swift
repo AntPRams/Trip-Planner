@@ -13,6 +13,7 @@ class MainViewModel: MainViewModelInterface {
     @Published var connections = [Connection]()
     @Published var cities = [String]()
     @Published var originText: String = ""
+    @Published var destinationText: String = ""
     
     init(networkProvider: ConnectionsServiceInterface = ConnectionsService()) {
         self.networkProvider = networkProvider
@@ -49,8 +50,9 @@ class MainViewModel: MainViewModelInterface {
     func calculatePaths(from origin: String, to destination: String) {
         Task {
             let connections = try await networkProvider.fetchConnections()
-            let calculator = PathCalculator(connections: connections, origin: origin)
-            //await calculator.findPath(to: destination)
+            let calculator = PathCalculator(connections: connections)
+            let cheapest = try await calculator.getCheapestPath(from: origin, to: destination)
+            print(cheapest)
         }
     }
 }

@@ -1,10 +1,3 @@
-//
-//  ContentView.swift
-//  TuiCC
-//
-//  Created by António Ramos on 22/08/2023.
-//
-
 import SwiftUI
 
 struct MainView: View {
@@ -37,7 +30,9 @@ struct MainView: View {
         }
     }
 }
-//
-//#Preview {
-//    MainView(viewModel: MainViewModel(networkProvider: ConnectionsService()))
-//}
+
+struct MainView_Previews: PreviewProvider {
+    static var previews: some View {
+        MainView(viewModel: MainViewModel(networkProvider: ConnectionsService()))
+    }
+}

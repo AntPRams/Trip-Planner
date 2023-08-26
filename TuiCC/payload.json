@@ -123,7 +123,7 @@
     {
       "from": "Tokyo",
       "to": "Los Angeles",
-      "price": 400,
+      "price": 40000000,
       "coordinates": {
         "from": {
           "lat": 51.5285582,
