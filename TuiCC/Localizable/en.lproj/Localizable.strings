@@ -1,0 +1,11 @@
+
+// MARK: - Network Error
+
+"networkErrorBadRequest" = "The server could not understand the request.";
+"networkErrorUnauthorized" = "Access denied.";
+"networkErrorNotFound" = "The resource you're looking for can't be found.";
+"networkError500GenericMessage" = "Oops!\nSomething went wrong on our end.";
+"networkError300GenericMessage" = "Multiple options available.\nRefine your request.";
+"networkErrorUnknown" = "Oops!\nSomething went wrong.";
+
+// MARK: - App Error

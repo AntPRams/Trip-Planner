@@ -1,13 +1,32 @@
 import Foundation
 
-public enum NetworkError: Error, LocalizedError {
+enum NetworkError: Error {
     case redirected
-    case notFound
     case badRequest
     case unauthorized
     case forbidden
+    case notFound
     case serverError
-    case http(httpResponse: HTTPURLResponse, data: Data)
+    case unknown
+}
+
+extension NetworkError: LocalizedError {
+    public var errorDescription: String? {
+        switch self {
+        case .redirected:
+            return AppConstants.localized(.networkErrorBadRequest)
+        case .badRequest:
+            return AppConstants.localized(.networkErrorBadRequest)
+        case .unauthorized, .forbidden:
+            return AppConstants.localized(.networkErrorUnauthorized)
+        case .notFound:
+            return AppConstants.localized(.networkErrorNotFound)
+        case .serverError:
+            return AppConstants.localized(.networkError500GenericMessage)
+        case .unknown:
+            return AppConstants.localized(.networkErrorUnknown)
+        }
+    }
 }
 
 func mapResponse(response: (data: Data, response: URLResponse)) throws -> Data {
@@ -31,6 +50,6 @@ func mapResponse(response: (data: Data, response: URLResponse)) throws -> Data {
     case 500..<600:
         throw NetworkError.serverError
     default:
-        throw NetworkError.http(httpResponse: httpResponse, data: response.data)
+        throw NetworkError.unknown
     }
 }
