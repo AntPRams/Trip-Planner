@@ -3,12 +3,13 @@ import SwiftUI
 struct DropDownList: View {
     
     @ObservedObject var viewModel: SearchFieldViewModel
+    @State private var scrollViewContentSize: CGSize = .zero
     
     var body: some View {
         if viewModel.showDropDown {
             ScrollView {
-                LazyVStack {
-                    Spacer()
+                Spacer()
+                LazyVStack(alignment: .leading, pinnedViews: [.sectionHeaders]) {
                     ForEach(viewModel.cities, id: \.self) { city in
                         CityRow(type: .origin, text: city)
                             .onTapGesture {
@@ -20,10 +21,19 @@ struct DropDownList: View {
                         Divider()
                     }
                 }
-                .frame(maxWidth: .infinity)
+                .background(
+                    GeometryReader { geo -> Color in
+                        DispatchQueue.main.async {
+                            withAnimation {
+                                scrollViewContentSize = geo.size
+                            }
+                        }
+                        return Color.clear
+                    }
+                )
             }
-            .frame(height: CGFloat(viewModel.cities.count * 52))
-            .frame(maxHeight: 250)
+            .frame(height: scrollViewContentSize.height)
+            .ignoresSafeArea(.keyboard, edges: .bottom)
             .background(
                 RoundedRectangle(cornerRadius: 6)
                     .foregroundColor(.white)

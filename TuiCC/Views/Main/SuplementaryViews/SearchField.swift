@@ -8,23 +8,19 @@ struct SearchField: View {
     @State private var showDropdown: Bool = false
     
     var body: some View {
-        TextField(
-            Localizable.searchCityTextViewPlaceholder,
-            text: $viewModel.text,
-            onEditingChanged: { isEditing in
-                viewModel.isBeingEdited = isEditing
-            })
-        .focused($isFocused)
+        TextField(Localizable.searchCityTextViewPlaceholder, text: $viewModel.text)
         .textFieldStyle(.roundedBorder)
         .padding(.all, 3)
-        .overlay(alignment: .topLeading) {
-            DropDownList(viewModel: viewModel)
-        }
-        .onChange(of: isFocused, perform: { _ in
+        .focused($isFocused)
+        .onChange(of: isFocused, perform: { isFocused in
+            viewModel.isBeingEdited = isFocused
             viewModel.shouldShowDropdown()
         })
         .onChange(of: viewModel.text) { newValue in
             viewModel.shouldShowDropdown()
+        }
+        .overlay(alignment: .topLeading) {
+            DropDownList(viewModel: viewModel)
         }
     }
 }
