@@ -37,7 +37,7 @@ private extension Localizable {
         private let subject = PassthroughSubject<String, Never>()
         
         public init(wrappedValue: String) {
-            value = wrappedValue
+            value = NSLocalizedString(wrappedValue, comment: "")
         }
         
         public var wrappedValue: String {
