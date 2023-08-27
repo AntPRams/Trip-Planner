@@ -1,84 +1,46 @@
 import SwiftUI
 
 
-struct MainViewHeader: View {
+struct MainViewHeader<ViewModel: MainViewModelInterface>: View {
     
-    @ObservedObject var viewModel: MainViewModel
+    @ObservedObject var viewModel: ViewModel
+    @FocusState private var focusedField: ConnectionType?
     
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
-            SearchField(viewModel: viewModel, textFieldType: .origin)
+            SearchField(viewModel: viewModel.originSearchFieldViewModel)
+                .focused($focusedField, equals: .origin)
                 .zIndex(3)
-            SearchField(viewModel: viewModel, textFieldType: .destination)
+            SearchField(viewModel: viewModel.destinationSearchFieldViewModel)
+                .focused($focusedField, equals: .destination)
                 .zIndex(2)
+            HStack {
+                Spacer()
+                Button {
+                    viewModel.calculatePaths()
+                } label: {
+                    Text("Search")
+                }
+                Spacer()
+            }
+        }
+        .padding(6)
+        .onSubmit {
+            switch focusedField {
+            case .origin:
+                focusedField = .destination
+            case .destination:
+                focusedField = nil
+            case .none:
+                break
+            }
         }
     }
 }
 
-struct SearchField: View {
+extension View {
     
-    @ObservedObject var viewModel: MainViewModel
-    @State private var showDropdown: Bool = false
     
-    var textFieldType: ConnectionType
-    
-    var body: some View {
-        TextField("Type origin", text: textFieldType == .origin ? $viewModel.originText : $viewModel.destinationText)
-            .textFieldStyle(.roundedBorder)
-            .onReceive(
-                (textFieldType == .origin ? viewModel.$originText : viewModel.$destinationText).debounce(
-                for: .seconds(1),
-                scheduler: DispatchQueue.main
-            )) { value in
-                withAnimation {
-                    showDropdown = (value != String())
-                }
-            }
-            .padding(.all, 3)
-            .overlay(alignment: .topLeading) {
-                DropDownList(
-                    showDropdownList: $showDropdown,
-                    list: $viewModel.cities,
-                    selectedCity: $viewModel.originText
-                )
-            }
-    }
-}
-
-struct DropDownList: View {
-    
-    @Binding var showDropdownList: Bool
-    @Binding var list: [String]
-    @Binding var selectedCity: String
-    
-    var body: some View {
-        ZStack {
-            if showDropdownList {
-                VStack(alignment: .center) {
-                    ForEach(list, id: \.self) { city in
-                        CityRow(type: .origin, text: city)
-                            .onTapGesture {
-                                selectedCity = city
-                                withAnimation {
-                                    showDropdownList = false
-                                }
-                            }
-                            .frame(maxWidth: .infinity)
-                            .padding(8)
-                        Divider()
-                    }
-                }
-                .frame(maxWidth: .infinity)
-                .background(
-                    RoundedRectangle(cornerRadius: 6)
-                        .foregroundColor(.white)
-                        .shadow(radius: 4)
-                )
-                .offset(y: 50)
-            }
-        }
-        .transition(.asymmetric(insertion: .scale, removal: .opacity))
-    }
 }
 
 enum ConnectionType {
@@ -99,11 +61,13 @@ struct CityRow: View {
             Text(text)
             Spacer()
         }
+        .frame(height: 20)
     }
 }
-//
-//struct MainViewHeader_Previews: PreviewProvider {
-//    static var previews: some View {
-//
-//    }
-//}
+
+struct MainViewHeader_Previews: PreviewProvider {
+    static var previews: some View {
+        MainViewHeader(viewModel: MainViewModel())
+            .previewLayout(.sizeThatFits)
+    }
+}

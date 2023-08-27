@@ -9,13 +9,11 @@ actor PathCalculator {
     private var nodes = [FlightNode]()
     private var flightPaths = [FlightPath]()
     
-    var connections: [Connection]
+    var connections = [Connection]()
     
     //MARK: - Init
     
-    init(connections: [Connection]) {
-        self.connections = connections
-    }
+    init() {}
     
     //MARK: - Public interface
     
@@ -66,7 +64,7 @@ extension PathCalculator {
         for node in nodes {
             let possibleConnections = nodes.filter { element in
                 node.flightConnection.destination == element.flightConnection.origin && // Has connection to node
-                element.flightConnection.destination != origin // We don't want to go in circles
+                node.flightConnection.destination != origin // We don't want to go in circles
             }
             node.addConnections(to: possibleConnections, bidirectional: false)
         }

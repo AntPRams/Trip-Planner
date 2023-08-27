@@ -1,30 +1,31 @@
 import SwiftUI
+import CoreLocationUI
+import MapKit
 
-struct MainView: View {
+struct MainView<ViewModel: MainViewModelInterface>: View {
     
-    @StateObject var viewModel: MainViewModel
+    @StateObject var viewModel: ViewModel
     
     var body: some View {
         NavigationStack {
+            if case .loading = viewModel.currentState {
+                ProgressView()
+            }
             VStack {
                 MainViewHeader(viewModel: viewModel)
+                    .padding(6)
                     .zIndex(1)
-                Button("press me") {
-                    viewModel.fetchData()
+                Divider()
+                if let coordinates = viewModel.coordinates {
+                    MapViewRepresentable(lineCoordinates: coordinates)
                 }
-                Image(systemName: "globe")
-                    .imageScale(.large)
-                    .foregroundStyle(.tint)
-                Text("Hello, world!")
-                Button("Lets test") {
-                    let source = "Tokyo"
-                    let destination = "Los Angeles"
-                    viewModel.calculatePaths(from: source, to: destination)
-                }
+                Spacer()
             }
-            .padding()
-            .navigationTitle("Search")
+            .allowsHitTesting(viewModel.currentState != .loading)
+            .navigationTitle("Trip Planner")
+            .errorAlert(error: $viewModel.error)
         }
+        .transition(.asymmetric(insertion: .scale, removal: .opacity))
         .onAppear {
             viewModel.fetchData()
         }
