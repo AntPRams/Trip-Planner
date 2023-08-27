@@ -3,28 +3,26 @@ import SwiftUI
 struct DropDownList: View {
     
     @ObservedObject var viewModel: SearchFieldViewModel
-    @Binding var showDropdownList: Bool
     
     var body: some View {
-        if showDropdownList {
+        if viewModel.showDropDown {
             ScrollView {
-                LazyVStack(alignment: .center) {
+                LazyVStack {
+                    Spacer()
                     ForEach(viewModel.cities, id: \.self) { city in
                         CityRow(type: .origin, text: city)
                             .onTapGesture {
                                 withAnimation {
                                     viewModel.text = city
-                                    showDropdownList = false
                                 }
                             }
                             .frame(maxWidth: .infinity)
-                            .padding(8)
                         Divider()
                     }
                 }
                 .frame(maxWidth: .infinity)
             }
-            .frame(height: CGFloat(viewModel.cities.count * 50))
+            .frame(height: CGFloat(viewModel.cities.count * 52))
             .frame(maxHeight: 250)
             .background(
                 RoundedRectangle(cornerRadius: 6)

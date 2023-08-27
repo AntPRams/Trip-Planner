@@ -8,12 +8,13 @@ struct MapViewRepresentable: UIViewRepresentable {
         let mapView = MKMapView()
         mapView.delegate = context.coordinator
         if let origin = lineCoordinates.first {
-            let span = MKCoordinateSpan(latitudeDelta: 100, longitudeDelta: 100)
+            let span = MKCoordinateSpan(latitudeDelta: 50, longitudeDelta: 50)
             mapView.setRegion(MKCoordinateRegion(center: origin, span: span), animated: true)
         }
         mapView.mapType = .satelliteFlyover
         let polyline = MKPolyline(coordinates: lineCoordinates, count: lineCoordinates.count)
         mapView.addOverlay(polyline)
+        
 
         return mapView
       }

@@ -59,7 +59,7 @@ extension PathCalculator {
     /// Will convert every `Connection` into `FlightNode` so the graph can process them
     /// Then it will add the possible connections into each node.
     private func processNodes(from origin: String) {
-        nodes = connections.map { FlightNode(id: $0.id.uuidString, flightConnection: $0) }
+        nodes = connections.map { FlightNode(flightConnection: $0) }
         
         for node in nodes {
             let possibleConnections = nodes.filter { element in

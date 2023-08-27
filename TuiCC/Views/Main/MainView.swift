@@ -16,13 +16,17 @@ struct MainView<ViewModel: MainViewModelInterface>: View {
                     .padding(6)
                     .zIndex(1)
                 Divider()
+                Text("Flight")
+                Text("Price")
                 if let coordinates = viewModel.coordinates {
                     MapViewRepresentable(lineCoordinates: coordinates)
+                        .cornerRadius(10)
+                        .padding()
                 }
                 Spacer()
             }
             .allowsHitTesting(viewModel.currentState != .loading)
-            .navigationTitle("Trip Planner")
+            .navigationTitle(Localizable.mainViewTitle)
             .errorAlert(error: $viewModel.error)
         }
         .transition(.asymmetric(insertion: .scale, removal: .opacity))

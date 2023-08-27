@@ -14,17 +14,17 @@ extension NetworkError: LocalizedError {
     public var errorDescription: String? {
         switch self {
         case .redirected:
-            return AppConstants.localized(.networkErrorBadRequest)
+            return Localizable.networkErrorBadRequest
         case .badRequest:
-            return AppConstants.localized(.networkErrorBadRequest)
+            return Localizable.networkErrorBadRequest
         case .unauthorized, .forbidden:
-            return AppConstants.localized(.networkErrorUnauthorized)
+            return Localizable.networkErrorUnauthorized
         case .notFound:
-            return AppConstants.localized(.networkErrorNotFound)
+            return Localizable.networkErrorNotFound
         case .serverError:
-            return AppConstants.localized(.networkError500GenericMessage)
+            return Localizable.networkError500GenericMessage
         case .unknown:
-            return AppConstants.localized(.networkErrorUnknown)
+            return Localizable.networkErrorUnknown
         }
     }
 }

@@ -6,19 +6,22 @@ struct SearchField: View {
     @State private var showDropdown: Bool = false
     
     var body: some View {
-        TextField("Type origin", text: $viewModel.text, onEditingChanged: { isEditing in
-           showDropdown = isEditing && viewModel.cities.isNotEmpty
-        })
-            .textFieldStyle(.roundedBorder)
-            .onChange(of: viewModel.text, perform: { newValue in
-                withAnimation {
-                    showDropdown = newValue != String() && !viewModel.cities.contains(newValue)
-                }
+        TextField(
+            Localizable.searchCityTextViewPlaceholder,
+            text: $viewModel.text,
+            onEditingChanged: { isEditing in
+                viewModel.isBeingEdited = isEditing
             })
-            .padding(.all, 3)
-            .overlay(alignment: .topLeading) {
-                DropDownList(viewModel: viewModel, showDropdownList: $showDropdown)
+        .onChange(of: viewModel.text, perform: { newValue in
+            withAnimation {
+                viewModel.shouldShowDropdown()
             }
+        })
+        .textFieldStyle(.roundedBorder)
+        .padding(.all, 3)
+        .overlay(alignment: .topLeading) {
+            DropDownList(viewModel: viewModel)
+        }
     }
 }
 //

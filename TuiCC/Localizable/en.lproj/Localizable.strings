@@ -11,3 +11,19 @@
 // MARK: - App Error
 
 "appErrorNoPathsAvailable" = "There are no flights available.";
+"appErrorOriginMissing" = "You must provide the city of origin.";
+"appErrorDestinationMissing" = "You must provide destination.";
+"appErrorPathMissing" = "You must provide the trip origin and destination.";
+"errorPleaseTryAgain" = "Please try again.";
+
+
+// MARK: - Buttons
+
+"buttonOk" = "Ok";
+"buttonSearch" = "Search";
+
+//MARK: - Views
+
+"mainViewTitle" = "Trip Planner";
+"searchCityTextViewPlaceholder" = "Choose city";
+

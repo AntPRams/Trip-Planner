@@ -1,16 +1,20 @@
 import GameplayKit
 
 class FlightNode: GKGraphNode {
+    
+    //MARK: - Properties
+    
     let flightConnection: Connection
     
-    init(id: String, flightConnection: Connection) {
+    //MARK: - Init
+    
+    init(flightConnection: Connection) {
         self.flightConnection = flightConnection
         super.init()
     }
     
     required init?(coder aDecoder: NSCoder) {
-        let coordinates = Coordinates.Coordinate(latitude: 0, longitude: 0)
-        self.flightConnection = Connection(origin: "", destination: "", locationsCoordinates: Coordinates(origin: coordinates, destination: coordinates), price: 0)
+        flightConnection = .stub()
         super.init()
     }
 }

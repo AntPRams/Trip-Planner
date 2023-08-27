@@ -25,8 +25,10 @@ enum ViewState: Equatable {
 
 final class SearchFieldViewModel: ObservableObject {
     
+    var isBeingEdited: Bool = false
     @Published var text = String()
     @Published var cities = [String]()
+    @Published var showDropDown: Bool = false
     var connectionType: ConnectionType
     private var allCities = [String]()
     
@@ -51,11 +53,20 @@ final class SearchFieldViewModel: ObservableObject {
     
     func performSearch(query: String) {
         cities = allCities.filter({ city in
-            predicate(from: query, city: city)
+            search(for: query, city)
         })
     }
     
-    private func predicate(from query: String, city: String) -> Bool {
+    func shouldShowDropdown() {
+        withAnimation {
+            showDropDown = isBeingEdited &&
+            !cities.contains(text) &&
+            text != String() &&
+            cities.isNotEmpty
+        }
+    }
+    
+    private func search(for query: String, _ city: String) -> Bool {
         let rhs = query.folding(options: [.caseInsensitive], locale: nil)
         let lhs = city.folding(options: [.caseInsensitive], locale: nil)
         

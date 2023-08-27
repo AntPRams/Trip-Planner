@@ -19,7 +19,7 @@ struct MainViewHeader<ViewModel: MainViewModelInterface>: View {
                 Button {
                     viewModel.calculatePaths()
                 } label: {
-                    Text("Search")
+                    Text(Localizable.buttonSearch)
                 }
                 Spacer()
             }
@@ -38,31 +38,9 @@ struct MainViewHeader<ViewModel: MainViewModelInterface>: View {
     }
 }
 
-extension View {
-    
-    
-}
-
 enum ConnectionType {
     case origin
     case destination
-}
-
-struct CityRow: View {
-    
-    var type: ConnectionType
-    var text: String
-    
-    var body: some View {
-        HStack {
-            type == .origin ?
-            Image.originPlaneImage :
-            Image.destinationPlaneImage
-            Text(text)
-            Spacer()
-        }
-        .frame(height: 20)
-    }
 }
 
 struct MainViewHeader_Previews: PreviewProvider {

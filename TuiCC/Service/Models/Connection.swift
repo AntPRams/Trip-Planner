@@ -26,3 +26,20 @@ extension Connection: Hashable {
         return hasher.combine(id)
     }
 }
+
+extension Connection {
+    static func stub(
+        origin: String = "origin",
+        destination: String = "destination",
+        locationsCoordinates: Coordinates = .stub(),
+        price: Double = 0
+    ) -> Connection {
+        
+        Connection(
+            origin: origin,
+            destination: destination,
+            locationsCoordinates: locationsCoordinates,
+            price: price
+        )
+    }
+}

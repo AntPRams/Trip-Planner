@@ -1,14 +1,14 @@
 import Foundation
 
 extension Array {
-    
-    @inlinable
     public var isNotEmpty: Bool {
-        self.count > 0
+        !isEmpty
     }
 }
 
 extension Array where Element: Hashable {
+    
+    ///Will return a new array without duplicates
     func removingDuplicates() -> [Element] {
         var addedDict = [Element: Bool]()
         
@@ -17,6 +17,7 @@ extension Array where Element: Hashable {
         }
     }
     
+    ///Will remove duplicates from a mutable array
     mutating func removeDuplicates() {
         self = self.removingDuplicates()
     }
