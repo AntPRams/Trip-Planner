@@ -8,7 +8,6 @@ struct DropDownList: View {
     var body: some View {
         if viewModel.showDropDown {
             ScrollView {
-                Spacer()
                 LazyVStack(alignment: .leading, pinnedViews: [.sectionHeaders]) {
                     ForEach(viewModel.cities, id: \.self) { city in
                         CityRow(type: .origin, text: city)
@@ -24,18 +23,15 @@ struct DropDownList: View {
                 .background(
                     GeometryReader { geo -> Color in
                         DispatchQueue.main.async {
-                            withAnimation {
-                                scrollViewContentSize = geo.size
-                            }
+                            scrollViewContentSize = geo.size
                         }
                         return Color.clear
                     }
                 )
             }
             .frame(height: scrollViewContentSize.height)
-            .ignoresSafeArea(.keyboard, edges: .bottom)
             .background(
-                RoundedRectangle(cornerRadius: 6)
+                RoundedRectangle(cornerRadius: 10)
                     .foregroundColor(.white)
                     .shadow(radius: 4)
             )
