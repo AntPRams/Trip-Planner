@@ -1,6 +1,6 @@
 import GameplayKit
 
-class FlightNode: GKGraphNode {
+class Node: GKGraphNode {
     
     //MARK: - Properties
     

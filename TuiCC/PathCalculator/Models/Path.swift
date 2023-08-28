@@ -1,10 +1,10 @@
 import CoreLocation
 
-class FlightPath {
+class Path {
     
     //MARK: - Properties
     
-    var nodes: [FlightNode]
+    var nodes: [Node]
     var cumulativePrice: Double {
         let values = nodes.compactMap { node in
             node.flightConnection.price
@@ -14,14 +14,14 @@ class FlightPath {
     
     //MARK: - Init
         
-    init(nodes: [FlightNode]) {
+    init(nodes: [Node]) {
         self.nodes = nodes
     }
 }
 
 //MARK: - Public interface
 
-extension FlightPath {
+extension Path {
     func coordinates() -> [CLLocationCoordinate2D] {
         guard nodes.isNotEmpty else { return [] }
         
@@ -40,7 +40,7 @@ extension FlightPath {
     }
     
     func getStopOvers() -> [[String]] {
-        nodes.map { (node: FlightNode) in
+        nodes.map { (node: Node) in
             [node.flightConnection.origin, node.flightConnection.destination]
         }
     }

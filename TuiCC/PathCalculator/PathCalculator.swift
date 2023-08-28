@@ -6,8 +6,8 @@ actor PathCalculator {
     //MARK: - Properties
     
     private let graph = GKGraph()
-    private var nodes = [FlightNode]()
-    private var flightPaths = [FlightPath]()
+    private var nodes = [Node]()
+    private var flightPaths = [Path]()
     
     var connections = [Connection]()
     
@@ -48,7 +48,7 @@ actor PathCalculator {
     }
     
     func printCost(for path: [GKGraphNode]) {
-        let values = path.compactMap({ $0 as? FlightNode}).compactMap { node in
+        let values = path.compactMap({ $0 as? Node}).compactMap { node in
             node.flightConnection.price
         }
         print(values.reduce(0, +))
@@ -59,10 +59,10 @@ actor PathCalculator {
 
 extension PathCalculator {
     
-    /// Will convert every `Connection` into `FlightNode` so the graph can process them
+    /// Will convert every `Connection` into `Node` so the graph can process them
     /// Then it will add the possible connections into each node.
     private func processNodes(from origin: String) {
-        nodes = connections.map { FlightNode(flightConnection: $0) }
+        nodes = connections.map { Node(flightConnection: $0) }
         
         for node in nodes {
             let possibleConnections = nodes.filter { element in
@@ -73,7 +73,7 @@ extension PathCalculator {
         }
     }
     
-    /// Will process all possible `FlightPath`s between the two give locations
+    /// Will process all possible `Path`s between the two give locations
     ///
     /// - Parameters:
     ///   - origin: Origin city
@@ -91,9 +91,9 @@ extension PathCalculator {
         //Calculate all possible paths between the two nodes
         for origin in possibleNodesToOrigin {
             for destination in possibleNodesToDestination {
-                let nodes = graph.findPath(from: origin, to: destination).compactMap { $0 as? FlightNode }
+                let nodes = graph.findPath(from: origin, to: destination).compactMap { $0 as? Node }
                 if nodes.isNotEmpty {
-                    let path = FlightPath(nodes: nodes)
+                    let path = Path(nodes: nodes)
                     flightPaths.append(path)
                 }
             }
