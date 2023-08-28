@@ -7,6 +7,7 @@ enum NetworkError: Error {
     case forbidden
     case notFound
     case serverError
+    case noData
     case unknown
 }
 
@@ -23,6 +24,8 @@ extension NetworkError: LocalizedError {
             return Localizable.networkErrorNotFound
         case .serverError:
             return Localizable.networkError500GenericMessage
+        case .noData:
+            return Localizable.networkErrorNoData
         case .unknown:
             return Localizable.networkErrorUnknown
         }

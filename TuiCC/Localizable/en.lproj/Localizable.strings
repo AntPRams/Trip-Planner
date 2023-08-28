@@ -7,6 +7,7 @@
 "networkError500GenericMessage" = "Oops!\nSomething went wrong on our end.";
 "networkError300GenericMessage" = "Multiple options available.\nRefine your request.";
 "networkErrorUnknown" = "Oops!\nSomething went wrong.";
+"networkErrorNoData" = "No data available.";
 
 // MARK: - App Error
 

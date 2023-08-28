@@ -10,7 +10,7 @@ class MainViewModelTests: XCTestCase {
     override func setUp() {
         super.setUp()
         
-        sut = MainViewModel(networkProvider: ConnectionsServiceMock())
+        sut = MainViewModel()
         sut.originSearchFieldViewModel.text = "A"
         sut.destinationSearchFieldViewModel.text = "E"
         disposableBag = Set<AnyCancellable>()
@@ -47,6 +47,8 @@ class MainViewModelTests: XCTestCase {
     func test_extractCities() {
         //given
         let expectation = XCTestExpectation(description: "Did set cities")
+        let url = URLMocks.getMockDataUrl(for: .mockConnections)
+        sut = MainViewModel(service: ConnectionsService(url: url))
         
         //when
         sut.fetchData()
@@ -64,7 +66,7 @@ class MainViewModelTests: XCTestCase {
             }
             .store(in: &disposableBag)
         
-        wait(for: [expectation], timeout: 3)
+        wait(for: [expectation], timeout: 1)
     }
     
     func test_calculatePath() async throws {
@@ -93,6 +95,26 @@ class MainViewModelTests: XCTestCase {
             .store(in: &disposableBag)
     }
     
+    func test_calculatePathError() throws {
+        //when
+        sut.calculatePaths()
+        
+        //then
+        assertError(AppError.noPathsAvailable)
+    }
+    
+    func test_fetchDataError() throws {
+        //given
+        let url = URLMocks.getMockDataUrl(for: .nullConnections)
+        sut = MainViewModel(service: ConnectionsService(url: url))
+        
+        //when
+        sut.fetchData()
+        
+        //then
+        assertError(NetworkError.noData)
+    }
+    
     func test_clearData() {
         //given
         sut.pathResult = .stub()
@@ -113,8 +135,25 @@ class MainViewModelTests: XCTestCase {
 
 private extension MainViewModelTests {
     func injectMockData() async throws {
-        let connections = try await ConnectionsServiceMock().fetchConnections()
+        let url = URLMocks.getMockDataUrl(for: .mockConnections)
+        let connections = try await ConnectionsService(url: url).fetchConnections()
         await sut.pathCalculator.updateConnections(connections)
+    }
+    
+    func assertError<T: Equatable>(_ customError: T) {
+        //when
+        let expectation = XCTestExpectation(description: "Did fail with expected error")
+        
+        //then
+        sut.$error
+            .dropFirst()
+            .sink { error in
+                expectation.fulfill()
+                XCTAssertEqual(error as? T, customError)
+            }
+            .store(in: &disposableBag)
+        
+        wait(for: [expectation], timeout: 1)
     }
 }
 

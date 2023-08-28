@@ -1,0 +1,25 @@
+{
+  "configurations" : [
+    {
+      "id" : "EA03CA86-BDDF-476F-BBEA-D580CEDB71A0",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:TuiCC.xcodeproj",
+        "identifier" : "B61D2BE12A964728008D3606",
+        "name" : "TuiCCTests"
+      }
+    }
+  ],
+  "version" : 1
+}

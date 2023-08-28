@@ -46,6 +46,6 @@ struct MainView<ViewModel: MainViewModelInterface>: View {
 
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
-        MainView(viewModel: MainViewModel(networkProvider: ConnectionsService()))
+        MainView(viewModel: MainViewModel())
     }
 }

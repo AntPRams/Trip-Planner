@@ -10,11 +10,11 @@ protocol MainViewModelInterface: ObservableObject {
     var connections: [FlightConnection] { get set }
     var currentState: ViewState { get set }
     var pathCalculator: PathCalculator { get }
-    var networkProvider: ConnectionsServiceInterface { get }
+    var service: ConnectionsService { get }
     var canPerformSearch: Bool { get set }
     var originSearchFieldViewModel: SearchFieldViewModel { get }
     var destinationSearchFieldViewModel: SearchFieldViewModel { get }
-
+    
     func clear()
     func fetchData()
     func calculatePaths()
@@ -24,7 +24,7 @@ final class MainViewModel: MainViewModelInterface {
     
     // MARK: - Properties
     
-    private(set) var networkProvider: ConnectionsServiceInterface
+    private(set) var service: ConnectionsService
     private(set) var pathCalculator: PathCalculator
     
     
@@ -43,11 +43,11 @@ final class MainViewModel: MainViewModelInterface {
     // MARK: - Init
     
     init(
-        networkProvider: ConnectionsServiceInterface = ConnectionsService(),
+        service: ConnectionsService = ConnectionsService(),
         pathCalculator: PathCalculator = PathCalculator()
     ) {
         self.pathCalculator = pathCalculator
-        self.networkProvider = networkProvider
+        self.service = service
     }
     
     // MARK: - Public interface
@@ -56,7 +56,7 @@ final class MainViewModel: MainViewModelInterface {
         currentState = .loading
         Task {
             do {
-                let connections = try await networkProvider.fetchConnections()
+                let connections = try await service.fetchConnections()
                 await pathCalculator.updateConnections(connections)
                 await MainActor.run {
                     self.connections = connections
@@ -66,17 +66,12 @@ final class MainViewModel: MainViewModelInterface {
                     }
                 }
             } catch {
-                currentState = .idle
-                self.error = error
-                print(error.localizedDescription)
+                await MainActor.run {
+                    currentState = .idle
+                    self.error = error
+                }
             }
         }
-    }
-    
-    func clear() {
-        originSearchFieldViewModel.text = String()
-        destinationSearchFieldViewModel.text = String()
-        pathResult = nil
     }
     
     func calculatePaths() {
@@ -101,6 +96,12 @@ final class MainViewModel: MainViewModelInterface {
                 }
             }
         }
+    }
+    
+    func clear() {
+        originSearchFieldViewModel.text = String()
+        destinationSearchFieldViewModel.text = String()
+        pathResult = nil
     }
 }
 

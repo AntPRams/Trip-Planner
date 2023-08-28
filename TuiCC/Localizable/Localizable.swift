@@ -10,6 +10,7 @@ enum Localizable {
     @Localized static var networkError500GenericMessage = "networkError500GenericMessage"
     @Localized static var networkError300GenericMessage = "networkError300GenericMessage"
     @Localized static var networkErrorUnknown = "networkErrorUnknown"
+    @Localized static var networkErrorNoData = "networkErrorNoData"
     
     // MARK: - App Error
     @Localized static var appErrorNoPathsAvailable = "appErrorNoPathsAvailable"
@@ -30,5 +31,4 @@ enum Localizable {
     @Localized static var searchCityTextViewPlaceholder = "searchCityTextViewPlaceholder"
     @Localized static var bestDeal = "bestDeal"
     @Localized static var stopOvers = "stopOvers"
-    
 }

@@ -1,6 +1,19 @@
 import SwiftUI
 import Combine
 
+protocol SearchFieldViewModelInterface: ObservableObject {
+    
+    var text: String { get set }
+    var filteredCities: String { get set }
+    var showDropDown: Bool { get set }
+    var isBeingEdited: Bool { get set }
+    var connectionType: ConnectionType { get set }
+    
+    func updateCities(_ cities: [String])
+    func performSearch(query: String)
+    func shouldShowDropdown()
+}
+
 final class SearchFieldViewModel: ObservableObject {
     
     // MARK: - Properties
