@@ -1,9 +1,3 @@
-//
-//  ConnectionsServiceTests.swift
-//  TuiCCTests
-//
-//  Created by António Ramos on 23/08/2023.
-//
 @testable import TuiCC
 import XCTest
 
@@ -21,13 +15,14 @@ final class ConnectionsServiceTests: XCTestCase {
         super.tearDown()
     }
 
-    func test_fetchConnections() throws {
-        Task {
-            //when
-            let connections = try await sut.fetchConnections()
-            
-            //then
-            XCTAssertEqual(connections.count, 3)
-        }
+    func test_fetchConnections() async throws {
+        //when
+        let connections = try await sut.fetchConnections()
+        
+        //then
+        XCTAssertTrue(connections.count == 6)
+        XCTAssertTrue(connections[0].origin == "A")
+        XCTAssertEqual(connections[5].destination, "E")
+        XCTAssertEqual(connections[2].price, 200)
     }
 }

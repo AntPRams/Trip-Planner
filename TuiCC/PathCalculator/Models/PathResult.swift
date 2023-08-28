@@ -17,7 +17,7 @@ struct PathResult {
 
 extension PathResult {
     
-    func stub(
+    static func stub(
         coordinates: [CLLocationCoordinate2D] = [],
         stopOvers: [[String]] = [[]],
         price: Double = 0

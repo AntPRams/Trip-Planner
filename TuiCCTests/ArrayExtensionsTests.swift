@@ -1,14 +1,7 @@
-//
-//  TuiCCTests.swift
-//  TuiCCTests
-//
-//  Created by António Ramos on 23/08/2023.
-//
-
 import XCTest
 @testable import TuiCC
 
-final class ArrayExtensionsTests: XCTestCase {
+final class ExtensionsTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
@@ -38,5 +31,15 @@ final class ArrayExtensionsTests: XCTestCase {
         //then
         XCTAssertFalse(emptyArray.isNotEmpty)
         XCTAssertTrue(notEmptyArray.isNotEmpty)
+    }
+    
+    func test_stringIsNotEmpty() {
+        //given
+        let emptyString = String()
+        let notEmptyString = "some"
+        
+        //then
+        XCTAssertFalse(emptyString.isNotEmpty)
+        XCTAssertTrue(notEmptyString.isNotEmpty)
     }
 }

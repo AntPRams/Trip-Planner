@@ -9,6 +9,8 @@ protocol MainViewModelInterface: ObservableObject {
     var pathResult: PathResult? { get set }
     var connections: [FlightConnection] { get set }
     var currentState: ViewState { get set }
+    var pathCalculator: PathCalculator { get }
+    var networkProvider: ConnectionsServiceInterface { get }
     var canPerformSearch: Bool { get set }
     var originSearchFieldViewModel: SearchFieldViewModel { get }
     var destinationSearchFieldViewModel: SearchFieldViewModel { get }
@@ -22,8 +24,9 @@ final class MainViewModel: MainViewModelInterface {
     
     // MARK: - Properties
     
-    private var networkProvider: ConnectionsServiceInterface
-    private let pathCalculator = PathCalculator()
+    private(set) var networkProvider: ConnectionsServiceInterface
+    private(set) var pathCalculator: PathCalculator
+    
     
     @Published var currentState: ViewState = .loading
     @Published var connections = [FlightConnection]()
@@ -40,8 +43,10 @@ final class MainViewModel: MainViewModelInterface {
     // MARK: - Init
     
     init(
-        networkProvider: ConnectionsServiceInterface = ConnectionsService()
+        networkProvider: ConnectionsServiceInterface = ConnectionsService(),
+        pathCalculator: PathCalculator = PathCalculator()
     ) {
+        self.pathCalculator = pathCalculator
         self.networkProvider = networkProvider
     }
     

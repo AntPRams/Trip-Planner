@@ -5,7 +5,7 @@ final class ConnectionsService: ConnectionsServiceInterface {
     private var apiCaller: APICallerInterface
     
     private let mockurl = Bundle(for: ConnectionsService.self).url(
-        forResource: "payload",
+        forResource: "connectionsPayloadMock",
         withExtension: "json"
     )
     
@@ -18,7 +18,7 @@ final class ConnectionsService: ConnectionsServiceInterface {
             throw NetworkError.notFound
         }
         
-        let data: Connections? = try await apiCaller.fetch(from: url)
+        let data: Connections? = try await apiCaller.fetch(from: mockurl!)
         
         guard
             let flightConnections = data?.connections?.compactMap(FlightConnection.map(_:)),

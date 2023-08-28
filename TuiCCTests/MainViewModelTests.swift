@@ -11,6 +11,8 @@ class MainViewModelTests: XCTestCase {
         super.setUp()
         
         sut = MainViewModel(networkProvider: ConnectionsServiceMock())
+        sut.originSearchFieldViewModel.text = "A"
+        sut.destinationSearchFieldViewModel.text = "E"
         disposableBag = Set<AnyCancellable>()
     }
     
@@ -52,15 +54,67 @@ class MainViewModelTests: XCTestCase {
         //then
         sut.$cities
             .dropFirst() //Dropping the initial value
-            .sink { [weak self] cities in
-                guard let self, cities.isNotEmpty else {
+            .sink { cities in
+                guard cities.isNotEmpty else {
+                    XCTFail("Cities doesn't contain any value")
                     return
                 }
                 expectation.fulfill()
-                XCTAssertEqual(sut.cities, ["Porto", "Madrid", "Paris", "Lisbon"])
+                XCTAssertEqual(cities, ["A", "B", "C", "D", "F", "E"])
             }
             .store(in: &disposableBag)
         
-        wait(for: [expectation])
+        wait(for: [expectation], timeout: 3)
+    }
+    
+    func test_calculatePath() async throws {
+        //given
+        try await injectMockData()
+        
+        //when
+        sut.calculatePaths()
+        XCTAssertTrue(sut.currentState == .loading)
+        
+        //then
+        sut.$pathResult
+            .dropFirst()
+            .sink { [weak self] path in
+                guard let self, let path else {
+                    XCTFail("Failed to get path")
+                    return
+                }
+                XCTAssertTrue(sut.currentState == .idle)
+                XCTAssertEqual(path.formattedValue, "821")
+                XCTAssertEqual(path.stopOvers.last, ["F", "E"])
+                XCTAssertEqual(path.stopOvers.first, ["A", "B"])
+                XCTAssertEqual(path.coordinates.first?.latitude, 1)
+                XCTAssertEqual(path.coordinates.last?.longitude, 123)
+            }
+            .store(in: &disposableBag)
+    }
+    
+    func test_clearData() {
+        //given
+        sut.pathResult = .stub()
+        
+        //when
+        XCTAssertNotNil(sut.pathResult)
+        XCTAssertTrue(sut.originSearchFieldViewModel.text.isNotEmpty)
+        XCTAssertTrue(sut.destinationSearchFieldViewModel.text.isNotEmpty)
+        sut.clear()
+        
+        //then
+        XCTAssertNil(sut.pathResult)
+        XCTAssertFalse(sut.originSearchFieldViewModel.text.isNotEmpty)
+        XCTAssertFalse(sut.destinationSearchFieldViewModel.text.isNotEmpty)
+        
     }
 }
+
+private extension MainViewModelTests {
+    func injectMockData() async throws {
+        let connections = try await ConnectionsServiceMock().fetchConnections()
+        await sut.pathCalculator.updateConnections(connections)
+    }
+}
+

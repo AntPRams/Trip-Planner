@@ -10,7 +10,7 @@
 		91CFED5C2A9BD33700AEF028 /* MapViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91CFED5B2A9BD33700AEF028 /* MapViewRepresentable.swift */; };
 		91CFED5E2A9BE66F00AEF028 /* CityRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91CFED5D2A9BE66F00AEF028 /* CityRow.swift */; };
 		91CFED622A9BEA9100AEF028 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 91DD4C6A2A9A3998000AD497 /* Localizable.strings */; };
-		91DD4C542A98F90D000AD497 /* payload.json in Resources */ = {isa = PBXBuildFile; fileRef = 91DD4C532A98F90D000AD497 /* payload.json */; };
+		91D850412A9CF4A600F1EA9F /* connectionsPayloadMock.json in Resources */ = {isa = PBXBuildFile; fileRef = 91F0B1772A9CE9C1009196BE /* connectionsPayloadMock.json */; };
 		91DD4C5D2A99AD10000AD497 /* PathCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DD4C5C2A99AD10000AD497 /* PathCalculator.swift */; };
 		91DD4C602A9A3693000AD497 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DD4C5F2A9A3693000AD497 /* AppError.swift */; };
 		91DD4C632A9A383D000AD497 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DD4C622A9A383D000AD497 /* Node.swift */; };
@@ -35,13 +35,12 @@
 		91F0B1712A9C3D09009196BE /* TripOverviewTextModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F0B1702A9C3D09009196BE /* TripOverviewTextModifier.swift */; };
 		91F0B1742A9C4123009196BE /* MapViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F0B1732A9C4123009196BE /* MapViewCoordinator.swift */; };
 		91F0B1762A9CDFA3009196BE /* FlightConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F0B1752A9CDFA3009196BE /* FlightConnection.swift */; };
-		91F0B1782A9CE9C1009196BE /* connectionsMockWithNilValues.json in Resources */ = {isa = PBXBuildFile; fileRef = 91F0B1772A9CE9C1009196BE /* connectionsMockWithNilValues.json */; };
+		91F0B1782A9CE9C1009196BE /* connectionsPayloadMock.json in Resources */ = {isa = PBXBuildFile; fileRef = 91F0B1772A9CE9C1009196BE /* connectionsPayloadMock.json */; };
 		B61D2BDB2A962FD6008D3606 /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61D2BDA2A962FD6008D3606 /* Connection.swift */; };
 		B61D2BDD2A963002008D3606 /* Coordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61D2BDC2A963002008D3606 /* Coordinates.swift */; };
 		B61D2BE52A964728008D3606 /* ArrayExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61D2BE42A964728008D3606 /* ArrayExtensionsTests.swift */; };
 		B6342AFE2A97AFD30078E138 /* MainViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6342AFD2A97AFD30078E138 /* MainViewHeader.swift */; };
 		B64667DA2A964A7200DA4302 /* ConnectionsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64667D92A964A7200DA4302 /* ConnectionsService.swift */; };
-		B64667DF2A964CCF00DA4302 /* connectionsMock.json in Resources */ = {isa = PBXBuildFile; fileRef = B64667DE2A964CCF00DA4302 /* connectionsMock.json */; };
 		B64667E12A964DE600DA4302 /* ConnectionsServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64667E02A964DE600DA4302 /* ConnectionsServiceTests.swift */; };
 		B64667E22A964ECE00DA4302 /* ConnectionsServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69C4E362A95072500CEC473 /* ConnectionsServiceMock.swift */; };
 		B64667E42A96538700DA4302 /* EndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64667E32A96538700DA4302 /* EndPoints.swift */; };
@@ -71,7 +70,6 @@
 /* Begin PBXFileReference section */
 		91CFED5B2A9BD33700AEF028 /* MapViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewRepresentable.swift; sourceTree = "<group>"; };
 		91CFED5D2A9BE66F00AEF028 /* CityRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityRow.swift; sourceTree = "<group>"; };
-		91DD4C532A98F90D000AD497 /* payload.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = payload.json; sourceTree = "<group>"; };
 		91DD4C5C2A99AD10000AD497 /* PathCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathCalculator.swift; sourceTree = "<group>"; };
 		91DD4C5F2A9A3693000AD497 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
 		91DD4C622A9A383D000AD497 /* Node.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
@@ -96,14 +94,13 @@
 		91F0B1702A9C3D09009196BE /* TripOverviewTextModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripOverviewTextModifier.swift; sourceTree = "<group>"; };
 		91F0B1732A9C4123009196BE /* MapViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewCoordinator.swift; sourceTree = "<group>"; };
 		91F0B1752A9CDFA3009196BE /* FlightConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightConnection.swift; sourceTree = "<group>"; };
-		91F0B1772A9CE9C1009196BE /* connectionsMockWithNilValues.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = connectionsMockWithNilValues.json; sourceTree = "<group>"; };
+		91F0B1772A9CE9C1009196BE /* connectionsPayloadMock.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = connectionsPayloadMock.json; sourceTree = "<group>"; };
 		B61D2BDA2A962FD6008D3606 /* Connection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connection.swift; sourceTree = "<group>"; };
 		B61D2BDC2A963002008D3606 /* Coordinates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinates.swift; sourceTree = "<group>"; };
 		B61D2BE22A964728008D3606 /* TuiCCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TuiCCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B61D2BE42A964728008D3606 /* ArrayExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtensionsTests.swift; sourceTree = "<group>"; };
 		B6342AFD2A97AFD30078E138 /* MainViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewHeader.swift; sourceTree = "<group>"; };
 		B64667D92A964A7200DA4302 /* ConnectionsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionsService.swift; sourceTree = "<group>"; };
-		B64667DE2A964CCF00DA4302 /* connectionsMock.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = connectionsMock.json; sourceTree = "<group>"; };
 		B64667E02A964DE600DA4302 /* ConnectionsServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionsServiceTests.swift; sourceTree = "<group>"; };
 		B64667E32A96538700DA4302 /* EndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoints.swift; sourceTree = "<group>"; };
 		B64667E52A9657B400DA4302 /* MainViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModelTests.swift; sourceTree = "<group>"; };
@@ -267,8 +264,7 @@
 		B64667DD2A964C7C00DA4302 /* Json */ = {
 			isa = PBXGroup;
 			children = (
-				B64667DE2A964CCF00DA4302 /* connectionsMock.json */,
-				91F0B1772A9CE9C1009196BE /* connectionsMockWithNilValues.json */,
+				91F0B1772A9CE9C1009196BE /* connectionsPayloadMock.json */,
 			);
 			path = Json;
 			sourceTree = "<group>";
@@ -302,7 +298,6 @@
 				B69C4E242A94F94700CEC473 /* Preview Content */,
 				91DD4C6C2A9A3A4E000AD497 /* Localizable */,
 				B69C4E222A94F94700CEC473 /* Assets.xcassets */,
-				91DD4C532A98F90D000AD497 /* payload.json */,
 			);
 			path = TuiCC;
 			sourceTree = "<group>";
@@ -468,8 +463,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B64667DF2A964CCF00DA4302 /* connectionsMock.json in Resources */,
-				91F0B1782A9CE9C1009196BE /* connectionsMockWithNilValues.json in Resources */,
+				91F0B1782A9CE9C1009196BE /* connectionsPayloadMock.json in Resources */,
 				91CFED622A9BEA9100AEF028 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -478,9 +472,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				91DD4C542A98F90D000AD497 /* payload.json in Resources */,
 				91DD4C682A9A3998000AD497 /* Localizable.strings in Resources */,
 				B69C4E262A94F94700CEC473 /* Preview Assets.xcassets in Resources */,
+				91D850412A9CF4A600F1EA9F /* connectionsPayloadMock.json in Resources */,
 				B69C4E232A94F94700CEC473 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -655,7 +649,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -713,7 +707,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
