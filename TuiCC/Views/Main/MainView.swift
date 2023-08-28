@@ -22,6 +22,7 @@ struct MainView<ViewModel: MainViewModelInterface>: View {
                             price: path.formattedValue,
                             stopOvers: path.stopOvers
                         )
+
                         MapViewRepresentable(lineCoordinates: path.coordinates)
                             .cornerRadius(10)
                             .frame(height: 300)
@@ -30,6 +31,7 @@ struct MainView<ViewModel: MainViewModelInterface>: View {
                     }
                     Spacer()
                 }
+                .accessibilityIdentifier(AccessibilityIdentifiers.bottomScrollView)
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .scrollBounceBehavior(.always)
                 .padding(.horizontal)
@@ -42,7 +44,6 @@ struct MainView<ViewModel: MainViewModelInterface>: View {
         .onAppear {
             viewModel.fetchData()
         }
-        .accessibilityIdentifier(AccessibilityIdentifiers.mainView)
     }
 }
 

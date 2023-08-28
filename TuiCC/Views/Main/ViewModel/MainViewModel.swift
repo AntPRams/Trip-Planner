@@ -10,7 +10,7 @@ protocol MainViewModelInterface: ObservableObject {
     var connections: [FlightConnection] { get set }
     var currentState: ViewState { get set }
     var pathCalculator: PathCalculator { get }
-    var service: ConnectionsService { get }
+    var service: any Service { get }
     var originSearchFieldViewModel: SearchFieldViewModel { get }
     var destinationSearchFieldViewModel: SearchFieldViewModel { get }
     
@@ -21,10 +21,11 @@ protocol MainViewModelInterface: ObservableObject {
 
 final class MainViewModel: MainViewModelInterface {
     
+    
     // MARK: - Properties
     
-    private(set) var service: ConnectionsService
     private(set) var pathCalculator: PathCalculator
+    private(set) var service: any Service
     
     @Published var error: Error?
     @Published var cities = [String]()
@@ -40,7 +41,7 @@ final class MainViewModel: MainViewModelInterface {
     // MARK: - Init
     
     init(
-        service: ConnectionsService = ConnectionsService(),
+        service: any Service = ConnectionsService(),
         pathCalculator: PathCalculator = PathCalculator()
     ) {
         self.pathCalculator = pathCalculator
@@ -53,7 +54,9 @@ final class MainViewModel: MainViewModelInterface {
         currentState = .loading
         Task {
             do {
-                let connections = try await service.fetchConnections()
+                guard let connections = try await service.fetchConnections() as? [FlightConnection] else {
+                    throw NetworkError.unknown
+                }
                 await pathCalculator.updateConnections(connections)
                 await MainActor.run {
                     self.connections = connections

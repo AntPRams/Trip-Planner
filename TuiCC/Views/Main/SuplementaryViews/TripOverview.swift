@@ -45,7 +45,6 @@ struct TripOverview: View {
                 }
             }
         }
-        .accessibilityIdentifier(AccessibilityIdentifiers.tripOverviewView)
         .padding(6)
         .modifier(BackgroundModifier())
     }

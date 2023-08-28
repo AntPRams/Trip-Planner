@@ -24,6 +24,7 @@ struct DropDownList: View {
                         Divider()
                     }
                 }
+                .accessibilityIdentifier(AccessibilityIdentifiers.dropDownListView)
                 .background(
                     GeometryReader { geo -> Color in
                         DispatchQueue.main.async {
@@ -33,7 +34,6 @@ struct DropDownList: View {
                     }
                 )
             }
-            .accessibilityIdentifier(AccessibilityIdentifiers.dropDownListView)
             .frame(height: scrollViewContentSize.height)
             .modifier(BackgroundModifier())
             .offset(y: 40)

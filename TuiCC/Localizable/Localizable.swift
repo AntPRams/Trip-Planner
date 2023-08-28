@@ -28,7 +28,8 @@ enum Localizable {
     
     //MARK: - Views
     @Localized static var mainViewTitle = "mainViewTitle"
-    @Localized static var searchCityTextViewPlaceholder = "searchCityTextViewPlaceholder"
+    @Localized static var searchCityOriginTextViewPlaceholder = "searchCityOriginTextViewPlaceholder"
+    @Localized static var searchCityDestinationTextViewPlaceholder = "searchCityDestinationTextViewPlaceholder"
     @Localized static var bestDeal = "bestDeal"
     @Localized static var stopOvers = "stopOvers"
 }

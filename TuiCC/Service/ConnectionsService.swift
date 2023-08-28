@@ -1,6 +1,12 @@
 import Foundation
 
-final class ConnectionsService {
+protocol Service {
+    associatedtype DataType
+    func fetchConnections() async throws -> [DataType]
+}
+
+final class ConnectionsService: Service {
+    typealias DataType = FlightConnection
     
     private var apiCaller: APICallerInterface
     private var url: URL?
@@ -9,8 +15,13 @@ final class ConnectionsService {
         apiCaller: APICallerInterface = APICaller(),
         url: URL? = EndPoint.connections.url
     ) {
+        if ProcessInfo.processInfo.arguments.contains("UITesting") {
+            self.url = URLMocks.getMockDataUrl(for: .mockConnections)
+        } else {
+            self.url = url
+        }
+        
         self.apiCaller = apiCaller
-        self.url = url
     }
     
     func fetchConnections() async throws -> [FlightConnection] {

@@ -12,4 +12,14 @@ enum ConnectionType {
             return Image.destinationPlaneImage
         }
     }
+    
+    var placeholder: String {
+        switch self {
+            
+        case .origin:
+            return Localizable.searchCityOriginTextViewPlaceholder
+        case .destination:
+            return Localizable.searchCityDestinationTextViewPlaceholder
+        }
+    }
 }

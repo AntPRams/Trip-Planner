@@ -1,9 +1,6 @@
 enum AccessibilityIdentifiers {
     
-    static let mainView = "mainView"
-    static let mainViewHeader = "mainViewHeader"
     static let mapView = "mapView"
-    static let mainViewButtonsRow = "mainViewButtonsRow"
     static let searchButton = "searchButton"
     static let clearButton = "clearButton"
     static let refreshButton = "refreshButton"
@@ -12,5 +9,6 @@ enum AccessibilityIdentifiers {
     static let dropDownListView = "dropDownListView"
     static let cityRow = "cityRow"
     static let tripOverviewView = "tripOverviewView"
+    static let alertView = "alertView"
+    static let bottomScrollView = "bottomScrollView"
 }
-//.accessibilityIdentifier(AccessibilityIdentifiers)

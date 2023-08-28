@@ -8,7 +8,7 @@ struct SearchField: View {
     @State private var showDropdown: Bool = false
     
     var body: some View {
-        TextField(Localizable.searchCityTextViewPlaceholder, text: $viewModel.text)
+        TextField(viewModel.connectionType.placeholder, text: $viewModel.text)
             .textFieldStyle(.roundedBorder)
             .padding(.all, 3)
             .focused($isFocused)

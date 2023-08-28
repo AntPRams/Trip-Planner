@@ -33,7 +33,6 @@ struct ButtonsRow<ViewModel: MainViewModelInterface>: View {
             .accessibilityIdentifier(AccessibilityIdentifiers.refreshButton)
             Spacer()
         }
-        .accessibilityIdentifier(AccessibilityIdentifiers.mainViewButtonsRow)
     }
 }
 
