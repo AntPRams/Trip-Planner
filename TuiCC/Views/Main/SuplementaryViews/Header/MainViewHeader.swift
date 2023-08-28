@@ -14,15 +14,10 @@ struct MainViewHeader<ViewModel: MainViewModelInterface>: View {
             SearchField(viewModel: viewModel.destinationSearchFieldViewModel)
                 .focused($focusedField, equals: .destination)
                 .zIndex(2)
-            HStack {
-                Spacer()
-                Button {
-                    viewModel.calculatePaths()
-                } label: {
-                    Text(Localizable.buttonSearch)
-                }
-                Spacer()
-            }
+            ButtonsRow(
+                viewModel: viewModel,
+                focusedField: _focusedField
+            )
         }
         .padding(6)
         .onSubmit {
@@ -36,11 +31,6 @@ struct MainViewHeader<ViewModel: MainViewModelInterface>: View {
             }
         }
     }
-}
-
-enum ConnectionType {
-    case origin
-    case destination
 }
 
 struct MainViewHeader_Previews: PreviewProvider {

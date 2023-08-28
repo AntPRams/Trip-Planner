@@ -14,16 +14,20 @@
 "appErrorOriginMissing" = "You must provide the city of origin.";
 "appErrorDestinationMissing" = "You must provide destination.";
 "appErrorPathMissing" = "You must provide the trip origin and destination.";
-"errorPleaseTryAgain" = "Please try again.";
-
+"appErrorSameCityInBothFields" = "Please select different cities.";
 
 // MARK: - Buttons
 
 "buttonOk" = "Ok";
 "buttonSearch" = "Search";
+"buttonClear" = "Clear";
+"buttonRefresh" = "Refresh";
 
 //MARK: - Views
 
 "mainViewTitle" = "Trip Planner";
 "searchCityTextViewPlaceholder" = "Choose city";
+"bestDeal" = "⭐️ Best deal";
+"stopOvers" = "Stop Overs";
+
 

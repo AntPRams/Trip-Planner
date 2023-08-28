@@ -18,7 +18,7 @@ final class ConnectionsService: ConnectionsServiceInterface {
             throw NetworkError.notFound
         }
         
-        let data: Connections = try await apiCaller.fetch(from: mockurl!)
+        let data: Connections = try await apiCaller.fetch(from: url)
         
         guard data.connections.isNotEmpty else {
             throw NetworkError.notFound

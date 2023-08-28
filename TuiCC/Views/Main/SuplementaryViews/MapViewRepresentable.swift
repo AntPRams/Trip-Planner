@@ -7,19 +7,24 @@ struct MapViewRepresentable: UIViewRepresentable {
     func makeUIView(context: Context) -> MKMapView {
         let mapView = MKMapView()
         mapView.delegate = context.coordinator
-        if let origin = lineCoordinates.first {
-            let span = MKCoordinateSpan(latitudeDelta: 50, longitudeDelta: 50)
-            mapView.setRegion(MKCoordinateRegion(center: origin, span: span), animated: true)
-        }
         mapView.mapType = .satelliteFlyover
-        let polyline = MKPolyline(coordinates: lineCoordinates, count: lineCoordinates.count)
-        mapView.addOverlay(polyline)
-        
+        mapView.region.span = MKCoordinateSpan(latitudeDelta: 50, longitudeDelta: 50)
 
         return mapView
       }
     
-    func updateUIView(_ view: MKMapView, context: Context) {}
+    func updateUIView(_ view: MKMapView, context: Context) {
+        let overlays = view.overlays
+        view.removeOverlays(overlays)
+        
+        if let origin = lineCoordinates.first {
+            let span = MKCoordinateSpan(latitudeDelta: 50, longitudeDelta: 50)
+            view.setRegion(MKCoordinateRegion(center: origin, span: span), animated: true)
+        }
+        
+        let polyline = MKPolyline(coordinates: lineCoordinates, count: lineCoordinates.count)
+        view.addOverlay(polyline)
+    }
     
     func makeCoordinator() -> Coordinator {
         Coordinator(self)

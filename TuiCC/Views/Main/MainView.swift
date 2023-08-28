@@ -8,22 +8,31 @@ struct MainView<ViewModel: MainViewModelInterface>: View {
     
     var body: some View {
         NavigationStack {
-            if case .loading = viewModel.currentState {
-                ProgressView()
-            }
             VStack {
                 MainViewHeader(viewModel: viewModel)
                     .padding(6)
                     .zIndex(1)
                 Divider()
-                Text("Flight")
-                Text("Price")
-                if let coordinates = viewModel.coordinates {
-                    MapViewRepresentable(lineCoordinates: coordinates)
-                        .cornerRadius(10)
-                        .padding()
+                    .background(Color.clear)
+                if case .loading = viewModel.currentState {
+                    ProgressView()
                 }
-                Spacer()
+                ScrollView {
+                    if let path = viewModel.pathResult {
+                        TripOverview(
+                            price: path.price,
+                            stopOvers: path.stopOvers
+                        )
+                        MapViewRepresentable(lineCoordinates: path.coordinates)
+                            .cornerRadius(10)
+                            .frame(height: 300)
+                            .frame(maxWidth: .infinity)
+                    }
+                    Spacer()
+                }
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .scrollBounceBehavior(.always)
+                .padding(.horizontal)
             }
             .allowsHitTesting(viewModel.currentState != .loading)
             .navigationTitle(Localizable.mainViewTitle)

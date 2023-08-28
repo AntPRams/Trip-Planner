@@ -5,6 +5,7 @@ enum AppError: Error {
     case originMissing
     case destinationMissing
     case pathMissing
+    case sameCityInBothFields
 }
 
 extension AppError: LocalizedError {
@@ -18,6 +19,8 @@ extension AppError: LocalizedError {
             return Localizable.appErrorDestinationMissing
         case .pathMissing:
             return Localizable.appErrorPathMissing
+        case .sameCityInBothFields:
+            return Localizable.appErrorSameCityInBothFields
         }
     }
 }

@@ -5,18 +5,20 @@ struct DropDownList: View {
     @ObservedObject var viewModel: SearchFieldViewModel
     @State private var scrollViewContentSize: CGSize = .zero
     
+    @Environment(\.colorScheme) var colorScheme
+    
     var body: some View {
         if viewModel.showDropDown {
             ScrollView {
                 LazyVStack(alignment: .leading, pinnedViews: [.sectionHeaders]) {
                     ForEach(viewModel.cities, id: \.self) { city in
-                        CityRow(type: .origin, text: city)
+                        CityRow(type: viewModel.connectionType, text: city)
+                            .frame(maxWidth: .infinity)
                             .onTapGesture {
                                 withAnimation {
                                     viewModel.text = city
                                 }
                             }
-                            .frame(maxWidth: .infinity)
                         Divider()
                     }
                 }
@@ -30,11 +32,7 @@ struct DropDownList: View {
                 )
             }
             .frame(height: scrollViewContentSize.height)
-            .background(
-                RoundedRectangle(cornerRadius: 10)
-                    .foregroundColor(.white)
-                    .shadow(radius: 4)
-            )
+            .modifier(ViewBackground())
             .offset(y: 40)
             .transition(
                 .asymmetric(
@@ -47,13 +45,9 @@ struct DropDownList: View {
 }
 
 
-//struct DropDownList_Previews: PreviewProvider {
-//    static var previews: some View {
-//        DropDownList(
-//            showDropdownList: .constant(true),
-//            list: .constant(["a", "b", "c"]),
-//            selectedCity: .constant("")
-//        )
-//        .previewLayout(.sizeThatFits)
-//    }
-//}
+struct DropDownList_Previews: PreviewProvider {
+    static var previews: some View {
+        DropDownList(viewModel: SearchFieldViewModel(connectionType: .destination))
+        .previewLayout(.sizeThatFits)
+    }
+}

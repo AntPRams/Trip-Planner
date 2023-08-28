@@ -8,9 +8,6 @@ struct LocalizedAlertError: LocalizedError {
     var errorDescription: String? {
         underlyingError.errorDescription
     }
-    var recoverySuggestion: String? {
-        Localizable.errorPleaseTryAgain
-    }
     
     // MARK: - Init
 

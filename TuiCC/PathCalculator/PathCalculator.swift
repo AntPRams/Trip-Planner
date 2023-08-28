@@ -21,10 +21,13 @@ actor PathCalculator {
         self.connections = connections
     }
     
-    func getCheapestPath(from origin: String, to destination: String) throws -> (price: Double, coordinates: [CLLocationCoordinate2D]) {
+    func getCheapestPath(from origin: String, to destination: String) throws -> PathResult {
+        flightPaths.removeAll()
         if connections.isNotEmpty && nodes.isEmpty {
             processNodes(from: origin)
         }
+        
+        try validateSearch(origin: origin, destination: destination)
 
         findPath(from: origin, to: destination)
         
@@ -35,15 +38,15 @@ actor PathCalculator {
             throw AppError.noPathsAvailable
         }
         
-        return (price: cheapestPath.cumulativePrice, coordinates: cheapestPath.coordinates())
+        let result = PathResult(
+            coordinates: cheapestPath.coordinates(),
+            stopOvers: cheapestPath.getStopOvers(),
+            price: String(cheapestPath.cumulativePrice)
+        )
+        
+        return result
     }
     
-    func printPath(_ path: [GKGraphNode]) {
-        path.compactMap({ $0 as? FlightNode}).forEach { (node: FlightNode) in
-            print("\(node.flightConnection.origin) -> \(node.flightConnection.destination)")
-        }
-    }
-
     func printCost(for path: [GKGraphNode]) {
         let values = path.compactMap({ $0 as? FlightNode}).compactMap { node in
             node.flightConnection.price
@@ -92,10 +95,23 @@ extension PathCalculator {
                 if nodes.isNotEmpty {
                     let path = FlightPath(nodes: nodes)
                     flightPaths.append(path)
-                    printPath(nodes)
-                    printCost(for: nodes)
                 }
             }
+        }
+    }
+    
+    private func validateSearch(origin: String, destination: String) throws {
+        switch (origin, destination) {
+        case _ where origin.isEmpty && destination.isEmpty:
+            throw AppError.pathMissing
+        case _ where origin.isEmpty:
+            throw AppError.originMissing
+        case _ where destination.isEmpty:
+            throw AppError.destinationMissing
+        case _ where destination == origin:
+            throw AppError.sameCityInBothFields
+        default:
+            return
         }
     }
 }

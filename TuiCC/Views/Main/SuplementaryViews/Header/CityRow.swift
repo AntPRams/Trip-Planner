@@ -7,12 +7,14 @@ struct CityRow: View {
     
     var body: some View {
         HStack {
-            type == .origin ?
-            Image.originPlaneImage :
-            Image.destinationPlaneImage
+            type.image
             Text(text)
             Spacer()
         }
+        .background(
+            RoundedRectangle(cornerRadius: 10)
+                .foregroundColor(Color(UIColor.secondarySystemBackground))
+        )
         .padding(8)
     }
 }

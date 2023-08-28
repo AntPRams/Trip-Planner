@@ -38,4 +38,10 @@ extension FlightPath {
         
         return mapCoordinates
     }
+    
+    func getStopOvers() -> [[String]] {
+        nodes.map { (node: FlightNode) in
+            [node.flightConnection.origin, node.flightConnection.destination]
+        }
+    }
 }

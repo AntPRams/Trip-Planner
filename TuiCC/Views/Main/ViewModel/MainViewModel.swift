@@ -11,70 +11,22 @@ protocol MainViewModelInterface: ObservableObject {
     var error: Error? { get set }
     var originSearchFieldViewModel: SearchFieldViewModel { get }
     var destinationSearchFieldViewModel: SearchFieldViewModel { get }
-    var coordinates: [CLLocationCoordinate2D]? { get set }
+    var pathResult: PathResult? { get set }
     func fetchData()
+    func clear()
     func calculatePaths()
 }
 
-enum ViewState: Equatable {
+enum ViewState {
     
     case initial
     case loading
     case idle
 }
 
-final class SearchFieldViewModel: ObservableObject {
-    
-    var isBeingEdited: Bool = false
-    @Published var text = String()
-    @Published var cities = [String]()
-    @Published var showDropDown: Bool = false
-    var connectionType: ConnectionType
-    private var allCities = [String]()
-    
-    var disposableBag = Set<AnyCancellable>()
-    
-    init(connectionType: ConnectionType) {
-        self.connectionType = connectionType
-        subscribeToTextChanges()
-    }
-    
-    func updateCities(_ cities: [String]) {
-        allCities = cities
-    }
-    
-    private func subscribeToTextChanges() {
-        $text.sink { [weak self] query in
-            guard let self else { return }
-            query != String() ? performSearch(query: query) : cities.removeAll()
-        }
-        .store(in: &disposableBag)
-    }
-    
-    func performSearch(query: String) {
-        cities = allCities.filter({ city in
-            search(for: query, city)
-        })
-    }
-    
-    func shouldShowDropdown() {
-        withAnimation {
-            showDropDown = isBeingEdited &&
-            !cities.contains(text) &&
-            text != String() &&
-            cities.isNotEmpty
-        }
-    }
-    
-    private func search(for query: String, _ city: String) -> Bool {
-        let rhs = query.folding(options: [.caseInsensitive], locale: nil)
-        let lhs = city.folding(options: [.caseInsensitive], locale: nil)
-        
-        return lhs.contains(rhs)
-    }
-}
-
 final class MainViewModel: MainViewModelInterface {
+    
+    // MARK: - Properties
     
     private var networkProvider: ConnectionsServiceInterface
     private let pathCalculator = PathCalculator()
@@ -83,19 +35,23 @@ final class MainViewModel: MainViewModelInterface {
     @Published var connections = [Connection]()
     @Published var cities = [String]()
     @Published var error: Error?
-    @Published var coordinates: [CLLocationCoordinate2D]?
+    @Published var pathResult: PathResult?
     
-    var disposableBag = Set<AnyCancellable>()
+    private var disposableBag = Set<AnyCancellable>()
     let originSearchFieldViewModel = SearchFieldViewModel(connectionType: .origin)
     let destinationSearchFieldViewModel = SearchFieldViewModel(connectionType: .destination)
     
     @Published var canPerformSearch: Bool = false
+    
+    // MARK: - Init
     
     init(
         networkProvider: ConnectionsServiceInterface = ConnectionsService()
     ) {
         self.networkProvider = networkProvider
     }
+    
+    // MARK: - Public interface
     
     func fetchData() {
         currentState = .loading
@@ -119,6 +75,41 @@ final class MainViewModel: MainViewModelInterface {
         }
     }
     
+    func clear() {
+        originSearchFieldViewModel.text = String()
+        destinationSearchFieldViewModel.text = String()
+        pathResult = nil
+    }
+    
+    func calculatePaths() {
+        let origin = originSearchFieldViewModel.text
+        let destination = destinationSearchFieldViewModel.text
+        currentState = .loading
+        Task {
+            do {
+                let path = try await pathCalculator.getCheapestPath(
+                    from: origin,
+                    to: destination
+                )
+                await MainActor.run {
+                    pathResult = path
+                    currentState = .idle
+                }
+            } catch {
+                await MainActor.run {
+                    pathResult = nil
+                    currentState = .idle
+                    self.error = error
+                }
+            }
+        }
+    }
+}
+
+// MARK: - Private work
+
+extension MainViewModel {
+    
     private func extractCities() {
         let allCities = connections.flatMap { model in
             [model.origin, model.destination]
@@ -127,21 +118,5 @@ final class MainViewModel: MainViewModelInterface {
         cities = allCities.removingDuplicates()
         originSearchFieldViewModel.updateCities(cities)
         destinationSearchFieldViewModel.updateCities(cities)
-        
-        self.objectWillChange.send()
-    }
-    
-    
-    func calculatePaths() {
-        coordinates = nil
-        Task {
-            let origin = originSearchFieldViewModel.text
-            let destination = destinationSearchFieldViewModel.text
-            let cheapest = try await pathCalculator.getCheapestPath(from: origin, to: destination)
-            await MainActor.run {
-                coordinates = cheapest.coordinates
-            }
-            print(cheapest)
-        }
     }
 }
