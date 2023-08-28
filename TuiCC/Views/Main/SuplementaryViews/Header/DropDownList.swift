@@ -11,7 +11,7 @@ struct DropDownList: View {
         if viewModel.showDropDown {
             ScrollView {
                 LazyVStack(alignment: .leading, pinnedViews: [.sectionHeaders]) {
-                    ForEach(viewModel.cities, id: \.self) { city in
+                    ForEach(viewModel.filteredCities, id: \.self) { city in
                         CityRow(type: viewModel.connectionType, text: city)
                             .frame(maxWidth: .infinity)
                             .onTapGesture {

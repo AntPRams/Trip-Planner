@@ -27,12 +27,12 @@ extension Path {
         
         var mapCoordinates = [CLLocationCoordinate2D]()
         if let origin = nodes.first {
-            mapCoordinates.append(origin.flightConnection.locationsCoordinates.origin.locationCoordinate)
-            mapCoordinates.append(origin.flightConnection.locationsCoordinates.destination.locationCoordinate)
+            mapCoordinates.append(origin.flightConnection.originCoordinates)
+            mapCoordinates.append(origin.flightConnection.destinationCoordinates)
         }
         
         let destinationsDroppingOrigin = Array(nodes.dropFirst()).compactMap { node in
-            node.flightConnection.locationsCoordinates.destination.locationCoordinate
+            node.flightConnection.destinationCoordinates
         }
         mapCoordinates.append(contentsOf: destinationsDroppingOrigin)
         

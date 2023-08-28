@@ -30,14 +30,14 @@ extension PathResult {
         )
     }
     
-    private func formatValue(from currentValue: Double) -> String {
+    func formatValue(from currentValue: Double) -> String {
         let localeIdentifier = Locale.preferredLanguages[0]
         let formatter = NumberFormatter()
         formatter.numberStyle = .currency
-        formatter.minimumFractionDigits = 0
         formatter.maximumFractionDigits = 2
         formatter.currencySymbol = "€"
         formatter.locale = Locale(identifier: localeIdentifier)
+        formatter.positiveFormat = "#,##0 ¤"
         
         guard
             let formattedString = formatter.string(from: currentValue as NSNumber)

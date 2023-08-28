@@ -13,17 +13,20 @@ final class ConnectionsService: ConnectionsServiceInterface {
         self.apiCaller = apiCaller
     }
     
-    func fetchConnections() async throws -> [Connection] {
+    func fetchConnections() async throws -> [FlightConnection] {
         guard let url = EndPoint.connections() else {
             throw NetworkError.notFound
         }
         
-        let data: Connections = try await apiCaller.fetch(from: url)
+        let data: Connections? = try await apiCaller.fetch(from: url)
         
-        guard data.connections.isNotEmpty else {
+        guard
+            let flightConnections = data?.connections?.compactMap(FlightConnection.map(_:)),
+            flightConnections.isNotEmpty
+        else {
             throw NetworkError.notFound
         }
         
-        return data.connections
+        return flightConnections
     }
 }

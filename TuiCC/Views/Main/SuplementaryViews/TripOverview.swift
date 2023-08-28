@@ -52,7 +52,14 @@ struct TripOverview: View {
 
 struct TripOverview_Previews: PreviewProvider {
     static var previews: some View {
-        TripOverview(price: "3000", stopOvers: [["test", "test test"], ["qweqqe eqweq test test", "testtesttesttesttesttest testtesttesttesttest"]])
-            .previewLayout(.sizeThatFits)
+        TripOverview(
+            price: "3000",
+            stopOvers:
+                [
+                    ["test", "test test"],
+                    ["test test test test", "testtesttesttesttesttest testtesttesttesttest"]
+                ]
+        )
+        .previewLayout(.sizeThatFits)
     }
 }

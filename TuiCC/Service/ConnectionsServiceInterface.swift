@@ -1,3 +1,3 @@
 protocol ConnectionsServiceInterface {
-    func fetchConnections() async throws -> [Connection]
+    func fetchConnections() async throws -> [FlightConnection]
 }

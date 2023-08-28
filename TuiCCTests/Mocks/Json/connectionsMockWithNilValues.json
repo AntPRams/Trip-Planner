@@ -1,0 +1,172 @@
+{
+  "connections": [
+    {
+      "from": "London",
+      "to": null,
+      "coordinates": {
+        "from": {
+          "lat": 1,
+          "long": 1
+        },
+        "to": {
+          "lat": 1,
+          "long": 1
+        }
+      },
+      "price": 1
+    },
+    {
+      "from": "A",
+      "to": "B",
+      "coordinates": {
+        "from": {
+          "lat": 1,
+          "long": 1
+        },
+        "to": {
+          "lat": 1,
+          "long": 1
+        }
+      },
+      "price": 1
+    },
+    {
+      "from": "London",
+      "to": "Porto",
+      "price": 1,
+      "coordinates": {
+        "from": {
+          "lat": null,
+          "long": 1
+        },
+        "to": {
+          "lat": 1,
+          "long": 1
+        }
+      }
+    },
+    {
+      "from": "B",
+      "to": "C",
+      "price": 100,
+      "coordinates": {
+        "from": {
+          "lat": 2,
+          "long": 2
+        },
+        "to": {
+          "lat": 2,
+          "long": 2
+        }
+      }
+    },
+    {
+      "from": "Tokyo",
+      "to": "Cape Town",
+      "price": null,
+      "coordinates": {
+        "from": {
+          "lat": 1,
+          "long": 1
+        },
+        "to": {
+          "lat": 1,
+          "long": 1
+        }
+      }
+    },
+    {
+      "from": "C",
+      "to": "D",
+      "price": 200,
+      "coordinates": {
+        "from": {
+          "lat": 3,
+          "long": 3
+        },
+        "to": {
+          "lat": 3,
+          "long": 3
+        }
+      }
+    },
+    {
+      "from": null,
+      "to": "London",
+      "price": 1,
+      "coordinates": {
+        "from": {
+          "lat": 1,
+          "long": 1
+        },
+        "to": {
+          "lat": null,
+          "long": 1
+        }
+      }
+    },
+    {
+      "from": "D",
+      "to": "F",
+      "price": 400,
+      "coordinates": {
+        "from": {
+          "lat": 4,
+          "long": 4
+        },
+        "to": {
+          "lat": 4,
+          "long": 4
+        }
+      }
+    },
+    {
+      "from": "D",
+      "to": "E",
+      "price": 40000,
+      "coordinates": {
+        "from": {
+          "lat": 5,
+          "long": 5
+        },
+        "to": {
+          "lat": 5,
+          "long": 5
+        }
+      }
+    },
+    {
+      "from": "F",
+      "to": "E",
+      "price": 1,
+      "coordinates": null,
+    },
+    {
+      "from": "F",
+      "to": "E",
+      "price": 120,
+      "coordinates": {
+        "from": {
+          "lat": 6,
+          "long": 6
+        },
+        "to": {
+          "lat": 6,
+          "long": 6
+        }
+      }
+    },
+    {
+      "from": "Los Angeles",
+      "to": "Tokyo",
+      "price": 1,
+      "coordinates": {
+        "from": {
+          "lat": 1,
+          "long": 1
+        },
+        "to": null
+      }
+    }
+  ]
+}

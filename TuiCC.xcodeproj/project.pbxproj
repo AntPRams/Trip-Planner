@@ -34,6 +34,8 @@
 		91F0B16D2A9C357A009196BE /* Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F0B16C2A9C357A009196BE /* Localized.swift */; };
 		91F0B1712A9C3D09009196BE /* TripOverviewTextModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F0B1702A9C3D09009196BE /* TripOverviewTextModifier.swift */; };
 		91F0B1742A9C4123009196BE /* MapViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F0B1732A9C4123009196BE /* MapViewCoordinator.swift */; };
+		91F0B1762A9CDFA3009196BE /* FlightConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F0B1752A9CDFA3009196BE /* FlightConnection.swift */; };
+		91F0B1782A9CE9C1009196BE /* connectionsMockWithNilValues.json in Resources */ = {isa = PBXBuildFile; fileRef = 91F0B1772A9CE9C1009196BE /* connectionsMockWithNilValues.json */; };
 		B61D2BDB2A962FD6008D3606 /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61D2BDA2A962FD6008D3606 /* Connection.swift */; };
 		B61D2BDD2A963002008D3606 /* Coordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61D2BDC2A963002008D3606 /* Coordinates.swift */; };
 		B61D2BE52A964728008D3606 /* ArrayExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61D2BE42A964728008D3606 /* ArrayExtensionsTests.swift */; };
@@ -93,6 +95,8 @@
 		91F0B16C2A9C357A009196BE /* Localized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localized.swift; sourceTree = "<group>"; };
 		91F0B1702A9C3D09009196BE /* TripOverviewTextModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripOverviewTextModifier.swift; sourceTree = "<group>"; };
 		91F0B1732A9C4123009196BE /* MapViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewCoordinator.swift; sourceTree = "<group>"; };
+		91F0B1752A9CDFA3009196BE /* FlightConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightConnection.swift; sourceTree = "<group>"; };
+		91F0B1772A9CE9C1009196BE /* connectionsMockWithNilValues.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = connectionsMockWithNilValues.json; sourceTree = "<group>"; };
 		B61D2BDA2A962FD6008D3606 /* Connection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connection.swift; sourceTree = "<group>"; };
 		B61D2BDC2A963002008D3606 /* Coordinates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinates.swift; sourceTree = "<group>"; };
 		B61D2BE22A964728008D3606 /* TuiCCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TuiCCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -264,6 +268,7 @@
 			isa = PBXGroup;
 			children = (
 				B64667DE2A964CCF00DA4302 /* connectionsMock.json */,
+				91F0B1772A9CE9C1009196BE /* connectionsMockWithNilValues.json */,
 			);
 			path = Json;
 			sourceTree = "<group>";
@@ -290,14 +295,14 @@
 			isa = PBXGroup;
 			children = (
 				B69C4E1E2A94F94400CEC473 /* TuiCCApp.swift */,
+				B69C4E322A95066F00CEC473 /* Service */,
 				91DD4C552A9977F2000AD497 /* PathCalculator */,
 				B69C52572A9528D100CEC473 /* Common */,
 				B69C4E2E2A95055100CEC473 /* Views */,
-				B69C4E322A95066F00CEC473 /* Service */,
-				B69C4E222A94F94700CEC473 /* Assets.xcassets */,
 				B69C4E242A94F94700CEC473 /* Preview Content */,
-				91DD4C532A98F90D000AD497 /* payload.json */,
 				91DD4C6C2A9A3A4E000AD497 /* Localizable */,
+				B69C4E222A94F94700CEC473 /* Assets.xcassets */,
+				91DD4C532A98F90D000AD497 /* payload.json */,
 			);
 			path = TuiCC;
 			sourceTree = "<group>";
@@ -364,6 +369,7 @@
 				B69C4E4A2A9515D000CEC473 /* Connections.swift */,
 				B61D2BDC2A963002008D3606 /* Coordinates.swift */,
 				B61D2BDA2A962FD6008D3606 /* Connection.swift */,
+				91F0B1752A9CDFA3009196BE /* FlightConnection.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -463,6 +469,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B64667DF2A964CCF00DA4302 /* connectionsMock.json in Resources */,
+				91F0B1782A9CE9C1009196BE /* connectionsMockWithNilValues.json in Resources */,
 				91CFED622A9BEA9100AEF028 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -497,6 +504,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				91DD4C7A2A9BC9A9000AD497 /* LocalizedAlertError.swift in Sources */,
+				91F0B1762A9CDFA3009196BE /* FlightConnection.swift in Sources */,
 				91F0B1742A9C4123009196BE /* MapViewCoordinator.swift in Sources */,
 				B69C52592A9528E400CEC473 /* Array.swift in Sources */,
 				91DD4C732A9A7AE0000AD497 /* Image.swift in Sources */,

@@ -6,12 +6,12 @@ final class SearchFieldViewModel: ObservableObject {
     // MARK: - Properties
 
     @Published var text = String()
-    @Published var cities = [String]()
+    @Published var filteredCities = [String]()
     @Published var showDropDown: Bool = false
     
     var isBeingEdited: Bool = false
     var connectionType: ConnectionType
-    private var allCities = [String]()
+    private var cities = [String]()
     
     var disposableBag = Set<AnyCancellable>()
     
@@ -25,11 +25,11 @@ final class SearchFieldViewModel: ObservableObject {
     // MARK: - Public interface
     
     func updateCities(_ cities: [String]) {
-        allCities = cities
+        self.cities = cities
     }
     
     func performSearch(query: String) {
-        cities = allCities.filter({ city in
+        filteredCities = cities.filter({ city in
             search(for: query, city)
         })
     }
@@ -37,9 +37,9 @@ final class SearchFieldViewModel: ObservableObject {
     func shouldShowDropdown() {
         withAnimation {
             showDropDown = isBeingEdited &&
-            !cities.contains(text) &&
+            !filteredCities.contains(text) &&
             text != String() &&
-            cities.isNotEmpty
+            filteredCities.isNotEmpty
         }
     }
 }
@@ -58,7 +58,7 @@ extension SearchFieldViewModel {
     private func subscribeToTextChanges() {
         $text.sink { [weak self] query in
             guard let self else { return }
-            query != String() ? performSearch(query: query) : cities.removeAll()
+            query != String() ? performSearch(query: query) : filteredCities.removeAll()
         }
         .store(in: &disposableBag)
     }

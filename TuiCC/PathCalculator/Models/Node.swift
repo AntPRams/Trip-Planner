@@ -4,11 +4,11 @@ class Node: GKGraphNode {
     
     //MARK: - Properties
     
-    let flightConnection: Connection
+    let flightConnection: FlightConnection
     
     //MARK: - Init
     
-    init(flightConnection: Connection) {
+    init(flightConnection: FlightConnection) {
         self.flightConnection = flightConnection
         super.init()
     }

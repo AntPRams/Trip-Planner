@@ -4,24 +4,18 @@ import Combine
 import CoreLocation
 
 protocol MainViewModelInterface: ObservableObject {
-    var canPerformSearch: Bool { get set }
-    var currentState: ViewState { get set }
-    var connections: [Connection] { get set }
-    var cities: [String] { get set }
     var error: Error? { get set }
+    var cities: [String] { get set }
+    var pathResult: PathResult? { get set }
+    var connections: [FlightConnection] { get set }
+    var currentState: ViewState { get set }
+    var canPerformSearch: Bool { get set }
     var originSearchFieldViewModel: SearchFieldViewModel { get }
     var destinationSearchFieldViewModel: SearchFieldViewModel { get }
-    var pathResult: PathResult? { get set }
-    func fetchData()
-    func clear()
-    func calculatePaths()
-}
 
-enum ViewState {
-    
-    case initial
-    case loading
-    case idle
+    func clear()
+    func fetchData()
+    func calculatePaths()
 }
 
 final class MainViewModel: MainViewModelInterface {
@@ -32,7 +26,7 @@ final class MainViewModel: MainViewModelInterface {
     private let pathCalculator = PathCalculator()
     
     @Published var currentState: ViewState = .loading
-    @Published var connections = [Connection]()
+    @Published var connections = [FlightConnection]()
     @Published var cities = [String]()
     @Published var error: Error?
     @Published var pathResult: PathResult?
@@ -65,7 +59,6 @@ final class MainViewModel: MainViewModelInterface {
                     withAnimation {
                         currentState = .idle
                     }
-                    print(self.connections)
                 }
             } catch {
                 currentState = .idle

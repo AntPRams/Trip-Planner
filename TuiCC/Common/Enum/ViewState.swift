@@ -1,8 +1,5 @@
-//
-//  ViewState.swift
-//  TuiCC
-//
-//  Created by António Ramos on 28/08/2023.
-//
-
-import Foundation
+enum ViewState {
+    case initial
+    case loading
+    case idle
+}

@@ -7,9 +7,9 @@ actor PathCalculator {
     
     private let graph = GKGraph()
     private var nodes = [Node]()
-    private var flightPaths = [Path]()
+    private var paths = [Path]()
     
-    var connections = [Connection]()
+    var connections = [FlightConnection]()
     
     //MARK: - Init
     
@@ -17,12 +17,12 @@ actor PathCalculator {
     
     //MARK: - Public interface
     
-    func updateConnections(_ connections: [Connection]) {
+    func updateConnections(_ connections: [FlightConnection]) {
         self.connections = connections
     }
     
     func getCheapestPath(from origin: String, to destination: String) throws -> PathResult {
-        flightPaths.removeAll()
+        paths.removeAll()
         if connections.isNotEmpty && nodes.isEmpty {
             processNodes(from: origin)
         }
@@ -32,8 +32,8 @@ actor PathCalculator {
         findPath(from: origin, to: destination)
         
         guard
-            flightPaths.isNotEmpty,
-            let cheapestPath = flightPaths.min(by: { $0.cumulativePrice < $1.cumulativePrice })
+            paths.isNotEmpty,
+            let cheapestPath = paths.min(by: { $0.cumulativePrice < $1.cumulativePrice })
         else {
             throw AppError.noPathsAvailable
         }
@@ -94,7 +94,7 @@ extension PathCalculator {
                 let nodes = graph.findPath(from: origin, to: destination).compactMap { $0 as? Node }
                 if nodes.isNotEmpty {
                     let path = Path(nodes: nodes)
-                    flightPaths.append(path)
+                    paths.append(path)
                 }
             }
         }
