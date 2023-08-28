@@ -16,8 +16,8 @@
       "price": 1
     },
     {
-      "from": "A",
-      "to": "B",
+      "from": "Lisbon",
+      "to": "London",
       "coordinates": {
         "from": {
           "lat": 1,
@@ -46,8 +46,8 @@
       }
     },
     {
-      "from": "B",
-      "to": "C",
+      "from": "London",
+      "to": "Oslo",
       "price": 100,
       "coordinates": {
         "from": {
@@ -76,8 +76,8 @@
       }
     },
     {
-      "from": "C",
-      "to": "D",
+      "from": "Oslo",
+      "to": "Berlin",
       "price": 200,
       "coordinates": {
         "from": {
@@ -106,8 +106,8 @@
       }
     },
     {
-      "from": "D",
-      "to": "F",
+      "from": "Berlin",
+      "to": "Rome",
       "price": 400,
       "coordinates": {
         "from": {
@@ -121,8 +121,8 @@
       }
     },
     {
-      "from": "D",
-      "to": "E",
+      "from": "Berlin",
+      "to": "Ankara",
       "price": 40000,
       "coordinates": {
         "from": {
@@ -136,14 +136,14 @@
       }
     },
     {
-      "from": "F",
-      "to": "E",
+      "from": "Tokyo",
+      "to": null,
       "price": 1,
       "coordinates": null,
     },
     {
-      "from": "F",
-      "to": "E",
+      "from": "Rome",
+      "to": "Ankara",
       "price": 120,
       "coordinates": {
         "from": {

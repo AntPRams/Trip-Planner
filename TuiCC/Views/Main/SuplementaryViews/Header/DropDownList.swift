@@ -13,6 +13,7 @@ struct DropDownList: View {
                 LazyVStack(alignment: .leading, pinnedViews: [.sectionHeaders]) {
                     ForEach(viewModel.filteredCities, id: \.self) { city in
                         CityRow(type: viewModel.connectionType, text: city)
+                            .accessibilityIdentifier(AccessibilityIdentifiers.cityRow)
                             .frame(maxWidth: .infinity)
                             .onTapGesture {
                                 withAnimation {
@@ -32,6 +33,7 @@ struct DropDownList: View {
                     }
                 )
             }
+            .accessibilityIdentifier(AccessibilityIdentifiers.dropDownListView)
             .frame(height: scrollViewContentSize.height)
             .modifier(BackgroundModifier())
             .offset(y: 40)

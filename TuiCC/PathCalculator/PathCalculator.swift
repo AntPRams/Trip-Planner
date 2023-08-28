@@ -21,13 +21,11 @@ actor PathCalculator {
         self.connections = connections
     }
     
-    func getCheapestPath(from origin: String, to destination: String) throws -> PathResult {
+    func generatePath(from origin: String, to destination: String) throws -> PathResult {
         paths.removeAll()
         if connections.isNotEmpty && nodes.isEmpty {
             processNodes(from: origin)
         }
-        
-        try validateSearch(origin: origin, destination: destination)
 
         findPath(from: origin, to: destination)
         
@@ -45,13 +43,6 @@ actor PathCalculator {
         )
         
         return result
-    }
-    
-    func printCost(for path: [GKGraphNode]) {
-        let values = path.compactMap({ $0 as? Node}).compactMap { node in
-            node.flightConnection.price
-        }
-        print(values.reduce(0, +))
     }
 }
 
@@ -97,21 +88,6 @@ extension PathCalculator {
                     paths.append(path)
                 }
             }
-        }
-    }
-    
-    private func validateSearch(origin: String, destination: String) throws {
-        switch (origin, destination) {
-        case _ where origin.isEmpty && destination.isEmpty:
-            throw AppError.pathMissing
-        case _ where origin.isEmpty:
-            throw AppError.originMissing
-        case _ where destination.isEmpty:
-            throw AppError.destinationMissing
-        case _ where destination == origin:
-            throw AppError.sameCityInBothFields
-        default:
-            return
         }
     }
 }

@@ -40,6 +40,17 @@
                ReferencedContainer = "container:TuiCC.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "914F59512A9D28FB0099D944"
+               BuildableName = "TuiCCUITests.xctest"
+               BlueprintName = "TuiCCUITests"
+               ReferencedContainer = "container:TuiCC.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

@@ -11,9 +11,11 @@ struct MainViewHeader<ViewModel: MainViewModelInterface>: View {
             SearchField(viewModel: viewModel.originSearchFieldViewModel)
                 .focused($focusedField, equals: .origin)
                 .zIndex(3)
+                .accessibilityIdentifier(AccessibilityIdentifiers.originSearchField)
             SearchField(viewModel: viewModel.destinationSearchFieldViewModel)
                 .focused($focusedField, equals: .destination)
                 .zIndex(2)
+                .accessibilityIdentifier(AccessibilityIdentifiers.destinationSearchField)
             ButtonsRow(
                 viewModel: viewModel,
                 focusedField: _focusedField

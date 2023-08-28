@@ -15,6 +15,7 @@ struct ButtonsRow<ViewModel: MainViewModelInterface>: View {
                 focusedField = nil
                 viewModel.calculatePaths()
             }
+            .accessibilityIdentifier(AccessibilityIdentifiers.searchButton)
             AppButton(
                 image: .clear,
                 text: Text(Localizable.buttonClear),
@@ -22,14 +23,17 @@ struct ButtonsRow<ViewModel: MainViewModelInterface>: View {
             ) {
                 viewModel.clear()
             }
+            .accessibilityIdentifier(AccessibilityIdentifiers.clearButton)
             AppButton(
                 image: .refresh,
                 text: Text(Localizable.buttonRefresh)
             ) {
                 viewModel.fetchData()
             }
+            .accessibilityIdentifier(AccessibilityIdentifiers.refreshButton)
             Spacer()
         }
+        .accessibilityIdentifier(AccessibilityIdentifiers.mainViewButtonsRow)
     }
 }
 

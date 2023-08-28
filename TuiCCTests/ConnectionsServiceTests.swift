@@ -22,8 +22,8 @@ final class ConnectionsServiceTests: XCTestCase {
         
         //then
         XCTAssertTrue(connections.count == 6)
-        XCTAssertTrue(connections[0].origin == "A")
-        XCTAssertEqual(connections[5].destination, "E")
+        XCTAssertTrue(connections[0].origin == "Lisbon")
+        XCTAssertEqual(connections[5].destination, "Ankara")
         XCTAssertEqual(connections[2].price, 200)
     }
 }

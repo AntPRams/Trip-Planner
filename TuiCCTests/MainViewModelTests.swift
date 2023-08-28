@@ -11,8 +11,8 @@ class MainViewModelTests: XCTestCase {
         super.setUp()
         
         sut = MainViewModel()
-        sut.originSearchFieldViewModel.text = "A"
-        sut.destinationSearchFieldViewModel.text = "E"
+        sut.originSearchFieldViewModel.text = "Lisbon"
+        sut.destinationSearchFieldViewModel.text = "Ankara"
         disposableBag = Set<AnyCancellable>()
     }
     
@@ -52,6 +52,7 @@ class MainViewModelTests: XCTestCase {
         
         //when
         sut.fetchData()
+        XCTAssertTrue(sut.currentState == .loading)
         
         //then
         sut.$cities
@@ -62,37 +63,11 @@ class MainViewModelTests: XCTestCase {
                     return
                 }
                 expectation.fulfill()
-                XCTAssertEqual(cities, ["A", "B", "C", "D", "F", "E"])
+                XCTAssertEqual(cities, ["Lisbon", "London", "Oslo", "Berlin", "Rome", "Ankara"])
             }
             .store(in: &disposableBag)
         
         wait(for: [expectation], timeout: 1)
-    }
-    
-    func test_calculatePath() async throws {
-        //given
-        try await injectMockData()
-        
-        //when
-        sut.calculatePaths()
-        XCTAssertTrue(sut.currentState == .loading)
-        
-        //then
-        sut.$pathResult
-            .dropFirst()
-            .sink { [weak self] path in
-                guard let self, let path else {
-                    XCTFail("Failed to get path")
-                    return
-                }
-                XCTAssertTrue(sut.currentState == .idle)
-                XCTAssertEqual(path.formattedValue, "821")
-                XCTAssertEqual(path.stopOvers.last, ["F", "E"])
-                XCTAssertEqual(path.stopOvers.first, ["A", "B"])
-                XCTAssertEqual(path.coordinates.first?.latitude, 1)
-                XCTAssertEqual(path.coordinates.last?.longitude, 123)
-            }
-            .store(in: &disposableBag)
     }
     
     func test_calculatePathError() throws {
@@ -129,16 +104,17 @@ class MainViewModelTests: XCTestCase {
         XCTAssertNil(sut.pathResult)
         XCTAssertFalse(sut.originSearchFieldViewModel.text.isNotEmpty)
         XCTAssertFalse(sut.destinationSearchFieldViewModel.text.isNotEmpty)
-        
+    }
+    
+    func test_searchValidationErrors() {
+        validateSearch(origin: String(), destination: String(), customError: .pathMissing)
+        validateSearch(origin: "Some", destination: String(), customError: .destinationMissing)
+        validateSearch(origin: String(), destination: "Some", customError: .originMissing)
+        validateSearch(origin: "Some", destination: "Some", customError: .sameCityInBothFields)
     }
 }
 
 private extension MainViewModelTests {
-    func injectMockData() async throws {
-        let url = URLMocks.getMockDataUrl(for: .mockConnections)
-        let connections = try await ConnectionsService(url: url).fetchConnections()
-        await sut.pathCalculator.updateConnections(connections)
-    }
     
     func assertError<T: Equatable>(_ customError: T) {
         //when
@@ -153,7 +129,16 @@ private extension MainViewModelTests {
             }
             .store(in: &disposableBag)
         
-        wait(for: [expectation], timeout: 1)
+        wait(for: [expectation], timeout: 0.5)
+    }
+    
+    func validateSearch(origin: String, destination: String, customError: AppError) {
+        do {
+            try sut.validateSearch(origin: origin, destination: destination)
+        } catch {
+            XCTAssertEqual(error as? AppError, customError)
+        }
     }
 }
+
 

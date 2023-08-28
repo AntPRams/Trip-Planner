@@ -11,6 +11,12 @@
 		914F59452A9D0C3B0099D944 /* UrlMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914F59442A9D0C3B0099D944 /* UrlMocks.swift */; };
 		914F594A2A9D190D0099D944 /* UrlMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914F59442A9D0C3B0099D944 /* UrlMocks.swift */; };
 		914F594B2A9D19120099D944 /* nullConnections.json in Resources */ = {isa = PBXBuildFile; fileRef = 914F59422A9D09730099D944 /* nullConnections.json */; };
+		914F594D2A9D1E960099D944 /* SearchViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914F594C2A9D1E960099D944 /* SearchViewModelTests.swift */; };
+		914F59552A9D28FC0099D944 /* MainViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914F59542A9D28FC0099D944 /* MainViewTests.swift */; };
+		914F59572A9D28FC0099D944 /* TuiCCUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914F59562A9D28FC0099D944 /* TuiCCUITestsLaunchTests.swift */; };
+		914F595E2A9D2A5C0099D944 /* MainViewModelMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914F595D2A9D2A5C0099D944 /* MainViewModelMock.swift */; };
+		914F59602A9D2E8C0099D944 /* AccessibilityIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914F595F2A9D2E8C0099D944 /* AccessibilityIdentifiers.swift */; };
+		914F59622A9D415F0099D944 /* PathCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914F59612A9D415F0099D944 /* PathCalculatorTests.swift */; };
 		91CFED5C2A9BD33700AEF028 /* MapViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91CFED5B2A9BD33700AEF028 /* MapViewRepresentable.swift */; };
 		91CFED5E2A9BE66F00AEF028 /* CityRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91CFED5D2A9BE66F00AEF028 /* CityRow.swift */; };
 		91CFED622A9BEA9100AEF028 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 91DD4C6A2A9A3998000AD497 /* Localizable.strings */; };
@@ -60,6 +66,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		914F59582A9D28FC0099D944 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B69C4E132A94F94400CEC473 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B69C4E1A2A94F94400CEC473;
+			remoteInfo = TuiCC;
+		};
 		B61D2BE62A964728008D3606 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = B69C4E132A94F94400CEC473 /* Project object */;
@@ -73,6 +86,13 @@
 		914F59412A9D05A80099D944 /* TuiCCTests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = TuiCCTests.xctestplan; sourceTree = SOURCE_ROOT; };
 		914F59422A9D09730099D944 /* nullConnections.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = nullConnections.json; sourceTree = "<group>"; };
 		914F59442A9D0C3B0099D944 /* UrlMocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlMocks.swift; sourceTree = "<group>"; };
+		914F594C2A9D1E960099D944 /* SearchViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModelTests.swift; sourceTree = "<group>"; };
+		914F59522A9D28FB0099D944 /* TuiCCUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TuiCCUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		914F59542A9D28FC0099D944 /* MainViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewTests.swift; sourceTree = "<group>"; };
+		914F59562A9D28FC0099D944 /* TuiCCUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TuiCCUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		914F595D2A9D2A5C0099D944 /* MainViewModelMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModelMock.swift; sourceTree = "<group>"; };
+		914F595F2A9D2E8C0099D944 /* AccessibilityIdentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityIdentifiers.swift; sourceTree = "<group>"; };
+		914F59612A9D415F0099D944 /* PathCalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathCalculatorTests.swift; sourceTree = "<group>"; };
 		91CFED5B2A9BD33700AEF028 /* MapViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewRepresentable.swift; sourceTree = "<group>"; };
 		91CFED5D2A9BE66F00AEF028 /* CityRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityRow.swift; sourceTree = "<group>"; };
 		91DD4C5C2A99AD10000AD497 /* PathCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathCalculator.swift; sourceTree = "<group>"; };
@@ -122,6 +142,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		914F594F2A9D28FB0099D944 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B61D2BDF2A964728008D3606 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -139,6 +166,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		914F59532A9D28FC0099D944 /* TuiCCUITests */ = {
+			isa = PBXGroup;
+			children = (
+				914F59542A9D28FC0099D944 /* MainViewTests.swift */,
+				914F59562A9D28FC0099D944 /* TuiCCUITestsLaunchTests.swift */,
+			);
+			path = TuiCCUITests;
+			sourceTree = "<group>";
+		};
 		91DD4C552A9977F2000AD497 /* PathCalculator */ = {
 			isa = PBXGroup;
 			children = (
@@ -249,8 +285,10 @@
 				914F59412A9D05A80099D944 /* TuiCCTests.xctestplan */,
 				B69C4E352A95070B00CEC473 /* Mocks */,
 				B61D2BE42A964728008D3606 /* ArrayExtensionsTests.swift */,
+				914F594C2A9D1E960099D944 /* SearchViewModelTests.swift */,
 				B64667E02A964DE600DA4302 /* ConnectionsServiceTests.swift */,
 				B64667E52A9657B400DA4302 /* MainViewModelTests.swift */,
+				914F59612A9D415F0099D944 /* PathCalculatorTests.swift */,
 			);
 			path = TuiCCTests;
 			sourceTree = "<group>";
@@ -270,6 +308,7 @@
 			children = (
 				91F0B1772A9CE9C1009196BE /* mockConnections.json */,
 				914F59422A9D09730099D944 /* nullConnections.json */,
+				914F595D2A9D2A5C0099D944 /* MainViewModelMock.swift */,
 			);
 			path = Json;
 			sourceTree = "<group>";
@@ -279,6 +318,7 @@
 			children = (
 				B69C4E1D2A94F94400CEC473 /* TuiCC */,
 				B61D2BE32A964728008D3606 /* TuiCCTests */,
+				914F59532A9D28FC0099D944 /* TuiCCUITests */,
 				B69C4E1C2A94F94400CEC473 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -288,6 +328,7 @@
 			children = (
 				B69C4E1B2A94F94400CEC473 /* TuiCC.app */,
 				B61D2BE22A964728008D3606 /* TuiCCTests.xctest */,
+				914F59522A9D28FB0099D944 /* TuiCCUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -382,6 +423,7 @@
 				91DD4C5E2A9A367D000AD497 /* Error */,
 				91F0B1632A9C25B7009196BE /* Views */,
 				91F0B16A2A9C307E009196BE /* Modifiers */,
+				914F595F2A9D2E8C0099D944 /* AccessibilityIdentifiers.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -389,6 +431,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		914F59512A9D28FB0099D944 /* TuiCCUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 914F595A2A9D28FC0099D944 /* Build configuration list for PBXNativeTarget "TuiCCUITests" */;
+			buildPhases = (
+				914F594E2A9D28FB0099D944 /* Sources */,
+				914F594F2A9D28FB0099D944 /* Frameworks */,
+				914F59502A9D28FB0099D944 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				914F59592A9D28FC0099D944 /* PBXTargetDependency */,
+			);
+			name = TuiCCUITests;
+			productName = TuiCCUITests;
+			productReference = 914F59522A9D28FB0099D944 /* TuiCCUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		B61D2BE12A964728008D3606 /* TuiCCTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = B61D2BE82A964728008D3606 /* Build configuration list for PBXNativeTarget "TuiCCTests" */;
@@ -431,9 +491,13 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1500;
+				LastSwiftUpdateCheck = 1430;
 				LastUpgradeCheck = 1500;
 				TargetAttributes = {
+					914F59512A9D28FB0099D944 = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = B69C4E1A2A94F94400CEC473;
+					};
 					B61D2BE12A964728008D3606 = {
 						CreatedOnToolsVersion = 15.0;
 						TestTargetID = B69C4E1A2A94F94400CEC473;
@@ -458,11 +522,19 @@
 			targets = (
 				B69C4E1A2A94F94400CEC473 /* TuiCC */,
 				B61D2BE12A964728008D3606 /* TuiCCTests */,
+				914F59512A9D28FB0099D944 /* TuiCCUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		914F59502A9D28FB0099D944 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B61D2BE02A964728008D3606 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -488,14 +560,26 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		914F594E2A9D28FB0099D944 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				914F59552A9D28FC0099D944 /* MainViewTests.swift in Sources */,
+				914F59572A9D28FC0099D944 /* TuiCCUITestsLaunchTests.swift in Sources */,
+				914F595E2A9D2A5C0099D944 /* MainViewModelMock.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B61D2BDE2A964728008D3606 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				B64667E12A964DE600DA4302 /* ConnectionsServiceTests.swift in Sources */,
+				914F59622A9D415F0099D944 /* PathCalculatorTests.swift in Sources */,
 				914F59452A9D0C3B0099D944 /* UrlMocks.swift in Sources */,
 				B61D2BE52A964728008D3606 /* ArrayExtensionsTests.swift in Sources */,
 				B64667E62A9657B400DA4302 /* MainViewModelTests.swift in Sources */,
+				914F594D2A9D1E960099D944 /* SearchViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -524,6 +608,7 @@
 				91CFED5C2A9BD33700AEF028 /* MapViewRepresentable.swift in Sources */,
 				91F0B1712A9C3D09009196BE /* TripOverviewTextModifier.swift in Sources */,
 				B64667DA2A964A7200DA4302 /* ConnectionsService.swift in Sources */,
+				914F59602A9D2E8C0099D944 /* AccessibilityIdentifiers.swift in Sources */,
 				B69C4E462A950BFC00CEC473 /* MainViewModel.swift in Sources */,
 				91F0B1652A9C298D009196BE /* ButtonsRow.swift in Sources */,
 				91DD4C652A9A386F000AD497 /* Path.swift in Sources */,
@@ -547,6 +632,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		914F59592A9D28FC0099D944 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B69C4E1A2A94F94400CEC473 /* TuiCC */;
+			targetProxy = 914F59582A9D28FC0099D944 /* PBXContainerItemProxy */;
+		};
 		B61D2BE72A964728008D3606 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = B69C4E1A2A94F94400CEC473 /* TuiCC */;
@@ -566,6 +656,44 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		914F595B2A9D28FC0099D944 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = DF7FAJJH84;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tuiCC.uiTests.TuiCCUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TuiCC;
+			};
+			name = Debug;
+		};
+		914F595C2A9D28FC0099D944 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = DF7FAJJH84;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tuiCC.uiTests.TuiCCUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TuiCC;
+			};
+			name = Release;
+		};
 		B61D2BE92A964728008D3606 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -792,6 +920,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		914F595A2A9D28FC0099D944 /* Build configuration list for PBXNativeTarget "TuiCCUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				914F595B2A9D28FC0099D944 /* Debug */,
+				914F595C2A9D28FC0099D944 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		B61D2BE82A964728008D3606 /* Build configuration list for PBXNativeTarget "TuiCCTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

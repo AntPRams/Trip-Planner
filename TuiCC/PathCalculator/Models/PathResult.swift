@@ -30,7 +30,7 @@ extension PathResult {
         )
     }
     
-    func formatValue(from currentValue: Double) -> String {
+    private func formatValue(from currentValue: Double) -> String {
         let localeIdentifier = Locale.preferredLanguages[0]
         let formatter = NumberFormatter()
         formatter.numberStyle = .currency

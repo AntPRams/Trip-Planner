@@ -11,7 +11,6 @@ protocol MainViewModelInterface: ObservableObject {
     var currentState: ViewState { get set }
     var pathCalculator: PathCalculator { get }
     var service: ConnectionsService { get }
-    var canPerformSearch: Bool { get set }
     var originSearchFieldViewModel: SearchFieldViewModel { get }
     var destinationSearchFieldViewModel: SearchFieldViewModel { get }
     
@@ -27,18 +26,16 @@ final class MainViewModel: MainViewModelInterface {
     private(set) var service: ConnectionsService
     private(set) var pathCalculator: PathCalculator
     
-    
-    @Published var currentState: ViewState = .loading
-    @Published var connections = [FlightConnection]()
-    @Published var cities = [String]()
     @Published var error: Error?
+    @Published var cities = [String]()
     @Published var pathResult: PathResult?
+    @Published var connections = [FlightConnection]()
+    @Published var currentState: ViewState = .loading
     
-    private var disposableBag = Set<AnyCancellable>()
     let originSearchFieldViewModel = SearchFieldViewModel(connectionType: .origin)
     let destinationSearchFieldViewModel = SearchFieldViewModel(connectionType: .destination)
     
-    @Published var canPerformSearch: Bool = false
+    private var disposableBag = Set<AnyCancellable>()
     
     // MARK: - Init
     
@@ -80,7 +77,8 @@ final class MainViewModel: MainViewModelInterface {
         currentState = .loading
         Task {
             do {
-                let path = try await pathCalculator.getCheapestPath(
+                try validateSearch(origin: origin, destination: destination)
+                let path = try await pathCalculator.generatePath(
                     from: origin,
                     to: destination
                 )
@@ -102,6 +100,21 @@ final class MainViewModel: MainViewModelInterface {
         originSearchFieldViewModel.text = String()
         destinationSearchFieldViewModel.text = String()
         pathResult = nil
+    }
+    
+    func validateSearch(origin: String, destination: String) throws {
+        switch (origin, destination) {
+        case _ where origin.isEmpty && destination.isEmpty:
+            throw AppError.pathMissing
+        case _ where origin.isEmpty:
+            throw AppError.originMissing
+        case _ where destination.isEmpty:
+            throw AppError.destinationMissing
+        case _ where destination == origin:
+            throw AppError.sameCityInBothFields
+        default:
+            return
+        }
     }
 }
 

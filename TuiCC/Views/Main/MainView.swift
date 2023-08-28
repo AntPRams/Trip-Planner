@@ -26,6 +26,7 @@ struct MainView<ViewModel: MainViewModelInterface>: View {
                             .cornerRadius(10)
                             .frame(height: 300)
                             .frame(maxWidth: .infinity)
+                            .accessibilityIdentifier(AccessibilityIdentifiers.mapView)
                     }
                     Spacer()
                 }
@@ -41,6 +42,7 @@ struct MainView<ViewModel: MainViewModelInterface>: View {
         .onAppear {
             viewModel.fetchData()
         }
+        .accessibilityIdentifier(AccessibilityIdentifiers.mainView)
     }
 }
 
