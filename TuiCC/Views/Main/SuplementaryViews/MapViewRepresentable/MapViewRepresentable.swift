@@ -2,16 +2,21 @@ import SwiftUI
 import MapKit
 
 struct MapViewRepresentable: UIViewRepresentable {
+    
+    // MARK: - Properties
+    
     let lineCoordinates: [CLLocationCoordinate2D]
+    
+    // MARK: - Build
     
     func makeUIView(context: Context) -> MKMapView {
         let mapView = MKMapView()
         mapView.delegate = context.coordinator
         mapView.mapType = .satelliteFlyover
         mapView.region.span = MKCoordinateSpan(latitudeDelta: 50, longitudeDelta: 50)
-
+        
         return mapView
-      }
+    }
     
     func updateUIView(_ view: MKMapView, context: Context) {
         let overlays = view.overlays
@@ -30,22 +35,3 @@ struct MapViewRepresentable: UIViewRepresentable {
         Coordinator(self)
     }
 }
-
-class Coordinator: NSObject, MKMapViewDelegate {
-    var parent: MapViewRepresentable
-    
-    init(_ parent: MapViewRepresentable) {
-        self.parent = parent
-    }
-    
-    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
-        if let routePolyline = overlay as? MKPolyline {
-            let renderer = MKPolylineRenderer(polyline: routePolyline)
-            renderer.strokeColor = UIColor.systemBlue
-            renderer.lineWidth = 5
-            return renderer
-        }
-        return MKOverlayRenderer()
-    }
-}
-

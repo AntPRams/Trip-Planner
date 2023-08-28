@@ -1,13 +1,19 @@
 import SwiftUI
 
-struct ViewBackground: ViewModifier {
+struct BackgroundModifier: ViewModifier {
+    
+    var applyShadow: Bool
+    
+    init(applyShadow: Bool = true) {
+        self.applyShadow = applyShadow
+    }
     
     func body(content: Content) -> some View {
         content
             .background(
                 RoundedRectangle(cornerRadius: 10)
                     .foregroundColor(Color(UIColor.secondarySystemBackground))
-                    .shadow(color: .secondary, radius: 1)
+                    .shadow(color: applyShadow ? .secondary : .clear, radius: 1)
             )
     }
 }

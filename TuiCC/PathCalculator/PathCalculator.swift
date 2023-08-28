@@ -41,7 +41,7 @@ actor PathCalculator {
         let result = PathResult(
             coordinates: cheapestPath.coordinates(),
             stopOvers: cheapestPath.getStopOvers(),
-            price: String(cheapestPath.cumulativePrice)
+            price: cheapestPath.cumulativePrice
         )
         
         return result

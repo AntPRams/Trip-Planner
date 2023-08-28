@@ -13,14 +13,13 @@ struct MainView<ViewModel: MainViewModelInterface>: View {
                     .padding(6)
                     .zIndex(1)
                 Divider()
-                    .background(Color.clear)
                 if case .loading = viewModel.currentState {
                     ProgressView()
                 }
                 ScrollView {
                     if let path = viewModel.pathResult {
                         TripOverview(
-                            price: path.price,
+                            price: path.formattedValue,
                             stopOvers: path.stopOvers
                         )
                         MapViewRepresentable(lineCoordinates: path.coordinates)

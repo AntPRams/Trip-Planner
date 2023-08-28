@@ -9,7 +9,7 @@ import SwiftUI
 
 struct TripOverview: View {
     
-    @Currency var price: String
+    var price: String
     var stopOvers: [[String?]]
     
     var body: some View {
@@ -20,6 +20,9 @@ struct TripOverview: View {
                     .font(.title.weight(.semibold))
                 Spacer()
                 Text(price)
+                    .fontDesign(.rounded)
+                    .font(.title2.weight(.semibold))
+                    .padding(.horizontal)
             }
             HStack {
                 Image.originPlaneImage
@@ -33,25 +36,23 @@ struct TripOverview: View {
                 HStack {
                     if let origin = stopOver[0] {
                         Text(origin)
-                            .fontDesign(.rounded)
-                            .frame(maxWidth: .infinity, alignment: .center)
+                            .modifier(TripOverviewTextModifier())
                     }
                     if let destination = stopOver[1] {
                         Text(destination)
-                            .fontDesign(.rounded)
-                            .frame(maxWidth: .infinity, alignment: .center)
+                            .modifier(TripOverviewTextModifier())
                     }
                 }
             }
         }
         .padding(6)
-        .modifier(ViewBackground())
+        .modifier(BackgroundModifier())
     }
 }
 
 struct TripOverview_Previews: PreviewProvider {
     static var previews: some View {
-        TripOverview(price: "3000", stopOvers: [["adasdasdsaa", "qweqeqeqwe"], ["qweqqe eqweq", "sadsdada"]])
+        TripOverview(price: "3000", stopOvers: [["test", "test test"], ["qweqqe eqweq test test", "testtesttesttesttesttest testtesttesttesttest"]])
             .previewLayout(.sizeThatFits)
     }
 }

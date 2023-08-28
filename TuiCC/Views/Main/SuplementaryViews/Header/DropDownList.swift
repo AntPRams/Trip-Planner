@@ -19,6 +19,7 @@ struct DropDownList: View {
                                     viewModel.text = city
                                 }
                             }
+                            .modifier(BackgroundModifier(applyShadow: false))
                         Divider()
                     }
                 }
@@ -32,7 +33,7 @@ struct DropDownList: View {
                 )
             }
             .frame(height: scrollViewContentSize.height)
-            .modifier(ViewBackground())
+            .modifier(BackgroundModifier())
             .offset(y: 40)
             .transition(
                 .asymmetric(
