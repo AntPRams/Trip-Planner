@@ -28,3 +28,6 @@ This app was developed using MVVM architeture.
 
 ## UI Details
 
+<p align="center">
+<img src="https://github.com/AntPRams/TuiCC/assets/36003116/a63ab8a6-9cd2-4590-b830-c21397fc38db" width="25%%">   <img src="https://github.com/AntPRams/TuiCC/assets/36003116/50e01cd0-a419-4b34-8f98-7de41381f1a1" width="25%%">    <img src="https://github.com/AntPRams/TuiCC/assets/36003116/bb2cb70c-a42d-4d83-b70f-181474426f98" width="25%%">
+</p>
