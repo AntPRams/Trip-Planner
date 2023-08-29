@@ -16,7 +16,7 @@ This app was developed using MVVM architeture.
  
 3. _The purpose of this app is to find the cheapest route between the two cities that the user select and to show the total price in a label in the same page_:
 
-
+* This was the trickiest part. I already knew about the Dijktra's algorithm but I never had to implement it. I've tried some solutions made from scratch, but where some did work perfectly in other paths failed miserably. Then I stumble upon an Apple framework, `GameplayKit` that had an API to create graphs. So, with the help of `GKGraph` i've managed to create a path calculator that was able to provide all the paths available between two given nodes. Then i only had to check which was the cheapest
  
 4. Use coordinates available in the JSON to show the cheapest selected route on a map
  
