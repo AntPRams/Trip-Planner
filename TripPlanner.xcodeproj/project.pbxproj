@@ -13,7 +13,7 @@
 		914F594B2A9D19120099D944 /* nullConnections.json in Resources */ = {isa = PBXBuildFile; fileRef = 914F59422A9D09730099D944 /* nullConnections.json */; };
 		914F594D2A9D1E960099D944 /* SearchViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914F594C2A9D1E960099D944 /* SearchViewModelTests.swift */; };
 		914F59552A9D28FC0099D944 /* MainViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914F59542A9D28FC0099D944 /* MainViewTests.swift */; };
-		914F59572A9D28FC0099D944 /* TuiCCUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914F59562A9D28FC0099D944 /* TuiCCUITestsLaunchTests.swift */; };
+		914F59572A9D28FC0099D944 /* TripPlannerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914F59562A9D28FC0099D944 /* TripPlannerUITestsLaunchTests.swift */; };
 		914F59622A9D415F0099D944 /* PathCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914F59612A9D415F0099D944 /* PathCalculatorTests.swift */; };
 		91D850412A9CF4A600F1EA9F /* mockConnections.json in Resources */ = {isa = PBXBuildFile; fileRef = 91F0B1772A9CE9C1009196BE /* mockConnections.json */; };
 		91F0B1782A9CE9C1009196BE /* mockConnections.json in Resources */ = {isa = PBXBuildFile; fileRef = 91F0B1772A9CE9C1009196BE /* mockConnections.json */; };
@@ -58,7 +58,6 @@
 		91F5C5AE2A9D8240002DE385 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F5C5822A9D823F002DE385 /* MainView.swift */; };
 		91F5C5AF2A9D8240002DE385 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 91F5C5842A9D823F002DE385 /* Localizable.strings */; };
 		91F5C5B02A9D8240002DE385 /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F5C5862A9D823F002DE385 /* Localizable.swift */; };
-		91F5C5B32A9D8F69002DE385 /* TripPlannerTests.xctestplan in Resources */ = {isa = PBXBuildFile; fileRef = 91F5C5B22A9D8F69002DE385 /* TripPlannerTests.xctestplan */; };
 		B61D2BE52A964728008D3606 /* ArrayExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61D2BE42A964728008D3606 /* ArrayExtensionsTests.swift */; };
 		B64667E12A964DE600DA4302 /* ConnectionsServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64667E02A964DE600DA4302 /* ConnectionsServiceTests.swift */; };
 		B64667E62A9657B400DA4302 /* MainViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64667E52A9657B400DA4302 /* MainViewModelTests.swift */; };
@@ -82,12 +81,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9149160C2A9D9110000FE872 /* TripPlannerTests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = file; path = TripPlannerTests.xctestplan; sourceTree = SOURCE_ROOT; };
 		914F59422A9D09730099D944 /* nullConnections.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = nullConnections.json; sourceTree = "<group>"; };
 		914F59442A9D0C3B0099D944 /* UrlMocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlMocks.swift; sourceTree = "<group>"; };
 		914F594C2A9D1E960099D944 /* SearchViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModelTests.swift; sourceTree = "<group>"; };
 		914F59522A9D28FB0099D944 /* TripPlannerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TripPlannerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		914F59542A9D28FC0099D944 /* MainViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewTests.swift; sourceTree = "<group>"; };
-		914F59562A9D28FC0099D944 /* TuiCCUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TuiCCUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		914F59562A9D28FC0099D944 /* TripPlannerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripPlannerUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		914F59612A9D415F0099D944 /* PathCalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathCalculatorTests.swift; sourceTree = "<group>"; };
 		91F0B1772A9CE9C1009196BE /* mockConnections.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = mockConnections.json; sourceTree = "<group>"; };
 		91F5C54A2A9D823F002DE385 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -131,7 +131,6 @@
 		91F5C5822A9D823F002DE385 /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		91F5C5852A9D823F002DE385 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		91F5C5862A9D823F002DE385 /* Localizable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
-		91F5C5B22A9D8F69002DE385 /* TripPlannerTests.xctestplan */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TripPlannerTests.xctestplan; sourceTree = "<group>"; };
 		B61D2BE22A964728008D3606 /* TripPlannerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TripPlannerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B61D2BE42A964728008D3606 /* ArrayExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtensionsTests.swift; sourceTree = "<group>"; };
 		B64667E02A964DE600DA4302 /* ConnectionsServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionsServiceTests.swift; sourceTree = "<group>"; };
@@ -168,7 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				914F59542A9D28FC0099D944 /* MainViewTests.swift */,
-				914F59562A9D28FC0099D944 /* TuiCCUITestsLaunchTests.swift */,
+				914F59562A9D28FC0099D944 /* TripPlannerUITestsLaunchTests.swift */,
 			);
 			path = TripPlannerUITests;
 			sourceTree = "<group>";
@@ -376,7 +375,7 @@
 		B61D2BE32A964728008D3606 /* TripPlannerTests */ = {
 			isa = PBXGroup;
 			children = (
-				91F5C5B22A9D8F69002DE385 /* TripPlannerTests.xctestplan */,
+				9149160C2A9D9110000FE872 /* TripPlannerTests.xctestplan */,
 				B69C4E352A95070B00CEC473 /* Mocks */,
 				B61D2BE42A964728008D3606 /* ArrayExtensionsTests.swift */,
 				914F594C2A9D1E960099D944 /* SearchViewModelTests.swift */,
@@ -538,7 +537,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				91F0B1782A9CE9C1009196BE /* mockConnections.json in Resources */,
-				91F5C5B32A9D8F69002DE385 /* TripPlannerTests.xctestplan in Resources */,
 				914F59432A9D09730099D944 /* nullConnections.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -563,7 +561,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				914F59552A9D28FC0099D944 /* MainViewTests.swift in Sources */,
-				914F59572A9D28FC0099D944 /* TuiCCUITestsLaunchTests.swift in Sources */,
+				914F59572A9D28FC0099D944 /* TripPlannerUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
