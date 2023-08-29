@@ -8,7 +8,7 @@ This app was developed using MVVM architeture.
 
 >1. _Download and parse information_: 
 
-* The `APICaller` is the object that have a generic method used to fetch a model, then the `ConnectionsService` use the caller to fetch and map the data accordingly. The `Service` is a protocol tthat can be extended or used for similar purposes.
+* The `APICaller` is the object that have a generic method used to fetch a model, then the `ConnectionsService` use the caller to fetch and map the data accordingly. The `Service` is a protocol that can be extended or used for similar purposes.
  
 >2. _The user should be able to select any departure city and any destination city available (even if a direct connection between the two cities is not available)_:
 
@@ -16,7 +16,7 @@ This app was developed using MVVM architeture.
  
 >3. _The purpose of this app is to find the cheapest route between the two cities that the user select and to show the total price in a label in the same page_:
 
-* This was the trickiest part. I already knew about the Dijktra's algorithm but I never had to implement it. I've tried some solutions made from scratch, but where some did work perfectly in other paths failed miserably. Then I stumble upon an Apple framework, `GameplayKit` that had an API to create graphs. So, with the help of [`GKGraph`](https://developer.apple.com/documentation/gameplaykit/gkgraph) i've managed to create a path calculator that was able to provide all the paths available between two given [nodes](https://developer.apple.com/documentation/gameplaykit/gkgraphnode). Then i only had to check which was the cheapest
+* This was the trickiest part. I already knew about the Dijktra's algorithm but I never had to implement it. I've tried some solutions made from scratch, but where some did work perfectly in other paths failed miserably. Then I stumble upon an Apple framework, `GameplayKit`. So, with the help of [`GKGraph`](https://developer.apple.com/documentation/gameplaykit/gkgraph) i've managed to create a path calculator that was able to provide all the paths available between two given [nodes](https://developer.apple.com/documentation/gameplaykit/gkgraphnode). Then i only had to check which was the cheapest.
  
 >4. _Use coordinates available in the JSON to show the cheapest selected route on a map_:
 
