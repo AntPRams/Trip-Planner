@@ -29,7 +29,7 @@ This app was developed using MVVM architeture.
 ## UI Details
 
 <p align="center">
-<img src="https://github.com/AntPRams/TuiCC/assets/36003116/a63ab8a6-9cd2-4590-b830-c21397fc38db" width="20%%">    <img src="https://github.com/AntPRams/TuiCC/assets/36003116/50e01cd0-a419-4b34-8f98-7de41381f1a1" width="20%%">    <img src="https://github.com/AntPRams/TuiCC/assets/36003116/50e01cd0-a419-4b34-8f98-7de41381f1a1" width="20%%">    <img src="https://github.com/AntPRams/TuiCC/assets/36003116/bb2cb70c-a42d-4d83-b70f-181474426f98" width="20%%">
+<img src="https://github.com/AntPRams/Trip-Planner/assets/36003116/da0eb761-960d-4f27-a6fe-45e91a03246d" width="20%%">    <img src="https://github.com/AntPRams/Trip-Planner/assets/36003116/d340ba11-a549-474a-8677-d8741bb1514d" width="20%%">    <img src="https://github.com/AntPRams/Trip-Planner/assets/36003116/9da32408-4397-4265-9329-2c1c5dfa6476" width="20%%">    <img src="https://github.com/AntPRams/Trip-Planner/assets/36003116/bef6901a-5fa8-465a-9c07-b95e271be308" width="20%%">
 </p>
 
 The header has three buttons:
@@ -45,7 +45,7 @@ When a patch is found the map and the trip overview will be displayed.
 ## Tests
 
 <p align="center">
-<img src="https://github.com/AntPRams/TuiCC/assets/36003116/4eea6eb6-6bce-4870-bb28-317a31369501" width="80%%">
+<img src="https://github.com/AntPRams/Trip-Planner/assets/36003116/6996d9b9-a218-45de-8041-bbd37cbda20a" width="80%%">
 </p>
 
 Unit tests covers 63,8% of the app, with a large portion of the remainder being covered by UI tests
@@ -55,4 +55,5 @@ Unit tests covers 63,8% of the app, with a large portion of the remainder being 
 * macOS Ventura 13.5.1
 
 * XCode 14.3.1
+
 
