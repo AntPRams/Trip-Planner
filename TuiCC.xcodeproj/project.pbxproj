@@ -14,7 +14,6 @@
 		914F594D2A9D1E960099D944 /* SearchViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914F594C2A9D1E960099D944 /* SearchViewModelTests.swift */; };
 		914F59552A9D28FC0099D944 /* MainViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914F59542A9D28FC0099D944 /* MainViewTests.swift */; };
 		914F59572A9D28FC0099D944 /* TuiCCUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914F59562A9D28FC0099D944 /* TuiCCUITestsLaunchTests.swift */; };
-		914F595E2A9D2A5C0099D944 /* MainViewModelMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914F595D2A9D2A5C0099D944 /* MainViewModelMock.swift */; };
 		914F59602A9D2E8C0099D944 /* AccessibilityIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914F595F2A9D2E8C0099D944 /* AccessibilityIdentifiers.swift */; };
 		914F59622A9D415F0099D944 /* PathCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914F59612A9D415F0099D944 /* PathCalculatorTests.swift */; };
 		91CFED5C2A9BD33700AEF028 /* MapViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91CFED5B2A9BD33700AEF028 /* MapViewRepresentable.swift */; };
@@ -90,7 +89,6 @@
 		914F59522A9D28FB0099D944 /* TuiCCUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TuiCCUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		914F59542A9D28FC0099D944 /* MainViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewTests.swift; sourceTree = "<group>"; };
 		914F59562A9D28FC0099D944 /* TuiCCUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TuiCCUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		914F595D2A9D2A5C0099D944 /* MainViewModelMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModelMock.swift; sourceTree = "<group>"; };
 		914F595F2A9D2E8C0099D944 /* AccessibilityIdentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityIdentifiers.swift; sourceTree = "<group>"; };
 		914F59612A9D415F0099D944 /* PathCalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathCalculatorTests.swift; sourceTree = "<group>"; };
 		91CFED5B2A9BD33700AEF028 /* MapViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewRepresentable.swift; sourceTree = "<group>"; };
@@ -308,7 +306,6 @@
 			children = (
 				91F0B1772A9CE9C1009196BE /* mockConnections.json */,
 				914F59422A9D09730099D944 /* nullConnections.json */,
-				914F595D2A9D2A5C0099D944 /* MainViewModelMock.swift */,
 			);
 			path = Json;
 			sourceTree = "<group>";
@@ -566,7 +563,6 @@
 			files = (
 				914F59552A9D28FC0099D944 /* MainViewTests.swift in Sources */,
 				914F59572A9D28FC0099D944 /* TuiCCUITestsLaunchTests.swift in Sources */,
-				914F595E2A9D2A5C0099D944 /* MainViewModelMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

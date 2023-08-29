@@ -1,10 +1,3 @@
-//
-//  AppButton.swift
-//  TuiCC
-//
-//  Created by António Ramos on 28/08/2023.
-//
-
 import SwiftUI
 
 struct AppButton: View {
@@ -16,7 +9,7 @@ struct AppButton: View {
     
     init(image: Image? = nil,
          text: Text? = nil,
-         color: Color = .accentColor,
+         color: Color = .primary,
          action: (() -> Void)? = nil
     ) {
         self.image = image

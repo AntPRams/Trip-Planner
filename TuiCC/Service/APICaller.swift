@@ -15,7 +15,7 @@ final class APICaller: APICallerInterface {
 }
 
 extension APICaller {
-    func mapResponse(response: (data: Data, response: URLResponse)) throws -> Data {
+    private func mapResponse(response: (data: Data, response: URLResponse)) throws -> Data {
         guard let httpResponse = response.response as? HTTPURLResponse else {
             return response.data
         }

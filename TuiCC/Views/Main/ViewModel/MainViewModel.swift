@@ -21,7 +21,6 @@ protocol MainViewModelInterface: ObservableObject {
 
 final class MainViewModel: MainViewModelInterface {
     
-    
     // MARK: - Properties
     
     private(set) var pathCalculator: PathCalculator
@@ -74,6 +73,8 @@ final class MainViewModel: MainViewModelInterface {
         }
     }
     
+    /// Will calculate paths based on the text in both `SearchField`s.
+    /// Before the request it will validate if both fields have the data as it should
     func calculatePaths() {
         let origin = originSearchFieldViewModel.text
         let destination = destinationSearchFieldViewModel.text
@@ -105,6 +106,10 @@ final class MainViewModel: MainViewModelInterface {
         pathResult = nil
     }
     
+    /// A method to validate the input on both `SearchField`s
+    /// - Parameters:
+    ///   - origin: Origin text
+    ///   - destination: Destination text
     func validateSearch(origin: String, destination: String) throws {
         switch (origin, destination) {
         case _ where origin.isEmpty && destination.isEmpty:
@@ -125,6 +130,7 @@ final class MainViewModel: MainViewModelInterface {
 
 extension MainViewModel {
     
+    /// Will convert `Connection`s in a array of cities to inject them in each `SearchFieldViewModel`
     private func extractCities() {
         let allCities = connections.flatMap { model in
             [model.origin, model.destination]

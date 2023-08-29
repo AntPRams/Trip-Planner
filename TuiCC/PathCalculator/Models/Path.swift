@@ -13,15 +13,13 @@ class Path {
     }
     
     //MARK: - Init
-        
+    
     init(nodes: [Node]) {
         self.nodes = nodes
     }
-}
-
-//MARK: - Public interface
-
-extension Path {
+    
+    //MARK: - Public interface
+    
     func coordinates() -> [CLLocationCoordinate2D] {
         guard nodes.isNotEmpty else { return [] }
         

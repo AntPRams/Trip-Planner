@@ -15,7 +15,6 @@ enum ConnectionType {
     
     var placeholder: String {
         switch self {
-            
         case .origin:
             return Localizable.searchCityOriginTextViewPlaceholder
         case .destination:

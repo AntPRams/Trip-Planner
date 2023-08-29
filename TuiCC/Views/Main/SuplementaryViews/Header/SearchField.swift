@@ -10,7 +10,7 @@ struct SearchField: View {
     var body: some View {
         TextField(viewModel.connectionType.placeholder, text: $viewModel.text)
             .textFieldStyle(.roundedBorder)
-            .padding(.all, 3)
+            .padding(2)
             .focused($isFocused)
             .onChange(of: isFocused, perform: { isFocused in
                 viewModel.isBeingEdited = isFocused

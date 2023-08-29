@@ -1,5 +1,3 @@
-import Foundation
-
 struct Connection: Decodable {
     
     let origin: String?

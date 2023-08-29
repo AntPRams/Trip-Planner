@@ -5,12 +5,11 @@ struct DropDownList: View {
     @ObservedObject var viewModel: SearchFieldViewModel
     @State private var scrollViewContentSize: CGSize = .zero
     
-    @Environment(\.colorScheme) var colorScheme
-    
     var body: some View {
         if viewModel.showDropDown {
             ScrollView {
                 LazyVStack(alignment: .leading, pinnedViews: [.sectionHeaders]) {
+                    Spacer()
                     ForEach(viewModel.filteredCities, id: \.self) { city in
                         CityRow(type: viewModel.connectionType, text: city)
                             .accessibilityIdentifier(AccessibilityIdentifiers.cityRow)

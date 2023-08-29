@@ -8,8 +8,12 @@ protocol Service {
 final class ConnectionsService: Service {
     typealias DataType = FlightConnection
     
+    // MARK: - Properties
+    
     private var apiCaller: APICallerInterface
     private var url: URL?
+    
+    // MARK: - Init
     
     init(
         apiCaller: APICallerInterface = APICaller(),
@@ -23,6 +27,8 @@ final class ConnectionsService: Service {
         
         self.apiCaller = apiCaller
     }
+    
+    // MARK: - Public interface
     
     func fetchConnections() async throws -> [FlightConnection] {
         guard let url else {

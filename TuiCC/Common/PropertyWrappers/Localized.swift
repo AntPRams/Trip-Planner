@@ -5,8 +5,6 @@ import Combine
 struct Localized {
     private var value: String
     
-    private let subject = PassthroughSubject<String, Never>()
-    
     public init(wrappedValue: String) {
         value = NSLocalizedString(wrappedValue, comment: "")
     }
@@ -15,7 +13,6 @@ struct Localized {
         get { value }
         set {
             value = NSLocalizedString(newValue, comment: "")
-            subject.send(value)
         }
     }
 }
