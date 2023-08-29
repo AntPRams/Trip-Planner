@@ -29,7 +29,7 @@ This app was developed using MVVM architeture.
 ## UI Details
 
 <p align="center">
-<img src="https://github.com/AntPRams/TuiCC/assets/36003116/a63ab8a6-9cd2-4590-b830-c21397fc38db" width="25%%">    <img src="[https://github.com/AntPRams/TuiCC/assets/36003116/50e01cd0-a419-4b34-8f98-7de41381f1a1](https://github.com/AntPRams/TuiCC/assets/36003116/a1f9d21e-169e-4598-8cdc-807cf430e94c)" width="25%%">    <img src="https://github.com/AntPRams/TuiCC/assets/36003116/50e01cd0-a419-4b34-8f98-7de41381f1a1" width="25%%">    <img src="https://github.com/AntPRams/TuiCC/assets/36003116/bb2cb70c-a42d-4d83-b70f-181474426f98" width="25%%">
+<img src="https://github.com/AntPRams/TuiCC/assets/36003116/a63ab8a6-9cd2-4590-b830-c21397fc38db" width="20%%">    <img src="[https://github.com/AntPRams/TuiCC/assets/36003116/50e01cd0-a419-4b34-8f98-7de41381f1a1](https://github.com/AntPRams/TuiCC/assets/36003116/a1f9d21e-169e-4598-8cdc-807cf430e94c)" width="20%%">    <img src="https://github.com/AntPRams/TuiCC/assets/36003116/50e01cd0-a419-4b34-8f98-7de41381f1a1" width="20%%">    <img src="https://github.com/AntPRams/TuiCC/assets/36003116/bb2cb70c-a42d-4d83-b70f-181474426f98" width="20%%">
 </p>
 
 The header has three buttons:
@@ -44,12 +44,14 @@ When a patch is found the map and the trip overview will be displayed.
 
 ## Tests
 
-The unit tests cover 
+<p align="center">
+<img src="[https://github.com/AntPRams/TuiCC/assets/36003116/a63ab8a6-9cd2-4590-b830-c21397fc38db](https://github.com/AntPRams/TuiCC/assets/36003116/4eea6eb6-6bce-4870-bb28-317a31369501)" width="20%%">
+</p>
 
-
+Unit tests cover 63,8% of the app, with a large portion of the remainder being covered by UI tests
 
 # Developed with:
 
 macOS Ventura 13.5.1
-XCode 
+XCode 14.3.1
 
