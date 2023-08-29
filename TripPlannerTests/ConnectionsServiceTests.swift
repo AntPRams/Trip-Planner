@@ -1,4 +1,4 @@
-@testable import TuiCC
+@testable import TripPlanner
 import XCTest
 
 final class ConnectionsServiceTests: XCTestCase {

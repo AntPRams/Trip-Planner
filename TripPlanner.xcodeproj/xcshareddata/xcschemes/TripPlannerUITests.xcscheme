@@ -19,9 +19,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "914F59512A9D28FB0099D944"
-               BuildableName = "TuiCCUITests.xctest"
-               BlueprintName = "TuiCCUITests"
-               ReferencedContainer = "container:TuiCC.xcodeproj">
+               BuildableName = "TripPlannerUITests.xctest"
+               BlueprintName = "TripPlannerUITests"
+               ReferencedContainer = "container:TripPlanner.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>

@@ -1,6 +1,6 @@
 import XCTest
 
-final class TuiCCUITestsLaunchTests: XCTestCase {
+final class TripPlannerUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true

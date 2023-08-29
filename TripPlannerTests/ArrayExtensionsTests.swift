@@ -1,5 +1,5 @@
+@testable import TripPlanner
 import XCTest
-@testable import TuiCC
 
 final class ExtensionsTests: XCTestCase {
     

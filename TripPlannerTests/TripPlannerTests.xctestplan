@@ -1,7 +1,7 @@
 {
   "configurations" : [
     {
-      "id" : "EA03CA86-BDDF-476F-BBEA-D580CEDB71A0",
+      "id" : "72DE845F-F3DE-46BC-90A7-5E3FEF9CE97A",
       "name" : "Test Scheme Action",
       "options" : {
 
@@ -15,9 +15,9 @@
     {
       "parallelizable" : true,
       "target" : {
-        "containerPath" : "container:TuiCC.xcodeproj",
+        "containerPath" : "container:TripPlanner.xcodeproj",
         "identifier" : "B61D2BE12A964728008D3606",
-        "name" : "TuiCCTests"
+        "name" : "TripPlannerTests"
       }
     }
   ],

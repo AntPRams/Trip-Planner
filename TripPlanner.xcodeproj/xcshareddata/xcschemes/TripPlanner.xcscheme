@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1500"
+   LastUpgradeVersion = "1430"
    version = "1.7">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "B69C4E1A2A94F94400CEC473"
-               BuildableName = "TuiCC.app"
-               BlueprintName = "TuiCC"
-               ReferencedContainer = "container:TuiCC.xcodeproj">
+               BuildableName = "TripPlanner.app"
+               BlueprintName = "TripPlanner"
+               ReferencedContainer = "container:TripPlanner.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -28,36 +28,11 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES"
       shouldAutocreateTestPlan = "YES">
-      <Testables>
-         <TestableReference
-            skipped = "NO"
-            parallelizable = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B61D2BE12A964728008D3606"
-               BuildableName = "TuiCCTests.xctest"
-               BlueprintName = "TuiCCTests"
-               ReferencedContainer = "container:TuiCC.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO"
-            parallelizable = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "914F59512A9D28FB0099D944"
-               BuildableName = "TuiCCUITests.xctest"
-               BlueprintName = "TuiCCUITests"
-               ReferencedContainer = "container:TuiCC.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-      </Testables>
    </TestAction>
    <LaunchAction
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      language = "en"
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
       ignoresPersistentStateOnLaunch = "NO"
@@ -69,9 +44,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B69C4E1A2A94F94400CEC473"
-            BuildableName = "TuiCC.app"
-            BlueprintName = "TuiCC"
-            ReferencedContainer = "container:TuiCC.xcodeproj">
+            BuildableName = "TripPlanner.app"
+            BlueprintName = "TripPlanner"
+            ReferencedContainer = "container:TripPlanner.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -86,9 +61,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B69C4E1A2A94F94400CEC473"
-            BuildableName = "TuiCC.app"
-            BlueprintName = "TuiCC"
-            ReferencedContainer = "container:TuiCC.xcodeproj">
+            BuildableName = "TripPlanner.app"
+            BlueprintName = "TripPlanner"
+            ReferencedContainer = "container:TripPlanner.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
