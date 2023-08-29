@@ -18,7 +18,12 @@ This app was developed using MVVM architeture.
 
 * This was the trickiest part. I already knew about the Dijktra's algorithm but I never had to implement it. I've tried some solutions made from scratch, but where some did work perfectly in other paths failed miserably. Then I stumble upon an Apple framework, `GameplayKit` that had an API to create graphs. So, with the help of `GKGraph` i've managed to create a path calculator that was able to provide all the paths available between two given nodes. Then i only had to check which was the cheapest
  
-4. Use coordinates available in the JSON to show the cheapest selected route on a map
+4. _Use coordinates available in the JSON to show the cheapest selected route on a map_:
+
+* I've started the project with XCode 15, but we all know how well behaved are those betas, I drop out and move to XCode 14, since I didn't had the access to the new SwiftUI map API's, I had to create a `UIViewRepresentable` to be able to add polylines to a map and add it to a SwiftUI view 
  
-5. BONUS: To select the cities use a text field with autocomplete (from the list of the available cities you get from the JSON) 
+5. _BONUS: To select the cities use a text field with autocomplete (from the list of the available cities you get from the JSON)_:
+
+* This was done with the help of `folding` using the query and the city while filtering. The suggestions are presented in a view below the `SearchField` that's being edited.
+
 ## UI Details
