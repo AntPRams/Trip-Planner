@@ -38,7 +38,7 @@ class PathCalculatorTests: XCTestCase {
         
         //when
         do {
-            let path = try await sut.generatePath(from: "Oslo", to: "Lisbon")
+            let _ = try await sut.generatePath(from: "Oslo", to: "Lisbon")
             XCTFail("It's supposed to throw error")
         } catch {
             //then
